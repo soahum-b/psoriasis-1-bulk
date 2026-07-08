@@ -14,7 +14,7 @@ Psoriatic skin is usually studied as a two-state contrast (lesional vs. normal),
 
 Standard psoriasis transcriptomics contrasts lesional (PP) against uninvolved (NN) skin, and is blind to the **peri-lesional** zone (PN) — the advancing margin just outside the visible plaque, where the transition from health to disease is presumably underway. If a distinct program initiates psoriatic conversion, the peri-lesional compartment is where it should be visible, and a two-state design cannot see it.
 
-We treat biopsy site as an **ordinal phenotype** (NN < PN < PP) and use **Scissor** (Sun & Xia, *Nat Biotechnol* 2022) to identify single cells whose expression co-varies with that gradient. The key design choice is that the phenotype is a **clinical biopsy-site label**, not a molecular score computed from the reference cells — so a flagged cell cannot be a restatement of how it was labelled. STAT3, a longstanding psoriasis candidate, is examined as a member of the resulting program, not assumed as a driver.
+We treat biopsy site as an **ordinal phenotype** (NN < PN < PP) and use **Scissor** (Sun, Guan, ... Xia, *Nat Biotechnol* 2021) to identify single cells whose expression co-varies with that gradient. The key design choice is that the phenotype is a **clinical biopsy-site label**, not a molecular score computed from the reference cells — so a flagged cell cannot be a restatement of how it was labelled. STAT3, a longstanding psoriasis candidate, is examined as a member of the resulting program, not assumed as a driver.
 
 ## 2  Data and design
 
@@ -131,6 +131,8 @@ The reframing yields a coherent, reproducible signal: a gradient-tracking popula
 
 ## 8  Data and code availability
 Single-cell reference **GSE173706** (Ma et al. 2023); bulk anchor **SRP165679** (Tsoi et al. 2019, via recount3). All code, figures, tables, environment spec, and this white paper are in `github.com/soahum-b/psoriasis-1-bulk`; reproduce/scale instructions in `HANDOFF.md`. Heavy inputs regenerate via `code/00_download_data.R`.
+
+**Method reference.** Scissor: Sun D, Guan X, Moran AE, et al. Identifying phenotype-associated subpopulations by integrating bulk and single-cell sequencing data. *Nature Biotechnology* **40**, 527–538 (2021). doi:10.1038/s41587-021-01091-3.
 
 ---
 *Working draft — internal white paper. All quantitative values computed from the saved analysis artifacts. Clinical interpretation is preliminary and not intended to guide patient care.*

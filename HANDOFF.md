@@ -11,7 +11,7 @@ single source of truth for *where we are* and *what to do next*.
 
 We project a **bulk RNA-seq ordinal phenotype** (biopsy site: normal `NN` <
 peri-lesional `PN` < lesional `PP`) onto a **single-cell reference** using
-**Scissor** (Sun & Xia, *Nat Biotechnol* 2022) in Gaussian/regression mode.
+**Scissor** (Sun, Guan, ... Xia, *Nat Biotechnol* 2021) in Gaussian/regression mode.
 The output is a per-cell selection: cells whose expression co-varies with the
 NN→PN→PP gradient (**Scissor+**, tracking toward lesional), cells tracking
 toward normal (**Scissor−**), and unselected **Background**. The phenotype is a
