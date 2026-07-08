@@ -164,7 +164,9 @@ census). Memory driver is the glmnet augmented design at 89k predictors ×
 2. **Try the real compiled Scissor on the cluster** and cross-check our glmnet
    port (§3). If concordant, report the canonical solver's numbers.
 3. **Orthogonal deconvolution validation** — ✅ DONE for the direct estimate
-   (§4b: NNLS confirms Scissor, 5/6 cell types concordant). REMAINING upgrade:
+   (§4b: NNLS concordant with Scissor for the 3 strongest lineages —
+   Endothelial/Fibroblast/Melanocyte; NK & Keratinocyte discordant, DC n.s.).
+   REMAINING upgrade:
    run **deconvBenchmarking** (github.com/humengying0907/deconvBenchmarking) as
    the method-selection layer. It is a benchmarking framework, not a real-bulk
    deconvolver — its three core calls `benchmarking_init()` /
