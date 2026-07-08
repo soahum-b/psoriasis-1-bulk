@@ -87,18 +87,38 @@ Independent NNLS deconvolution of the real SRP165679 bulk against a Ma-reference
 cell-type signature (`code/deconv_validation.R`) **confirms Scissor by a
 different method**. Estimated cell-type proportions across NN→PN→PP:
 
-| Cell type | Scissor side | Deconv proportion trend | p | Concordant |
-|-----------|-------------|--------------------------|---|:---:|
-| Endothelial | Scissor+ | **rises** 0.0→0.2→3.8 % | 1.6e-20 | ✓ |
-| Melanocyte | Scissor− | **falls** 7.8→7.3→2.2 % | 2.6e-15 | ✓ |
-| Fibroblast | Scissor− | **falls** 12.3→8.2→1.4 % | 4.5e-12 | ✓ |
-| NK | Scissor+ | **rises** →7.9 % (PP) | 7.5e-12 | ✓ |
-| Keratinocyte | ~ | rises 79→83→83 % | 4.5e-3 | (n/a) |
+Scissor direction is taken from the Fisher enrichment of each cell type among
+Scissor+ cells (pos-enrichment OR): OR>1 (sig) = lesional-tracking; OR<1 (sig) =
+normal-tracking. Concordant = deconv proportion trend is significant AND matches.
 
-**5 of 6 mappable cell types agree** in direction. This resolves the
-composition-vs-state ambiguity: the endothelial gradient signal reflects (at
-least partly) a **real compositional increase** in the bulk, not solely a state
-change. Figure `figures/fig_deconv_validation.png`; tables
+| Cell type | Scissor direction | pos-enrich OR | Deconv proportion trend | deconv padj | Status |
+|-----------|-------------------|:---:|--------------------------|:---:|:---:|
+| Endothelial | Scissor+ (lesional) | 11.26 | **rises** 0.0→0.2→3.8 % | 1.3e-19 | ✓ concordant |
+| Fibroblast | Scissor− (normal) | 0.15 | **falls** 12.3→8.2→1.4 % | 1.2e-11 | ✓ concordant |
+| Melanocyte | Scissor− (normal) | 0.04 | **falls** 7.8→7.3→2.2 % | 1.1e-14 | ✓ concordant |
+| NK | Scissor− (normal) | 0.36 | rises →7.9 % (PP) | 1.5e-11 | ✗ discordant |
+| Keratinocyte | Scissor− (normal) | 0.69 | rises 79→83→83 % | 5.1e-3 | ✗ discordant |
+| DC | Scissor+ (lesional) | 1.47 | rises (flat) | 0.20 | trend n.s. |
+
+**3 of 6 cell types with a clear Scissor direction are concordant** — and they
+are the three strongest-signal lineages: **Endothelial** (lesional-tracking,
+rises in bulk), **Fibroblast** and **Melanocyte** (normal-tracking, fall in
+bulk). This resolves the composition-vs-state ambiguity *for the endothelial
+signal*: it reflects (at least partly) a **real compositional increase** in the
+bulk, not solely a state change.
+
+The two discordant cases are informative, not failures. **NK** cells are
+*depleted* from the Scissor+ gradient-tracking set (per-cell) yet their bulk
+proportion rises sharply at PP — i.e. NK **infiltration** into lesional tissue
+is a compositional event that individual NK cells do not "track" the gradient in
+the Scissor sense. **Keratinocyte** is only weakly normal-leaning per-cell
+(OR 0.69) while its bulk fraction is near-flat-to-rising (it dominates all
+tiers), so the directions are not expected to align. Per-cell tracking and bulk
+composition are genuinely different measurements; they agree where the biology
+is a clean compositional shift (endothelial/fibroblast/melanocyte) and diverge
+where it is not (NK infiltration, keratinocyte dominance).
+
+Figure `figures/fig_deconv_validation.png`; tables
 `results/deconv_{proportions,trend,scissor_concordance}.csv`.
 
 Caveat: NNLS on marker signatures is the transparent core of regression
@@ -166,7 +186,8 @@ census). Memory driver is the glmnet augmented design at 89k predictors ×
    pipeline (no count matrix / logCPM / cell-selection input) and cannot be
    substituted into it. It belongs to a downstream sequence-level arm.
 
-   Concrete bridge (the ready-made path is seillra's `variant_usage.ipynb`):
+   Concrete bridge (seillra's README lists a variant-effects usage notebook,
+   `variant_usage.ipynb`, as the starting point — verify it in the repo):
    ```bash
    pip install git+https://github.com/kostkalab/seillra.git
    ```

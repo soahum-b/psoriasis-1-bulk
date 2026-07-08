@@ -1,9 +1,9 @@
-"celltype","slope_per_tier","p","padj","scissor_side","deconv_dir","concordant"
-"Endothelial",0.0182838677335361,1.61816573276663e-20,1.2945325862133e-19,"Scissor+","rises",TRUE
-"Melanocyte",-0.0269329695205149,2.63131809583338e-15,1.05252723833335e-14,"Scissor-","falls",TRUE
-"Fibroblast",-0.0539238235707464,4.53347740980053e-12,1.20892730928014e-11,"Scissor-","falls",TRUE
-"NK",0.0378760658667459,7.5203755510203e-12,1.50407511020406e-11,"Scissor+","rises",TRUE
-"Mast",-0.00054155021562497,1.31244334577477e-07,2.09990935323963e-07,NA,"falls",NA
-"Muscle",0.002013862444424,1.89660436671544e-07,2.52880582228726e-07,NA,"rises",NA
-"Keratinocyte",0.0223624165644337,0.00447280016828132,0.00511177162089294,"~","rises",FALSE
-"DC",0.000862130697746555,0.195886260198426,0.195886260198426,"Scissor+","rises",TRUE
+"celltype","pos_enrich_OR","pos_enrich_p","scissor_direction","slope_per_tier","p","padj","deconv_dir","deconv_sig","expected_deconv","mappable","concordant","status"
+"Endothelial",11.26,5.9e-245,"Scissor+ (lesional-tracking)",0.0182838677335361,1.61816573276663e-20,1.2945325862133e-19,"rises",TRUE,"rises",TRUE,TRUE,"CONCORDANT"
+"Fibroblast",0.151,4.6e-53,"Scissor- (normal-tracking)",-0.0539238235707464,4.53347740980053e-12,1.20892730928014e-11,"falls",TRUE,"falls",TRUE,TRUE,"CONCORDANT"
+"Melanocyte",0.036,2.8e-20,"Scissor- (normal-tracking)",-0.0269329695205149,2.63131809583338e-15,1.05252723833335e-14,"falls",TRUE,"falls",TRUE,TRUE,"CONCORDANT"
+"NK",0.361,1.9e-12,"Scissor- (normal-tracking)",0.0378760658667459,7.5203755510203e-12,1.50407511020406e-11,"rises",TRUE,"falls",TRUE,FALSE,"DISCORDANT"
+"Keratinocyte",0.694,8.4e-12,"Scissor- (normal-tracking)",0.0223624165644337,0.00447280016828132,0.00511177162089294,"rises",TRUE,"falls",TRUE,FALSE,"DISCORDANT"
+"DC",1.47,0.014,"Scissor+ (lesional-tracking)",0.000862130697746555,0.195886260198426,0.195886260198426,"rises",FALSE,"rises",TRUE,FALSE,"deconv trend n.s."
+"Muscle",0.854,0.23,"ns",0.002013862444424,1.89660436671544e-07,2.52880582228726e-07,"rises",TRUE,NA,FALSE,FALSE,"no clear Scissor direction"
+"Mast",0.747,0.54,"ns",-0.00054155021562497,1.31244334577477e-07,2.09990935323963e-07,"falls",TRUE,NA,FALSE,FALSE,"no clear Scissor direction"
