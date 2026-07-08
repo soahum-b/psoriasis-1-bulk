@@ -1,0 +1,27 @@
+# Conda environment for the Scissor-on-gradient pipeline.
+# Recreate with:  conda env create -f environment.yml  &&  conda activate scissor-r
+# The compiled Scissor package (APML1 solver) is NOT required — this pipeline
+# uses a pure-R glmnet reimplementation of the network-regularized elastic net
+# (see code/scissor_glmnet_solver.R). Only base R + the packages below are needed.
+name: scissor-r
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=4.5
+  - r-seurat            # Seurat 5 (scRNA processing)
+  - r-matrix
+  - r-glmnet            # network-regularized elastic net solver
+  - r-rspectra
+  - r-ggplot2
+  - r-patchwork
+  - r-ggrepel
+  - r-r.utils           # gzip reading for fread
+  - r-data.table
+  - bioconductor-preprocesscore   # quantile normalization (Scissor step)
+  - bioconductor-org.hs.eg.db     # Ensembl -> symbol mapping
+  - bioconductor-edger            # bulk logCPM
+  - bioconductor-limma
+  - bioconductor-summarizedexperiment
+  - bioconductor-recount3         # bulk phenotype anchor retrieval
+  - bioconductor-geoquery         # GSE173706 download

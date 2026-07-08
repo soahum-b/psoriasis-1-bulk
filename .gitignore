@@ -1,0 +1,29 @@
+# Large / regenerable data — NOT committed. Recreate with code/00_download_data.R
+data/raw/
+data/*.tar
+data/*.rds
+
+# Large intermediate objects — regenerable by the pipeline. Committed outputs
+# are the small CSVs and figures only (see below for what IS tracked).
+results/*.rds
+results_full/
+
+# Vendored Scissor source (reference only) and local R library
+.Scissor_src/
+.rlib/
+scissor_src.tar.gz
+
+# R / system
+.Rhistory
+.RData
+.Rproj.user/
+*.Rout
+.DS_Store
+
+# Keep tracked: all code/, all figures/, docs, environment.yml, and the small
+# result tables below (git add -f enforced in these paths):
+!results/*.csv
+
+# Small tracked inputs (labels/manifest — NOT regenerable bulk data):
+!data/sample_classification.rds
+!data/sample_manifest.csv
