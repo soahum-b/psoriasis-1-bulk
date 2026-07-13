@@ -146,13 +146,19 @@ Rscript code/00_download_data.R
 Rscript code/run_pipeline.R           # writes results/
 
 # 2b. FULL CENSUS on a cluster (all 89,058 cells) — the scale-up
-sbatch --mem=256G --cpus-per-task=16 --time=24:00:00 \
-       --wrap "Rscript code/run_full_census_cluster.R"    # writes results_full/
+sbatch code/run_full_census.sbatch    # writes results_full/
 ```
 
 `run_full_census_cluster.R` has all parameters at the top (`N_CELLS=Inf` = full
 census). Memory driver is the glmnet augmented design at 89k predictors ×
 ~3.1M SNN edges — budget ≥128 GB, 256 GB comfortable.
+
+**Checkpointed / resumable:** every expensive stage (Scissor inputs, alpha
+tuning, reliability test, permutation null) writes to `results_full/` and is
+skipped on rerun if that file exists. If the job dies (wall-time, node
+failure) or is requeued, just `sbatch code/run_full_census.sbatch` again —
+it resumes at the first incomplete stage. `run_full_census.sbatch` requests
+`--partition=big_memory` (1 TB RAM node) and sets `--requeue`.
 
 ---
 
@@ -219,7 +225,8 @@ code/
   scissor_run.R               Scissor driver: inputs prep + alpha tuning
   scissor_reliability.R       reliability test (test_lm port)
   run_pipeline.R              end-to-end local backbone driver
-  run_full_census_cluster.R   FULL-CENSUS scale-up (SLURM)
+  run_full_census_cluster.R   FULL-CENSUS scale-up (checkpointed per stage)
+  run_full_census.sbatch      SLURM submit script (big_memory, --requeue)
 results/                      *.csv tracked; *.rds git-ignored (regenerable)
   scissor_alpha_tuning.csv    selected fraction per alpha
   celltype_enrichment.csv     cell-type fold-enrichment + Fisher OR

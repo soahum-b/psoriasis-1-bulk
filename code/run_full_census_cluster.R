@@ -9,11 +9,17 @@
 # memory driver (89k predictors x ~3.1M SNN edges).
 #
 # Submit example (SLURM):
-#   sbatch --mem=256G --cpus-per-task=16 --time=24:00:00 \
-#          --wrap "Rscript code/run_full_census_cluster.R"
+#   sbatch code/run_full_census.sbatch
 #
 # Everything is parameterized at the top. Set N_CELLS=Inf for the full census,
 # or a number to reproduce/enlarge the subset. Outputs go to results_full/.
+#
+# CHECKPOINT/RESUME: every expensive stage (Scissor inputs, alpha tuning,
+# reliability test, permutation null) writes its result to results_full/ and
+# is SKIPPED on a rerun if that file already exists. If the job is killed
+# (wall-time, node failure, `scontrol requeue`), just resubmit the same
+# script — it picks up at the first incomplete stage instead of restarting
+# from scratch. To force a clean rerun of a stage, delete its output file.
 # ---------------------------------------------------------------------------
 
 suppressMessages({library(Seurat); library(Matrix); library(glmnet);
@@ -50,56 +56,89 @@ if (is.finite(N_CELLS) && N_CELLS < ncol(so)) {
 message("Cells in run: ", ncol(so))
 so <- FindNeighbors(so, dims = 1:20, verbose = FALSE)
 
-## ---- Scissor inputs + alpha tuning ----
-message("Preparing Scissor inputs (correlation + SNN edge augmentation) ...")
-inp <- prepare_scissor_inputs(anch$logcpm, so, y = anch$tier, hvg_only = TRUE,
-                              save_file = file.path(OUT, "scissor_inputs.rds"))
-message("Running alpha tuning ...")
-res <- run_scissor(inp, alpha_grid = ALPHA_GRID, cutoff = CUTOFF,
-                   target_frac = TARGET_FRAC, seed = SEED)
-saveRDS(res, file.path(OUT, "scissor_tuning.rds"))
+## ---- Scissor inputs (checkpointed) ----
+f_inp <- file.path(OUT, "scissor_inputs.rds")
+if (file.exists(f_inp)) {
+  message("[checkpoint] loading existing ", f_inp)
+  inp <- readRDS(f_inp)
+} else {
+  message("Preparing Scissor inputs (correlation + SNN edge augmentation) ...")
+  inp <- prepare_scissor_inputs(anch$logcpm, so, y = anch$tier, hvg_only = TRUE,
+                                save_file = f_inp)
+}
+
+## ---- alpha tuning (checkpointed) ----
+f_tune <- file.path(OUT, "scissor_tuning.rds")
+if (file.exists(f_tune)) {
+  message("[checkpoint] loading existing ", f_tune)
+  res <- readRDS(f_tune)
+} else {
+  message("Running alpha tuning ...")
+  res <- run_scissor(inp, alpha_grid = ALPHA_GRID, cutoff = CUTOFF,
+                     target_frac = TARGET_FRAC, seed = SEED)
+  saveRDS(res, f_tune)
+}
 ch <- res$chosen
 message(sprintf("Chosen alpha=%.2f  selected=%.2f%%  pos=%d neg=%d",
                 ch$alpha, ch$frac*100, length(ch$pos), length(ch$neg)))
 
-## ---- per-cell labels ----
+## ---- per-cell labels (cheap; always derived from ch) ----
 lab <- setNames(rep("Background", ncol(so)), colnames(so))
 lab[ch$pos] <- "Scissor+"; lab[ch$neg] <- "Scissor-"
 so$scissor <- factor(lab, levels = c("Scissor-","Background","Scissor+"))
 saveRDS(list(chosen = ch, tuning = res$tuning, scissor_label = lab,
              coefs = ch$beta), file.path(OUT, "scissor_result.rds"))
 
-## ---- significance: reliability test + selection null ----
+## ---- significance: reliability test (checkpointed) ----
 cell_num <- length(ch$pos) + length(ch$neg)
-message("Reliability test (n=", N_PERM_REL, ") ...")
-rt <- reliability_test_glmnet(inp, alpha = ch$alpha, cell_num = cell_num,
-                              n = N_PERM_REL, nfold = 10, seed = 1)
-saveRDS(rt, file.path(OUT, "reliability_test.rds"))
+f_rt <- file.path(OUT, "reliability_test.rds")
+if (file.exists(f_rt)) {
+  message("[checkpoint] loading existing ", f_rt)
+  rt <- readRDS(f_rt)
+} else {
+  message("Reliability test (n=", N_PERM_REL, ") ...")
+  rt <- reliability_test_glmnet(inp, alpha = ch$alpha, cell_num = cell_num,
+                                n = N_PERM_REL, nfold = 10, seed = 1)
+  saveRDS(rt, f_rt)
+}
 message(sprintf("Reliability: real MSE=%.4f  null mean=%.4f  p=%.3f",
                 rt$statistic, mean(rt$background), rt$p))
 
-message("Selection permutation null (n=", N_PERM_NULL, ") ...")
-tiers <- inp$y; nf <- numeric(N_PERM_NULL); nd <- numeric(N_PERM_NULL)
-real_gap <- mean(so@meta.data[ch$pos,"tier"]) - mean(so@meta.data[ch$neg,"tier"])
-for (i in seq_len(N_PERM_NULL)) {
-  set.seed(200 + i); yp <- tiers[sample(length(tiers))]
-  f <- net_enet_path(inp$X, yp, inp$B, alpha = ch$alpha, target_frac = TARGET_FRAC)
-  b <- f$beta; pos <- names(b)[b>0]; neg <- names(b)[b<0]
-  nf[i] <- (length(pos)+length(neg))/ncol(inp$X)
-  nd[i] <- (if(length(pos)) mean(so@meta.data[pos,"tier"]) else NA) -
-           (if(length(neg)) mean(so@meta.data[neg,"tier"]) else NA)
+## ---- significance: selection permutation null (checkpointed) ----
+f_null <- file.path(OUT, "permutation_null.rds")
+if (file.exists(f_null)) {
+  message("[checkpoint] loading existing ", f_null)
+  pn <- readRDS(f_null)
+} else {
+  message("Selection permutation null (n=", N_PERM_NULL, ") ...")
+  tiers <- inp$y; nf <- numeric(N_PERM_NULL); nd <- numeric(N_PERM_NULL)
+  real_gap <- mean(so@meta.data[ch$pos,"tier"]) - mean(so@meta.data[ch$neg,"tier"])
+  for (i in seq_len(N_PERM_NULL)) {
+    set.seed(200 + i); yp <- tiers[sample(length(tiers))]
+    f <- net_enet_path(inp$X, yp, inp$B, alpha = ch$alpha, target_frac = TARGET_FRAC)
+    b <- f$beta; pos <- names(b)[b>0]; neg <- names(b)[b<0]
+    nf[i] <- (length(pos)+length(neg))/ncol(inp$X)
+    nd[i] <- (if(length(pos)) mean(so@meta.data[pos,"tier"]) else NA) -
+             (if(length(neg)) mean(so@meta.data[neg,"tier"]) else NA)
+  }
+  pn <- list(real_gap = real_gap, null_frac = nf, null_dir = nd)
+  saveRDS(pn, f_null)
 }
-saveRDS(list(real_gap = real_gap, null_frac = nf, null_dir = nd),
-        file.path(OUT, "permutation_null.rds"))
 message(sprintf("Selection null: real gap=%.3f  null gap mean=%.3f  p=%.3f",
-                real_gap, mean(nd, na.rm=TRUE), mean(nd >= real_gap, na.rm=TRUE)))
+                pn$real_gap, mean(pn$null_dir, na.rm=TRUE),
+                mean(pn$null_dir >= pn$real_gap, na.rm=TRUE)))
 
-## ---- characterization ----
-message("Cell-type enrichment + gradient DE program ...")
-Idents(so) <- so$scissor
-de <- FindMarkers(so, ident.1 = "Scissor+", ident.2 = "Background",
-                  logfc.threshold = 0.1, min.pct = 0.1)
-de$gene <- rownames(de)
-write.csv(de, file.path(OUT, "gradient_program_DE.csv"), row.names = FALSE)
-saveRDS(so, file.path(OUT, "reference_scissor_full.rds"))
+## ---- characterization (checkpointed) ----
+f_de <- file.path(OUT, "gradient_program_DE.csv")
+if (file.exists(f_de)) {
+  message("[checkpoint] ", f_de, " already exists, skipping DE + full-object save")
+} else {
+  message("Cell-type enrichment + gradient DE program ...")
+  Idents(so) <- so$scissor
+  de <- FindMarkers(so, ident.1 = "Scissor+", ident.2 = "Background",
+                    logfc.threshold = 0.1, min.pct = 0.1)
+  de$gene <- rownames(de)
+  write.csv(de, f_de, row.names = FALSE)
+  saveRDS(so, file.path(OUT, "reference_scissor_full.rds"))
+}
 message("FULL-CENSUS RUN COMPLETE. Outputs in ", OUT, "/")
