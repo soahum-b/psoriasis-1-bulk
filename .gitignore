@@ -8,6 +8,9 @@ data/*.rds
 results/*.rds
 results_full/
 
+# SLURM job logs — ephemeral, regenerated per run
+logs/
+
 # Vendored Scissor source (reference only) and local R library
 .Scissor_src/
 .rlib/
