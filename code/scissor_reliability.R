@@ -6,7 +6,7 @@
 # A reliable association => real MSE low, few permutations beat it => small p.
 
 suppressMessages({library(glmnet); library(Matrix)})
-source("scissor_repo/code/scissor_glmnet_solver.R")
+source("code/scissor_glmnet_solver.R")
 
 # One CV pass: returns per-fold test MSE. Coefficients are taken at the lambda
 # on the path whose nzero is closest to `cell_num` (mirrors test_lm's index rule).

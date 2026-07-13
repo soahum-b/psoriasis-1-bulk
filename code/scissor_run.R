@@ -7,7 +7,7 @@
 # fraction falls under `cutoff`.
 
 suppressMessages({library(Seurat); library(Matrix); library(preprocessCore)})
-source("scissor_repo/code/scissor_glmnet_solver.R")
+source("code/scissor_glmnet_solver.R")
 
 # Prepare Scissor regression inputs (X, y, network) — the Scissor() preamble.
 prepare_scissor_inputs <- function(bulk_logcpm, seurat_obj, y,

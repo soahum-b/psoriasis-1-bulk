@@ -99,8 +99,9 @@ if (!file.exists("results/bulk_anchor.rds")) {
   ext <- colData(rse)$external_id; kp <- ext %in% sc$external_id
   rse <- rse[, kp]; cls <- sc$class[match(ext[kp], sc$external_id)]
   d <- DGEList(assay(rse,"counts"), group = cls); d <- calcNormFactors(d)
-  d <- d[filterByExpr(d, group = cls), , keep.lib.sizes = FALSE]
-  lc <- cpm(d, log = TRUE, prior.count = 1); rownames(lc) <- rowData(rse)$gene_name
+  keep <- filterByExpr(d, group = cls)
+  d <- d[keep, , keep.lib.sizes = FALSE]
+  lc <- cpm(d, log = TRUE, prior.count = 1); rownames(lc) <- rowData(rse)$gene_name[keep]
   lc <- lc[order(rowMeans(lc), decreasing = TRUE), ]
   lc <- lc[!duplicated(rownames(lc)) & !is.na(rownames(lc)) & rownames(lc) != "", ]
   saveRDS(list(logcpm = lc, tier = c(NN=0,PN=1,PP=2)[cls], cls = cls,
