@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Psoriatic skin is usually studied as a two-state contrast (lesional vs. normal), which discards the clinically meaningful *peri-lesional* margin where disease is actively expanding. We reframe the problem as an **ordinal gradient** — uninvolved (NN) < peri-lesional (PN) < lesional (PP) — and ask which single cells co-vary with that gradient. Using Scissor, we project an ordinal bulk RNA-seq phenotype (93 biopsies spanning all three tiers) onto an 89,058-cell single-cell reference that contains the peri-lesional compartment. Because the phenotype label is a clinical biopsy site rather than a molecular signature derived from the same cells, the mapping is **non-circular by construction**. Selected cells are monotonic on the gradient (mean tier: Scissor− 0.79 < background 1.38 < Scissor+ 1.43) and the gradient-tracking (Scissor+) fraction peaks at the peri-lesional tier. Both a reliability test (p = 0.000) and a selection permutation null (p = 0.000) confirm the signal is driven by real phenotype structure. Endothelial cells dominate the gradient-tracking population (5.2× enriched, OR 11.3 on the backbone; OR 5.24 and still the top lineage at full census), and the associated 1,861-gene program is vascular-led. An orthogonal bulk deconvolution independently confirms the compositional trend for the three strongest lineages. **STAT3, examined as a program member, is significant only at backbone scale (log2FC 0.43, padj 0.018) and does not survive the full census** (log2FC 0.30, p = 0.12, padj = 1; 42.7% vs 44.9% of cells expressing) — the vascular-led conclusion is unchanged, but STAT3 is not a gradient-tracking marker at full resolution. The full-census run (89,058 cells; alpha=0.20, 14.67% selected) has now completed and confirms the backbone's structural findings; additional robustness tiers remain staged for cluster execution.
+Psoriatic skin is usually studied as a two-state contrast (lesional vs. normal), which discards the clinically meaningful *peri-lesional* margin where disease is actively expanding. We reframe the problem as an **ordinal gradient** — uninvolved (NN) < peri-lesional (PN) < lesional (PP) — and ask which single cells co-vary with that gradient. Using Scissor, we project an ordinal bulk RNA-seq phenotype (93 biopsies spanning all three tiers) onto an 89,058-cell single-cell reference that contains the peri-lesional compartment. Because the phenotype label is a clinical biopsy site rather than a molecular signature derived from the same cells, the mapping is **non-circular by construction**. Selected cells are monotonic on the gradient (mean tier: Scissor− 0.79 < background 1.38 < Scissor+ 1.43) and the gradient-tracking (Scissor+) fraction peaks at the peri-lesional tier. Both a reliability test (p = 0.000) and a selection permutation null (p = 0.000) confirm the signal is driven by real phenotype structure. Endothelial cells dominate the gradient-tracking population (5.2× enriched, OR 11.3 on the backbone; OR 5.24 and still the top lineage at full census), and the associated 1,861-gene program is vascular-led. An orthogonal bulk deconvolution independently confirms the compositional trend for the three strongest lineages. **STAT3, examined as a program member, is significant only at backbone scale (log2FC 0.43, padj 0.018) and does not survive the full census** (log2FC 0.30, raw p = 0.12, BH-FDR q = 0.13; 42.7% vs 44.9% of cells expressing) — the vascular-led conclusion is unchanged, but STAT3 is not a gradient-tracking marker at full resolution. The full-census run (89,058 cells; alpha=0.20, 14.67% selected) has now completed and confirms the backbone's structural findings; additional robustness tiers remain staged for cluster execution.
 
 ## 1  Background and rationale
 
@@ -82,22 +82,24 @@ The **reliability test** (100 label permutations) gives real CV-MSE **0.147** vs
 | Fibroblast | 0.18× | 0.15 | 5×10⁻⁵³ | normal-tracking |
 | Melanocyte | 0.04× | 0.04 | 3×10⁻²⁰ | normal-tracking |
 
+Enrichment p-values are Fisher exact; under the protocol's **BH-FDR** across lineages every row above remains significant (DC weakest). At **full census** the same structure holds — Endothelial the top lineage (OR 5.24, BH q ≈ 0), Keratinocyte/Fibroblast/Melanocyte all BH q < 10⁻⁶¹, NK BH q = 8×10⁻³; Mast and T-cell are the only non-significant lineages.
+
 ### 4.4  The gradient-tracking gene program
-Scissor+ vs. background DE yields **1,861 genes at padj < 0.05**; top up-regulated genes are vascular/endothelial (**CCL14, ACKR1, RAMP3, PLVAP, APLNR, CYTL1, SPNS2**). On the backbone, **STAT3** is significant (**log2FC 0.43, padj 0.018**) but modest. At **full census this reverses**: STAT3 is not significant (log2FC 0.30, p = 0.12, padj = 1; 42.7% vs 44.9% of cells expressing), confirming that the program is vascular-led, not STAT3-led — the STAT3 signal was a small-subset effect that does not hold at full resolution.
+Scissor+ vs. background DE yields **1,861 genes at padj < 0.05** on the backbone (Seurat-default Bonferroni); under the protocol's BH-FDR at full census the program is **3,903 of 4,541 tested genes at BH q < 0.05**. Top up-regulated genes are vascular/endothelial (**CCL14, ACKR1, RAMP3, PLVAP, APLNR, CYTL1, SPNS2**). On the backbone, **STAT3** is significant (**log2FC 0.43, padj 0.018**) but modest. At **full census this reverses**: STAT3 is not significant under the protocol's BH-FDR (log2FC 0.30, raw p = 0.12, **BH-FDR q = 0.13**; 42.7% vs 44.9% of cells expressing), confirming that the program is vascular-led, not STAT3-led — the STAT3 signal was a small-subset effect that does not hold at full resolution. All single-cell DE significance in this section follows the protocol's BH-FDR (`p.adjust(method="BH")`) over the tested gene family, replacing Seurat's default Bonferroni `p_val_adj`.
 
 ![program](figures/fig_gradient_program.png)
 
-*Gradient-tracking gene program: volcano of Scissor+ vs background differential expression (1,861 genes at padj<0.05).*
+*Gradient-tracking gene program: volcano of Scissor+ vs background differential expression (1,861 genes at Bonferroni padj<0.05 on the backbone; 3,903/4,541 at BH-FDR q<0.05 at full census).*
 
 ![stat3](figures/fig_stat3.png)
 
-*STAT3 expression across Scissor classes on the 20k backbone: elevated in Scissor+ (log2FC 0.43, padj 0.018). Note: this significance does not survive the full census (log2FC 0.30, p = 0.12, padj = 1).*
+*STAT3 expression across Scissor classes on the 20k backbone: elevated in Scissor+ (log2FC 0.43, padj 0.018). Note: this significance does not survive the full census (log2FC 0.30, raw p = 0.12, BH-FDR q = 0.13).*
 
 
 ### 4.5  Orthogonal validation by bulk deconvolution
 NNLS deconvolution of the real SRP165679 bulk, tested for monotonic proportion trends across NN→PN→PP:
 
-| Cell type | Scissor direction | Bulk proportion trend | padj | Status |
+| Cell type | Scissor direction | Bulk proportion trend | BH-FDR | Status |
 |---|---|---|--:|---|
 | Endothelial | lesional-tracking | rises 0.0→0.2→3.8% | 1×10⁻¹⁹ | ✓ concordant |
 | Fibroblast | normal-tracking | falls 12.3→8.2→1.4% | 1×10⁻¹¹ | ✓ concordant |

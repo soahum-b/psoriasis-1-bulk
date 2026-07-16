@@ -11,7 +11,12 @@
 2. **Bulk anchor** — SRP165679 ordinal phenotype (NN<PN<PP), logCPM (edgeR).
 3. **Scissor solve** — network-regularized elastic net; symmetric-normalized graph Laplacian `L_sym = I − D^(−1/2) A D^(−1/2)` encoded as sparse edge-difference augmentation; solved on glmnet (`scissor_glmnet_solver.R`), λ-path walked to target selected fraction; alpha=0.40.
 4. **Significance** — reliability test (100 label permutations) + selection permutation null (30 shuffled-label reruns).
-5. **Interpretation** — cell-type enrichment (Fisher) of Scissor± vs background; gradient-program DE; orthogonal NNLS bulk deconvolution concordance.
+5. **Interpretation** — cell-type enrichment (Fisher) of Scissor± vs background; gradient-program DE (Scissor+ vs Background, `FindMarkers`, logfc.threshold=0.1, min.pct=0.1); orthogonal NNLS bulk deconvolution concordance.
+
+## Multiple-testing correction (protocol — applies to ALL arms)
+- **BH-FDR** (`p.adjust(method="BH")`), q < 0.05, is the significance rule throughout: bulk meta-analysis (Arm A), single-cell gradient-program DE and cell-type enrichment (Arm B), and deconvolution trend tests.
+- **Seurat caveat:** `FindMarkers` returns `p_val_adj` as **Bonferroni** (p × n_genes), NOT BH. For the single-cell arm we therefore recompute `fdr_BH = p.adjust(p_val, "BH")` over the tested gene family and report that, not Seurat's `p_val_adj`. (Full-census gradient program: 3,903/4,541 genes at BH q<0.05; STAT3 raw p=0.117 → BH q=0.13, n.s.)
+- Permutation-based tests (reliability, selection null) are single global statistics, not a testing family — no FDR correction applies.
 
 ## Versions / pins
 - Cluster: env `scissor-r`, R 4.5, Seurat 5 (see COMPUTE.md for full list).
