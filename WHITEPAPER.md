@@ -8,13 +8,13 @@
 
 ## Abstract
 
-Psoriatic skin is usually studied as a two-state contrast (lesional vs. normal), which discards the clinically meaningful *peri-lesional* margin where disease is actively expanding. We reframe the problem as an **ordinal gradient** — uninvolved (NN) < peri-lesional (PN) < lesional (PP) — and ask which single cells co-vary with that gradient. Using Scissor, we project an ordinal bulk RNA-seq phenotype (93 biopsies spanning all three tiers) onto an 89,058-cell single-cell reference that contains the peri-lesional compartment. Because the phenotype label is a clinical biopsy site rather than a molecular signature derived from the same cells, the mapping is **non-circular by construction**. Selected cells are monotonic on the gradient (mean tier: Scissor− 0.79 < background 1.38 < Scissor+ 1.43) and the gradient-tracking (Scissor+) fraction peaks at the peri-lesional tier. Both a reliability test (p = 0.000) and a selection permutation null (p = 0.000) confirm the signal is driven by real phenotype structure. Endothelial cells dominate the gradient-tracking population (5.2× enriched, OR 11.3), the associated 1,861-gene program is vascular-led, and STAT3 is a significant but modest member (log2FC 0.43, padj 0.018). An orthogonal bulk deconvolution independently confirms the compositional trend for the three strongest lineages. This document reports the validated laptop-scale **backbone**; the full-census run and additional robustness tiers are staged for cluster execution.
+Psoriatic skin is usually studied as a two-state contrast (lesional vs. normal), which discards the clinically meaningful *peri-lesional* margin where disease is actively expanding. We reframe the problem as an **ordinal gradient** — uninvolved (NN) < peri-lesional (PN) < lesional (PP) — and ask which single cells co-vary with that gradient. Using Scissor, we project an ordinal bulk RNA-seq phenotype (93 biopsies spanning all three tiers) onto an 89,058-cell single-cell reference that contains the peri-lesional compartment. Because the phenotype label is a clinical biopsy site rather than a molecular signature derived from the same cells, the mapping is **non-circular by construction**. Selected cells are monotonic on the gradient (mean tier: Scissor− 0.79 < background 1.38 < Scissor+ 1.43) and the gradient-tracking (Scissor+) fraction peaks at the peri-lesional tier. Both a reliability test (p = 0.000) and a selection permutation null (p = 0.000) confirm the signal is driven by real phenotype structure. Endothelial cells dominate the gradient-tracking population (5.2× enriched, OR 11.3 on the backbone; OR 5.24 and still the top lineage at full census), and the associated 1,861-gene program is vascular-led. An orthogonal bulk deconvolution independently confirms the compositional trend for the three strongest lineages. **STAT3, examined as a program member, is significant only at backbone scale (log2FC 0.43, padj 0.018) and does not survive the full census** (log2FC 0.30, p = 0.12, padj = 1; 42.7% vs 44.9% of cells expressing) — the vascular-led conclusion is unchanged, but STAT3 is not a gradient-tracking marker at full resolution. The full-census run (89,058 cells; alpha=0.20, 14.67% selected) has now completed and confirms the backbone's structural findings; additional robustness tiers remain staged for cluster execution.
 
 ## 1  Background and rationale
 
 Standard psoriasis transcriptomics contrasts lesional (PP) against uninvolved (NN) skin, and is blind to the **peri-lesional** zone (PN) — the advancing margin just outside the visible plaque, where the transition from health to disease is presumably underway. If a distinct program initiates psoriatic conversion, the peri-lesional compartment is where it should be visible, and a two-state design cannot see it.
 
-We treat biopsy site as an **ordinal phenotype** (NN < PN < PP) and use **Scissor** (Sun, Guan, … Xia, *Nat Biotechnol* 2022) to identify single cells whose expression co-varies with that gradient. The key design choice is that the phenotype is a **clinical biopsy-site label**, not a molecular score computed from the reference cells — so a flagged cell cannot be a restatement of how it was labelled. STAT3, a longstanding psoriasis candidate, is examined as a member of the resulting program, not assumed as a driver.
+We treat biopsy site as an **ordinal phenotype** (NN < PN < PP) and use **Scissor** (Sun, Guan, … Xia, *Nat Biotechnol* 2022) to identify single cells whose expression co-varies with that gradient. The key design choice is that the phenotype is a **clinical biopsy-site label**, not a molecular score computed from the reference cells — so a flagged cell cannot be a restatement of how it was labelled. STAT3, a longstanding psoriasis candidate, is examined as a member of the resulting program, not assumed as a driver — and, as it turns out, it does not survive as a gradient-tracking marker at full-census resolution (see §4).
 
 ## 2  Data and design
 
@@ -48,7 +48,7 @@ Scissor's selection is a graph-regularized elastic net solved by a compiled rout
 ## 4  Results
 
 ### 4.1  Selection and directionality
-The backbone runs on a **stratified 20,023-cell subset** (full census staged for cluster). Tuning gave **alpha=0.40, 14.84% of cells selected** (1,574 Scissor+, 1,397 Scissor−). Selected cells are **monotonic on the gradient**: mean tier Scissor− **0.79** < background **1.38** < Scissor+ **1.43**, and the Scissor+ fraction **peaks at the peri-lesional tier** (9.4% of PN cells vs. 8.0% of PP) — the signature of an intermediate progression state.
+The backbone runs on a **stratified 20,023-cell subset**. Tuning gave **alpha=0.40, 14.84% of cells selected** (1,574 Scissor+, 1,397 Scissor−). *(The full census subsequently re-tuned to alpha=0.20 at 14.67% selected, 6,837 Scissor+ / 6,228 Scissor− — see §6.)* Selected cells are **monotonic on the gradient**: mean tier Scissor− **0.79** < background **1.38** < Scissor+ **1.43**, and the Scissor+ fraction **peaks at the peri-lesional tier** (9.4% of PN cells vs. 8.0% of PP) — the signature of an intermediate progression state.
 
 ![alpha](figures/fig_alpha_tuning.png)
 
@@ -83,7 +83,7 @@ The **reliability test** (100 label permutations) gives real CV-MSE **0.147** vs
 | Melanocyte | 0.04× | 0.04 | 3×10⁻²⁰ | normal-tracking |
 
 ### 4.4  The gradient-tracking gene program
-Scissor+ vs. background DE yields **1,861 genes at padj < 0.05**; top up-regulated genes are vascular/endothelial (**CCL14, ACKR1, RAMP3, PLVAP, APLNR, CYTL1, SPNS2**). **STAT3** is significant (**log2FC 0.43, padj 0.018**) but modest — the program is vascular-led, not STAT3-led.
+Scissor+ vs. background DE yields **1,861 genes at padj < 0.05**; top up-regulated genes are vascular/endothelial (**CCL14, ACKR1, RAMP3, PLVAP, APLNR, CYTL1, SPNS2**). On the backbone, **STAT3** is significant (**log2FC 0.43, padj 0.018**) but modest. At **full census this reverses**: STAT3 is not significant (log2FC 0.30, p = 0.12, padj = 1; 42.7% vs 44.9% of cells expressing), confirming that the program is vascular-led, not STAT3-led — the STAT3 signal was a small-subset effect that does not hold at full resolution.
 
 ![program](figures/fig_gradient_program.png)
 
@@ -91,7 +91,7 @@ Scissor+ vs. background DE yields **1,861 genes at padj < 0.05**; top up-regulat
 
 ![stat3](figures/fig_stat3.png)
 
-*STAT3 expression across Scissor classes: significantly elevated in Scissor+ (log2FC 0.43, padj 0.018).*
+*STAT3 expression across Scissor classes on the 20k backbone: elevated in Scissor+ (log2FC 0.43, padj 0.018). Note: this significance does not survive the full census (log2FC 0.30, p = 0.12, padj = 1).*
 
 
 ### 4.5  Orthogonal validation by bulk deconvolution
@@ -114,16 +114,16 @@ The three strongest-signal lineages are concordant: the endothelial signal refle
 
 
 ## 5  Discussion
-The reframing yields a coherent, reproducible signal: a gradient-tracking population that is monotonic on NN→PN→PP, peaks at the peri-lesional margin, survives two orthogonal significance controls, and is corroborated by bulk deconvolution. The dominant biology is **vascular** — endothelial expansion and an angiogenic program — consistent with the histology of psoriatic progression and directing attention to the dermal vasculature at the advancing edge, not only the epidermal keratinocyte compartment. STAT3 participates in the expected direction but is not the driver; any role appears embedded in a broader vascular/inflammatory circuit.
+The reframing yields a coherent, reproducible signal: a gradient-tracking population that is monotonic on NN→PN→PP, peaks at the peri-lesional margin, survives two orthogonal significance controls, and is corroborated by bulk deconvolution. The dominant biology is **vascular** — endothelial expansion and an angiogenic program — consistent with the histology of psoriatic progression and directing attention to the dermal vasculature at the advancing edge, not only the epidermal keratinocyte compartment. STAT3 shows the expected direction only at backbone scale and loses significance at full census, so it is clearly not the driver of the gradient-tracking program; any role appears embedded in a broader vascular/inflammatory circuit rather than as a marker of the gradient itself.
 
 ## 6  Limitations
-- **Backbone scale** — 20,023-cell subset; full census staged for cluster (directionality expected to hold).
+- **Backbone vs. full census** — primary results shown on the 20,023-cell subset; the full census (89,058 cells) has now been run and confirms the structural findings (endothelial-led, monotonic gradient, significance controls) but revises STAT3 to non-significant. §4 figures still depict the backbone pending a full-census figure refresh.
 - **Solver** — validated pure-R reimplementation, not compiled APML1; cross-check planned.
 - **Single bulk anchor** — Tier-1 uses SRP165679 only.
 - **Deconvolution method** — transparent NNLS, not a benchmarked choice.
 
 ## 7  Next steps
-1. Full-census run (89,058 cells) on the cluster.
+1. ~~Full-census run (89,058 cells) on the cluster.~~ **Done** (SLURM 56882314; alpha=0.20, 14.67% selected; endothelial OR 5.24; STAT3 n.s.). Remaining: refresh §4 figures from the full-census object.
 2. Compiled-Scissor cross-check.
 3. Benchmarked deconvolution (deconvBenchmarking).
 4. Robustness tiers — additional bulk anchors / tier definitions.
