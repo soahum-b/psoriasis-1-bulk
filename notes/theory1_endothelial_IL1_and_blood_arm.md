@@ -80,11 +80,17 @@ blood — so a circulation arm is the right addition. mLOY (theory 2) is also a 
 | SRP173378 | Whole blood | GPP | 9 GPP / 7 healthy | 16 | Marginal — mixed blood |
 | SRP132160 | PBMC | GPP | GPP only, acitretin-treated | 15 | Not usable alone — no healthy ctrl, drug-treated |
 
-**Honest limit:** every recount3 psoriasis blood study is **Generalized Pustular Psoriasis (GPP)** —
-a distinct, rarer subtype from the plaque psoriasis (PsV) of the skin arm — and all are small. So
-recount3 cannot supply a matched plaque-psoriasis PBMC bulk arm. For a proper two-part story the blood
-single-cell/bulk data would need to come from GEO/ArrayExpress plaque-psoriasis PBMC datasets (to be
-screened), not recount3. The GPP studies remain useful as a *pustular-subtype* sensitivity check.
+**Honest limit + scope of what was screened:** the three psoriasis blood accessions checked here
+(SRP173379/SRP173378/SRP132160 — pre-selected from prior domain knowledge, *not* an exhaustive search)
+are **all Generalized Pustular Psoriasis (GPP)** — a distinct, rarer subtype from the plaque psoriasis
+(PsV) of the skin arm — and all small. This is *not* a comprehensive recount3 census: the full 8,677-
+project SRA table has no disease/tissue columns to filter on, so a definitive "no plaque-psoriasis PBMC
+bulk exists in recount3" claim would require a per-project title/metadata scan that has **not** been run.
+What is established: the known/obvious psoriasis blood studies are GPP, so recount3 does not *readily*
+supply a matched plaque-psoriasis PBMC bulk arm. For a proper two-part story the blood data most likely
+needs to come from GEO/ArrayExpress plaque-psoriasis PBMC datasets (to be screened). The GPP studies
+remain useful as a *pustular-subtype* sensitivity check. **Open task:** run a title-keyword scan across
+the recount3 SRA table before concluding recount3 has no usable plaque-psoriasis blood study.
 
 ## Theory 2 (loss-of-Y, male severity) — feasibility in current data
 
