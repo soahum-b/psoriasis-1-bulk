@@ -2,7 +2,7 @@
 
 The DEFINITIVE list of every file a remote job needs. Check each off before submitting.
 
-## Job: Scissor full-census (SLURM 56882314 — COMPLETED 2026-07-14)
+## Job: Scissor full-census (SLURM 56882314 — completed; results_full dated Jul 13–14)
 | File | Staged? | Notes |
 |---|---|---|
 | `code/run_full_census_cluster.R` | [x] | driver: build ref, tune alpha, solve, significance |

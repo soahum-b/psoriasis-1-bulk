@@ -4,7 +4,7 @@ Chronological record of what was tried, what happened, and WHICH artifact/figure
 
 ## 2026-07-13/14 — Scissor full-census cluster run
 - **Did:** submitted `code/run_full_census.sbatch` (SLURM job 56882314) on CSB, full 89,058-cell reference.
-- **Saw:** job ran to completion (log reaches `perm 100/100`). alpha=0.40 → 6,422 Scissor+ / 5,981 Scissor− = 13.9% selected (backbone was 14.84%). Reliability real CV-MSE 0.135 vs null ~0.835.
+- **Saw:** job ran to completion (log reaches `perm 100/100`). Final saved selection (from `results_full` object, `table(scissor)`): **6,837 Scissor+ / 6,228 Scissor− = 14.67% selected** (backbone was 14.84%). NOTE: this differs from the 6,422/5,981 alpha=0.40 tuning-grid log line I first mis-quoted; the object is authoritative. The exact alpha the final run selected is NOT yet verified (tuning.rds read was blocked by a cluster-proxy outage) — confirm from `scissor_tuning.rds` before citing an alpha. Reliability real CV-MSE 0.135 vs null ~0.835. NOTE: STAT3 does NOT survive at full census (log2FC 0.30, p=0.12, padj=1; 42.7% vs 44.9% expressing) — the backbone's "STAT3 sig, padj 0.018" was a subset effect; the program stays vascular-led (endothelial OR 5.24, top lineage).
 - **Produced:** `results_full/{reference_scissor_full.rds (1.2 GB), gradient_program_DE.csv, reliability_test.rds, permutation_null.rds}`.
 - **Refs:** Sun 2022 (Scissor).
 
