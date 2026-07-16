@@ -1,0 +1,4 @@
+study,tissue,disease_subtype,groups,n,note,verdict
+SRP173379,Neutrophils (sorted),GPP,8 GPP / 11 healthy,19,Sorted neutrophils — not PBMC; GPP subtype,Marginal
+SRP173378,Whole blood,GPP,9 GPP / 7 healthy,16,Whole blood — mixed; GPP subtype,Marginal
+SRP132160,PBMC,GPP,"GPP only, acitretin-treated",15,PBMC but NO healthy controls + drug-treated,Not usable alone
