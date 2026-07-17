@@ -28,12 +28,13 @@ Static snapshot. Update checkboxes as steps complete.
 - [x] Figure + writeup (`fig_theory1_endothelial_IL1.png`, `notes/theory1_endothelial_IL1_and_blood_arm.md`)
 - [ ] Literature integration into references.md (psoriatic march; IL-1 early; S1PR3-STAT3)
 
-## Phase 4 — Blood / circulation arm (two-part story: skin + blood)
-- [x] recount3 blood screen → known psoriasis-blood = GPP-only (EXCLUDED per user)
-- [x] ERP110814 baseline feasibility (plaque psoriasis blood; wk-0 recoverable via SDRF)
-- [ ] **Include ERP110814 baseline** (10 tx-naive PP blood; join SDRF time → recount3 ERR ids)
-- [ ] Screen GEO/CELLxGENE for plaque-psoriasis PBMC single-cell + a healthy-blood control
-- [ ] Systemic IL-1/myeloid-priming test in blood (closes the paracrine loop's source end)
+## Phase 4 — Blood / circulation arm — DROPPED (2026-07-17)
+- [x] recount3 blood screen → known psoriasis-blood = GPP-only (excluded)
+- [x] ERP110814 baseline ingested (10 tx-naive plaque-psoriasis blood, wk-0 via SDRF)
+- [~] Healthy control: GTEx whole blood is the only in-recount3 option, but it is perfectly
+      study-batch confounded with ERP110814 (disease aliased with lab/prep; globin 0.05% vs 37%).
+- **DROPPED** per user: cross-study case/control is uninterpretable. Would need a single
+  study with both plaque-psoriasis and healthy blood (not in recount3). Not pursued.
 
 ## Phase 5 — Theory 2: sex / mosaic loss of Y (male severity)
 - [x] Sex-inference feasibility in skin data (Y-genes vs XIST) — VIABLE
