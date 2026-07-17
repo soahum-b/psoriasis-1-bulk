@@ -13,6 +13,18 @@
 4. **Significance** — reliability test (100 label permutations) + selection permutation null (30 shuffled-label reruns).
 5. **Interpretation** — cell-type enrichment (Fisher) of Scissor± vs background; gradient-program DE (Scissor+ vs Background, `FindMarkers`, logfc.threshold=0.1, min.pct=0.1); orthogonal NNLS bulk deconvolution concordance.
 
+## Arm C — Theory 1: IL-1-responsive endothelium (single-cell, full census)
+1. **Receptor localization** — % expressing IL1B (ligand) vs IL1R1/IL1R2/IL1RAP (receptor complex) per cell type (FetchData over the 89k object); establishes source (DC) vs responder (endothelium/fibroblast).
+2. **Gradient enrichment** — within endothelium, Fisher exact of IL1R1+ vs IL1R1− against Scissor+ vs Background (OR + p).
+3. **Conditional co-expression** — % expressing STAT3/IL6/NFKB1/CASP1/GSDMD/PYCARD in IL1R1+ vs IL1R1− endothelial cells.
+4. **Direction** — endothelium PP vs NN (`FindMarkers`, no thresholds) over a 16-gene IL-1/adhesion/atherosclerosis set; BH-FDR over the set.
+   Outputs: `figures/fig_theory1_endothelial_IL1.png`, `notes/theory1_endothelial_IL1_and_blood_arm.md`.
+
+## Arm D — Blood / circulation (planned)
+1. **recount3 blood screen** — psoriasis blood/PBMC studies; known set (SRP173379/78, SRP132160) all GPP → excluded (subtype mismatch).
+2. **ERP110814 baseline** — join ArrayExpress SDRF (E-MTAB-6555) `Factor Value[time]` to recount3 `external_id` (ENA run); keep week-0 (10 tx-naive plaque-psoriasis blood). No healthy ctrl → pair with an external healthy-blood dataset (to be sourced).
+3. **Sex inference** (theory 2) — per-donor Y-gene (RPS4Y1/DDX3Y/UTY/EIF1AY/KDM5D/USP9Y) vs XIST expression; sex-stratified skin analysis feasible now, mLOY needs blood.
+
 ## Multiple-testing correction (protocol — applies to ALL arms)
 - **BH-FDR** (`p.adjust(method="BH")`), q < 0.05, is the significance rule throughout: bulk meta-analysis (Arm A), single-cell gradient-program DE and cell-type enrichment (Arm B), and deconvolution trend tests.
 - **Seurat caveat:** `FindMarkers` returns `p_val_adj` as **Bonferroni** (p × n_genes), NOT BH. For the single-cell arm we therefore recompute `fdr_BH = p.adjust(p_val, "BH")` over the tested gene family and report that, not Seurat's `p_val_adj`. (Full-census gradient program: 3,903/4,541 genes at BH q<0.05; STAT3 raw p=0.117 → BH q=0.13, n.s.)
@@ -34,3 +46,8 @@
 | `results_full/gradient_program_DE.csv` | full-census gradient program |
 | `WHITEPAPER.md` | Arm-B Scissor progression-gradient paper |
 | `HANDOFF.md` | Arm-B status / reproduce / next steps |
+| `results_full/gradient_program_DE_BH.csv` | full-census gradient program with BH-FDR column (4,541 genes) |
+| `results_full/celltype_enrichment_BH.csv` | full-census cell-type enrichment, BH-FDR |
+| `figures/fig_theory1_endothelial_IL1.png` | Arm-C: IL1R1+ endothelium enrichment + downstream program + PP-vs-NN panel |
+| `notes/theory1_endothelial_IL1_and_blood_arm.md` | Arm-C writeup + blood-arm feasibility |
+| `results/blood_arm_feasibility_recount3.csv` | recount3 blood screen (GPP-only) |

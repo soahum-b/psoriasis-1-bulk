@@ -18,3 +18,9 @@ Chronological record of what was tried, what happened, and WHICH artifact/figure
 - **Did:** confirmed GSE173706 is 10x droplet → isoform-by-cell-type infeasible per-cell. Applied project-setup skill (additive) to the cluster repo.
 - **Saw:** full-census results already present on n003; no re-run needed.
 - **Produced:** `RESUME_il1b_stat3_session.md` (7dd05578); docs/ + notes/ + cluster/ skeleton (this scaffolding).
+
+## 2026-07-16/17 — Full-census validation, BH-FDR audit, theory 1, blood-arm scoping
+- **Did:** validated full-census object; applied protocol BH-FDR to single-cell arm (was Seurat Bonferroni); corrected WHITEPAPER §4 STAT3 to n.s.; ran theory-1 (IL-1 receptor localization, IL1R1×Scissor enrichment, endothelium PP-vs-NN); screened recount3 blood (GPP-only, excluded); examined ERP110814/ERP110816 baseline via ArrayExpress SDRF; sex-inference feasibility.
+- **Saw:** STAT3 BH q=0.13 (n.s.); gradient program 3,903/4,541 at BH<0.05. Theory-1: IL1R1+ endothelium is the gradient-tracking, STAT3/inflammasome-active population (Fisher OR 2.32, p 1.4e-38); IL1R1 early-high (down in lesional, log2FC −1.12). Blood: known recount3 psoriasis-blood = GPP; ERP110814 = plaque-psoriasis blood, wk-0 baseline recoverable via SDRF `Factor Value[time]` (corrects earlier "no timepoint field") but no healthy ctrl. Sex cleanly inferable (Y-genes vs XIST, ~20M/~10F).
+- **Produced:** `results_full/gradient_program_DE_BH.csv` (77c061df), `celltype_enrichment_BH.csv` (29ba858c), WHITEPAPER.md v2 (63b78805), METHODS.md v2 (76c95368), `fig_theory1_endothelial_IL1.png` (93ad7fe6), `theory1_endothelial_IL1_and_blood_arm.md` (1a3e3584), `blood_arm_feasibility_recount3.csv` (45450d34). Cluster commits e470eca, 0aa3093, 31b6a3c.
+- **Refs:** psoriatic march (Front Med 2022;864185); IL-1 early / IL-1R progression (PMC6392027); S1PR3-STAT3 (s41419-025-07358-w); mLOY-CV (Nat Rev Cardiol 2023; Science abn3100).

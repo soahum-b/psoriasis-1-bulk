@@ -23,9 +23,25 @@ differently-scoped earlier one.
 - `focus_contrast = PP-vs-NN, peri-lesional excluded  [bulk, design, by:user]`  (PN contrast underpowered: only k=2 studies, 1/49 panel genes significant)
 - `study_constraint = must contain both NN and PP (NOT three-tier)  [bulk, ruling, by:agent]`  (corrects an earlier misstatement; SRP035988 has PN=0 yet qualifies)
 - `expand_studies = add SRP065812 → k=4  [bulk, design, by:agent]`  (16 healthy NN + 18 pre-adalimumab PP; drop 18 post-tx)
-- `exclude_ERP110816  [bulk, ruling, by:agent]`  (all patients on etanercept/anti-TNF confounds TNF→IL-1→STAT3; no timepoint field to isolate treatment-naive baseline)
+- `exclude_ERP110816_from_PPvsNN  [bulk, ruling, by:agent]`  (skin, all on etanercept/anti-TNF; **CORRECTION**: timepoint IS recoverable — `Factor Value[time]` in the ArrayExpress SDRF E-MTAB-6556, dropped by recount3 — so week-0 baseline can be isolated; real reason it stays out of the PP-vs-NN meta is that baseline has only lesional+uninvolved, **no healthy NN**. Available for a PP-vs-PN sensitivity check only.)
 - `pooled_normal_design = lesional vs all-normal pooled + control-type moderator + donor random effect  [bulk, design, by:user]`  (pooling healthy+uninvolved is not double-dipping; pre-specify one primary contrast)
 - `whitepaper_split = k=4 IL-1β/STAT3 documented as a separate meta-analysis section, NOT folded into the Scissor WHITEPAPER  [doc, ruling, by:agent]`  (different arm; avoids muddling two stories)
+
+### Theory 1 — IL-1-responsive vascular endothelium (psoriasis→atherosclerosis)
+- `theory1_reframe = DC→endothelial paracrine model  [analysis, ruling, by:agent]`  (IL-1β is DC-produced, not endothelial (48% of DCs vs 0.2% endo); vessels carry the RECEPTOR (IL1R1 ~29% of endo). Source and responder are spatially separate.)
+- `theory1_finding = IL1R1+ endothelium IS the gradient-tracking, STAT3/inflammasome-active population  [analysis, result, by:agent]`  (within endothelium, IL1R1+ cells 2.3× enriched in Scissor+ (Fisher OR 2.32, p 1.4e-38); IL1R1+ vs IL1R1- co-express more STAT3 66/40, IL6 31/13, NFKB1 28/13, CASP1 20/10, GSDMD 51/30, PYCARD 38/19. Figure: `figures/fig_theory1_endothelial_IL1.png`.)
+- `theory1_direction = IL-1 responsiveness is early/constitutive, not late  [analysis, ruling, by:agent]`  (endothelial IL1R1 DOWN in lesional vs normal (log2FC −1.12, BH q≈0; tier 51%→29%→27%) — consistent with IL-1 as an initiating signal that desensitizes as lesions establish.)
+
+### Circulation / blood arm ("two-part story": skin + blood)
+- `blood_arm = add a circulation arm to test systemic IL-1/myeloid priming + the atherosclerosis link  [design, by:user]`  (paracrine IL-1β source is systemic; mLOY is a blood-cell phenomenon — blood data serves both theories.)
+- `exclude_GPP = do NOT include generalized pustular psoriasis  [blood, constraint, by:user]`  (GPP is a distinct, rarer subtype from plaque psoriasis; the recount3 psoriasis-blood studies SRP173379/78/SRP132160 are all GPP → dropped from the blood arm.)
+- `recount3_is_bulk_only  [data, ruling, by:agent+user]`  (no single-cell in recount3; the circulating SINGLE-CELL PBMC arm must come from GEO/CELLxGENE, not recount3.)
+- `ERP110814_baseline = usable blood-arm input (PENDING inclusion)  [blood, proposal, by:agent]`  (blood, severe PLAQUE psoriasis (not GPP), bulk RNA-seq; 10 treatment-naive week-0 samples recoverable via ArrayExpress SDRF E-MTAB-6555 `Factor Value[time]`, joined to recount3 by ENA run id. CAVEAT: no healthy controls — needs an external healthy-blood reference to form a contrast.)
+- `blood_open_task = screen GEO/ArrayExpress for plaque-psoriasis PBMC + a healthy-blood control  [blood, todo, by:agent]`  (recount3 known psoriasis-blood = GPP-only; a full recount3 title census is not available via the API.)
+
+### Theory 2 — sex / mosaic loss of Y (mLOY), male severity
+- `theory2_sex_feasible_in_skin = YES  [analysis, ruling, by:agent]`  (sex cleanly inferable per donor from Y-genes RPS4Y1/DDX3Y/UTY/EIF1AY/KDM5D/USP9Y vs XIST; ~20 male / ~10 female donors → sex-stratified skin analysis feasible now.)
+- `theory2_mLOY_needs_blood  [analysis, ruling, by:agent]`  (mLOY is hematopoietic Y-dropout vs diploid baseline — cannot be established from skin biopsy; requires the PBMC/blood arm. Deferred per user "we can test it later".)
 
 ### Isoforms
 - `isoform_by_celltype = infeasible per-cell with GSE173706  [ruling, by:agent]`  (10x short-read cannot resolve STAT3α/β C-terminal splice; needs Smart-seq/long-read; indirect ecological correlation available as fallback)

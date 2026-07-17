@@ -18,6 +18,9 @@
 | Bulk phenotype anchor (Scissor arm) | **SRP165679** (Tsoi et al. 2019, recount3) | only tier-balanced study; `data/rse_SRP165679.rds` |
 | Bulk meta-analysis studies (PP-vs-NN) | **SRP035988, SRP165679, SRP126422, SRP065812** | recount3; all treatment-free; k=4 set |
 | Bulk candidate pool | 23 human recount3 psoriasis studies | screened in `study_eligibility_PPvsNN.csv` |
+| Blood arm candidate | **ERP110814** (E-MTAB-6555, Tsoi/QMUL) | blood, PLAQUE psoriasis; wk-0 baseline (10 tx-naive) recoverable via ArrayExpress SDRF; no healthy ctrl |
+| Blood arm — EXCLUDED | SRP173379 / SRP173378 / SRP132160 | all Generalized Pustular Psoriasis (GPP) — different subtype; dropped per user |
+| Blood — needed | plaque-psoriasis PBMC single-cell + healthy-blood control | to be screened in GEO/CELLxGENE (recount3 is bulk-only) |
 
 ## Outputs
 - Cluster repo: `results/` (small CSVs tracked), `results_full/` (large RDS, gitignored), `figures/`.

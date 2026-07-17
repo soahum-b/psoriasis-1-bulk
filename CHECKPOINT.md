@@ -3,14 +3,17 @@
 Lightweight state snapshot — overwrite each checkpoint. Large serialized state lives in the
 artifact store / `results_full/`, referenced by ID below.
 
-## As of 2026-07-16
+## As of 2026-07-17
 - **Running now:** nothing for this project. (Unrelated `md_prod` GPU array 56887578 is a different project.)
-- **Last completed:** Arm-A bulk k=4 IL-1β/STAT3 meta-analysis + writeup; project-setup scaffolding (additive) into this repo.
-- **Next:** retrieve + validate Scissor full-census numbers vs the 20k backbone (job 56882314 already finished on n003); then update WHITEPAPER.md §4 and re-render.
+- **Last completed:** full-census validation + protocol BH-FDR audit (STAT3 q=0.13 n.s.; WHITEPAPER §4 corrected); Theory-1 endothelial IL-1 analysis (IL1R1+ endothelium = gradient-tracking/STAT3-inflammasome-active, OR 2.32); blood-arm scoping (GPP excluded; ERP110814 baseline usable; needs healthy-blood ctrl); all .md docs synced.
+- **Next:** (1) include ERP110814 wk-0 baseline (SDRF→recount3 join) + source a healthy-blood control; (2) screen GEO/CELLxGENE for plaque-psoriasis PBMC single-cell; (3) sex-stratified skin pass (theory 2 down payment); (4) re-render WHITEPAPER HTML/PDF; (5) regenerate §4 figures from 89k object.
 - **Key IDs:**
   - Scissor full-census SLURM job: **56882314** (completed) → `results_full/`
   - Cluster repo: `~/Soahum/Project/psoriasis/psoriasis-1-bulk` (n003, git)
   - Artifacts: IL1B_STAT3_expanded_analysis.md `1ad8ca91`, k=4 forest `44e10919`, k=4 meta CSV `1ec80908`, k3-vs-k4 panel `34f3b909`, eligibility `8099b3fa`, resume note `7dd05578`
   - Full-census headline (verified from `results_full` object): **alpha=0.20, 6,837 Scissor+ / 6,228 Scissor− = 14.67% selected**; reliability CV-MSE 0.135 vs null ~0.835. See `fullcensus_vs_backbone.csv` (artifact 223ced02). Note: full-census tuning settled at alpha=0.20 (backbone used 0.40) — verified `scissor_tuning.rds$chosen$alpha`.
-  - **STAT3 correction:** at full census STAT3 is n.s. in the Scissor+ program (log2FC 0.30, p=0.12, padj=1) — the backbone's "sig, padj 0.018" was a subset effect. WHITEPAPER §4 STAT3 sentence must be corrected on the next update; endothelial-led thesis is unchanged (OR 5.24, top lineage).
+  - **STAT3 status (DONE):** at full census STAT3 is n.s. under protocol BH-FDR (log2FC 0.30, raw p=0.12, **BH q=0.13**; Seurat's padj=1 was Bonferroni). WHITEPAPER §4 corrected (v2, 63b78805); METHODS codifies BH rule. Endothelial-led thesis unchanged (OR 5.24, top lineage). Gradient program 3,903/4,541 at BH<0.05.
+  - **Theory-1 artifacts:** fig `93ad7fe6`, writeup `1a3e3584`, blood feasibility `45450d34`, BH tables `77c061df`/`29ba858c`.
+  - **Blood arm:** GPP studies excluded (user); ERP110814 = plaque-psoriasis blood, wk-0 recoverable via ArrayExpress SDRF E-MTAB-6555 `Factor Value[time]` joined to recount3 ENA-run ids (10 tx-naive PP, no healthy ctrl). ERP110816 skin baseline has no NN → PP-vs-PN sensitivity only.
+  - **Cluster commits (local):** e470eca (BH-FDR), 0aa3093 (theory-1), 31b6a3c (blood-claim softening).
 - **Blocked on:** git push credentials unresolved (local commits only, no push). Cluster node name changes per session — re-register.
