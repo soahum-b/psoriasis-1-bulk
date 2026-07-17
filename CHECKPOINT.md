@@ -3,7 +3,13 @@
 Lightweight state snapshot — overwrite each checkpoint. Large serialized state lives in the
 artifact store / `results_full/`, referenced by ID below.
 
-## As of 2026-07-17
+## As of 2026-07-17 (pm — pausing, resume tomorrow)
+- **Blood bulk arm: DROPPED** (ERP110814-vs-GTEx study-batch confounded). **Loss-of-Y in skin: clean NEGATIVE** (RNA proxy at dropout floor, no disease trend; genomic mLOY needs blood). Both documented + committed (5e56b4a + this doc sync).
+- **Resume tomorrow with:** Theory-2 Part A — sex-stratified analysis of the SKIN data (feasible now, no blood; sex already called: 21M/12F donors). Prompt drafted: `PROMPT_theory2_sex_mLOY.md` (artifact f202208b) if run in a fresh chat.
+- **Defensible arms standing:** A (bulk k=4 PP-vs-NN meta), B (Scissor gradient), C (Theory-1 IL1R1+ endothelium). All skin-based.
+- **Still-open (from HANDOFF):** WHITEPAPER HTML/PDF re-render; §4 figures regen from 89k object; APML1 cross-check; benchmarked deconvolution (Stage 1); Sei-LLRA sequence arm.
+
+## (earlier 2026-07-17)
 - **Running now:** nothing for this project. (Unrelated `md_prod` GPU array 56887578 is a different project.)
 - **Last completed:** full-census validation + protocol BH-FDR audit (STAT3 q=0.13 n.s.; WHITEPAPER §4 corrected); Theory-1 endothelial IL-1 analysis (IL1R1+ endothelium = gradient-tracking/STAT3-inflammasome-active, OR 2.32); blood-arm scoping (GPP excluded; ERP110814 baseline usable; needs healthy-blood ctrl); all .md docs synced.
 - **Next:** (1) include ERP110814 wk-0 baseline (SDRF→recount3 join) + source a healthy-blood control; (2) screen GEO/CELLxGENE for plaque-psoriasis PBMC single-cell; (3) sex-stratified skin pass (theory 2 down payment); (4) re-render WHITEPAPER HTML/PDF; (5) regenerate §4 figures from 89k object.

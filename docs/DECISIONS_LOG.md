@@ -41,6 +41,7 @@ differently-scoped earlier one.
 ### Theory 2 — sex / mosaic loss of Y (mLOY), male severity
 - `theory2_sex_feasible_in_skin = YES  [analysis, ruling, by:agent]`  (sex cleanly inferable per donor from Y-genes RPS4Y1/DDX3Y/UTY/EIF1AY/KDM5D/USP9Y vs XIST; ~20 male / ~10 female donors → sex-stratified skin analysis feasible now.)
 - `theory2_mLOY_needs_blood  [analysis, ruling, by:agent]`  (mLOY is hematopoietic Y-dropout vs diploid baseline — cannot be established from skin biopsy; requires the PBMC/blood arm. Deferred per user "we can test it later".)
+- `LOY_skin_check = clean NEGATIVE  [analysis, result, by:agent]`  (2026-07-17 exploratory: RNA-level Y-gene-expression proxy in skin. 21 male donors / 65,524 male cells. Y-silent fraction is depth-driven (31.5% at low depth → 1.4% at high depth = dropout floor) and does NOT track disease tier (NN 0.6 → PN 3.3 → PP 1.2, non-monotonic). No loss-of-Y-expression signal above technical dropout. Note: RNA Y-gene EXPRESSION is measurable (this is what we did); GENOMIC mLOY still needs DNA/blood. See `notes/lossofY_skin_check.md`.)
 
 ### Isoforms
 - `isoform_by_celltype = infeasible per-cell with GSE173706  [ruling, by:agent]`  (10x short-read cannot resolve STAT3α/β C-terminal splice; needs Smart-seq/long-read; indirect ecological correlation available as fallback)
