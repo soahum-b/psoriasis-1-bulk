@@ -52,7 +52,7 @@ The backbone runs on a **stratified 20,023-cell subset**. Tuning gave **alpha=0.
 
 ![alpha]({{artifact:art_d4e8addf-04d0-4fe6-a82b-5665e04e4186}})
 
-*Scissor alpha tuning. Selected fraction across the graph-smoothing grid; alpha=0.40 was chosen (14.84% selected, under the 20% cutoff).*
+*Scissor alpha tuning (full census). Selected fraction across the graph-smoothing grid; alpha=0.20 was chosen (14.67% selected, under the 20% cutoff). The backbone had re-tuned to alpha=0.40 (14.84%); the figure now depicts the full-census tuning.*
 
 ![scissor_umap]({{artifact:art_7a0f1fbc-1749-4bc3-839f-18fd1c68398a}})
 
