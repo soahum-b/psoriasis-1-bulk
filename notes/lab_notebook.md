@@ -28,3 +28,17 @@ Chronological record of what was tried, what happened, and WHICH artifact/figure
 ## 2026-07-17 (pm) — Blood arm dropped; loss-of-Y skin check (negative)
 - **Blood arm:** ingested ERP110814 baseline (10 tx-naive plaque-psoriasis blood, wk-0 via ArrayExpress SDRF E-MTAB-6555). Only in-recount3 healthy control is GTEx whole blood → perfectly study-batch confounded (disease aliased with lab/prep; globin 0.05% vs 37%, ~10yr age gap). **DROPPED** per user (uninterpretable cross-study case/control). Commit 5e56b4a.
 - **Loss-of-Y (RNA proxy) in skin:** 21 male donors / 65,524 male cells. Y-silent fraction is depth-driven (31.5%→1.4% low→high depth = dropout) and does not track disease tier. Clean negative; genomic mLOY still needs blood/DNA. See `notes/lossofY_skin_check.md`.
+
+## 2026-07-17 — Project audit + reproducibility sync
+- **Did:** independent audit of all arms/artifacts + granted folders + cluster repo; verified git
+  state; regenerated WHITEPAPER §4 figures from the 89k full-census object.
+- **Saw:** git already fully pushed — cluster `main` (ee40082) == GitHub `origin/main` (public);
+  the "blocked on push credentials" CHECKPOINT note was stale. Figure regen (`regen_fig4_fullcensus.R`,
+  SLURM 56889747 on n011, EXIT 0) confirmed full-census numbers: selection-null gap 0.382 vs null
+  0.019 (backbone had reported 0.638), alpha re-tuned to 0.20, STAT3 panel n.s. (BH q=0.13). Audit
+  flags the systematic target/druggability table (Open Targets/ChEMBL) as the largest remaining
+  scientific gap (P1).
+- **Produced:** `PROJECT_AUDIT.md` (+ PDF); `code/regen_fig4_fullcensus.R`; `figures_full/` (6 PNGs);
+  figures saved as artifact v2 over backbone versions (WHITEPAPER §4 inline figures now full-census);
+  WHITEPAPER.md v3 (caption/limitation text updated); removed stray lowercase `checkpoint.md`.
+- **Refs:** Scissor (Sun 2022); recount3.

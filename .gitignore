@@ -30,3 +30,4 @@ scissor_src.tar.gz
 # Small tracked inputs (labels/manifest — NOT regenerable bulk data):
 !data/sample_classification.rds
 !data/sample_manifest.csv
+psor_fig4_*.out

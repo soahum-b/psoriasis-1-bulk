@@ -51,3 +51,6 @@
 | `figures/fig_theory1_endothelial_IL1.png` | Arm-C: IL1R1+ endothelium enrichment + downstream program + PP-vs-NN panel |
 | `notes/theory1_endothelial_IL1_and_blood_arm.md` | Arm-C writeup + blood-arm feasibility |
 | `results/blood_arm_feasibility_recount3.csv` | recount3 blood screen (GPP-only) |
+| `code/regen_fig4_fullcensus.R` | regenerates WHITEPAPER §4 figures from the 89k full-census object → `figures_full/` |
+| `figures_full/*.png` | full-census §4 figures (alpha tuning, Scissor UMAP, composition, significance controls, gradient-program volcano, STAT3) — replace the 20k-backbone figures |
+| `PROJECT_AUDIT.md` | independent project audit: arm status, prioritised gaps, step-by-step walkthrough |

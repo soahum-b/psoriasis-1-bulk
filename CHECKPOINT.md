@@ -3,6 +3,24 @@
 Lightweight state snapshot — overwrite each checkpoint. Large serialized state lives in the
 artifact store / `results_full/`, referenced by ID below.
 
+## As of 2026-07-17 (audit + reproducibility sync)
+- **Independent project audit produced** → `PROJECT_AUDIT.md` (+ PDF): arm-by-arm status,
+  prioritised gaps (P1 = systematic target/druggability table is the thinnest layer), and a
+  step-by-step walkthrough. Copied to local `Recount-3/PROJECT_AUDIT.md`.
+- **Git push: NOT blocked (stale note corrected).** Cluster `main` (ee40082) == GitHub
+  `origin/main` (public, pushed 2026-07-17). The three "local-only" commits (e470eca, 0aa3093,
+  31b6a3c) are ancestors of the pushed HEAD — already on GitHub. The earlier "blocked on push
+  credentials" note was stale.
+- **§4 figures regenerated from the 89k full-census object** (DONE). `regen_fig4_fullcensus.R`
+  (SLURM job 56889747, n011) → `figures_full/{alpha_tuning, scissor_umap, scissor_composition,
+  significance, gradient_program, stat3}.png`. All six saved as artifact v2 over the backbone
+  figures, so WHITEPAPER §4 inline figures now resolve to full-census. Selection-null gap now
+  0.382 vs null 0.019; STAT3 panel carries the n.s. (BH q=0.13) verdict.
+- **Stray lowercase `checkpoint.md` removed** (superseded by this CHECKPOINT.md).
+- **Still-open (unchanged):** systematic target/druggability table (P1); CMap/LINCS reversal;
+  sex-stratified skin pass; APML1 cross-check; benchmarked deconvolution; Sei-LLRA arm; blood arm
+  (needs non-recount3 internally-controlled dataset).
+
 ## As of 2026-07-17 (pm — pausing, resume tomorrow)
 - **Blood bulk arm: DROPPED** (ERP110814-vs-GTEx study-batch confounded). **Loss-of-Y in skin: clean NEGATIVE** (RNA proxy at dropout floor, no disease trend; genomic mLOY needs blood). Both documented + committed (5e56b4a + this doc sync).
 - **Resume tomorrow with:** Theory-2 Part A — sex-stratified analysis of the SKIN data (feasible now, no blood; sex already called: 21M/12F donors). Prompt drafted: `PROMPT_theory2_sex_mLOY.md` (artifact f202208b) if run in a fresh chat.
@@ -22,4 +40,6 @@ artifact store / `results_full/`, referenced by ID below.
   - **Theory-1 artifacts:** fig `93ad7fe6`, writeup `1a3e3584`, blood feasibility `45450d34`, BH tables `77c061df`/`29ba858c`.
   - **Blood arm:** GPP studies excluded (user); ERP110814 = plaque-psoriasis blood, wk-0 recoverable via ArrayExpress SDRF E-MTAB-6555 `Factor Value[time]` joined to recount3 ENA-run ids (10 tx-naive PP, no healthy ctrl). ERP110816 skin baseline has no NN → PP-vs-PN sensitivity only.
   - **Cluster commits (local):** e470eca (BH-FDR), 0aa3093 (theory-1), 31b6a3c (blood-claim softening).
-- **Blocked on:** git push credentials unresolved (local commits only, no push). Cluster node name changes per session — re-register.
+- **Blocked on:** ~~git push credentials unresolved~~ **RESOLVED** — cluster `main` == GitHub
+  `origin/main` (ee40082, public). Nothing unpushed. Cluster node name still changes per session
+  — re-register each session.

@@ -1,9 +1,16 @@
 # HANDOFF — Scissor-on-gradient (peri-lesional psoriasis)
 
-**Status as of this handoff:** backbone complete and validated on a local
-20,023-cell subset. Ready to (a) scale to the full 89,058-cell census on a
-cluster, and (b) add orthogonal deconvolution validation. This file is the
-single source of truth for *where we are* and *what to do next*.
+**Status as of this handoff:** full 89,058-cell census complete and validated;
+§4 figures regenerated from the full-census object (`regen_fig4_fullcensus.R`,
+SLURM 56889747 → `figures_full/`, saved as artifact v2 over the backbone figures).
+Structural findings hold (endothelial-led, monotonic gradient, controls pass);
+STAT3 revised to non-significant at full census (BH q=0.13). Orthogonal
+deconvolution validation added. Git: cluster `main` == GitHub `origin/main`
+(public, synced). This file is the single source of truth for *where we are*
+and *what to do next*.
+
+> Prior status (superseded): backbone complete on the local 20,023-cell subset,
+> pending full-census scale-up + deconvolution — both now done.
 
 ---
 

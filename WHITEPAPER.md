@@ -21,11 +21,11 @@ We treat biopsy site as an **ordinal phenotype** (NN < PN < PP) and use **Scisso
 ### 2.1  Single-cell reference (GSE173706)
 Assembled from 33 per-sample count matrices: **96,088 cells × 33,538 genes**, 22 donors, all three tiers (NN 13,534; PN 35,518; PP 47,036), with **11 donors contributing paired PN+PP biopsies**. After Ensembl→symbol mapping (24,185 symbols) and QC, **89,058 cells (92.7%)** were retained; standard clustering gave 23 clusters annotated to nine broad lineages.
 
-![composition](figures/fig_ref_composition.png)
+![composition]({{artifact:art_054caac3-eed6-4990-ab03-411d801d39c4}})
 
 *Single-cell reference composition (GSE173706, Ma et al. 2023). (A) Cells per biopsy tier after QC. (B) Cells per donor, stacked by tier; 11 donors contribute paired PN+PP biopsies.*
 
-![ref_umap](figures/fig_ref_umap.png)
+![ref_umap]({{artifact:art_08f23e01-2c15-4c2d-878e-d55da50eb1b7}})
 
 *Reference UMAP (89,058 cells). (A) Nine broad lineages by canonical markers. (B) Cells colored by tier — peri-lesional (PN) cells occupy an intermediate position between normal (NN) and lesional (PP).*
 
@@ -50,15 +50,15 @@ Scissor's selection is a graph-regularized elastic net solved by a compiled rout
 ### 4.1  Selection and directionality
 The backbone runs on a **stratified 20,023-cell subset**. Tuning gave **alpha=0.40, 14.84% of cells selected** (1,574 Scissor+, 1,397 Scissor−). *(The full census subsequently re-tuned to alpha=0.20 at 14.67% selected, 6,837 Scissor+ / 6,228 Scissor− — see §6.)* Selected cells are **monotonic on the gradient**: mean tier Scissor− **0.79** < background **1.38** < Scissor+ **1.43**, and the Scissor+ fraction **peaks at the peri-lesional tier** (9.4% of PN cells vs. 8.0% of PP) — the signature of an intermediate progression state.
 
-![alpha](figures/fig_alpha_tuning.png)
+![alpha]({{artifact:art_d4e8addf-04d0-4fe6-a82b-5665e04e4186}})
 
 *Scissor alpha tuning. Selected fraction across the graph-smoothing grid; alpha=0.40 was chosen (14.84% selected, under the 20% cutoff).*
 
-![scissor_umap](figures/fig_scissor_umap.png)
+![scissor_umap]({{artifact:art_7a0f1fbc-1749-4bc3-839f-18fd1c68398a}})
 
-*Scissor selection on the reference UMAP (20k subset). Scissor+ (gradient-tracking, lesional-associated), Scissor- (normal-associated), and background cells.*
+*Scissor selection on the reference UMAP (full census, 89,058 cells). Scissor+ (gradient-tracking, lesional-associated), Scissor- (normal-associated), and background cells.*
 
-![scissor_comp](figures/fig_scissor_composition.png)
+![scissor_comp]({{artifact:art_8f1e3b16-e45e-48c8-9f62-7e5dab371551}})
 
 *Cell-type and tier composition of the Scissor-selected fractions. Scissor+ peaks at the PN/peri-lesional tier.*
 
@@ -66,7 +66,7 @@ The backbone runs on a **stratified 20,023-cell subset**. Tuning gave **alpha=0.
 ### 4.2  Significance
 The **reliability test** (100 label permutations) gives real CV-MSE **0.147** vs. null mean **0.779** (**p = 0.000**). The **selection permutation null** (30 shuffled-label reruns) collapses the positive-minus-negative tier gap from real **0.638** to null mean **−0.305** (**p = 0.000**). The selection reflects real phenotype structure, not graph geometry.
 
-![signif](figures/fig_significance.png)
+![signif]({{artifact:art_ce7c1728-4eb5-4dfd-8563-75e3c4f03f4d}})
 
 *Significance controls. (A) Reliability test: real CV-MSE vs 100 label permutations. (B) Selection permutation null: real pos-minus-neg tier gap vs 30 shuffled-label reruns.*
 
@@ -87,11 +87,11 @@ Enrichment p-values are Fisher exact; under the protocol's **BH-FDR** across lin
 ### 4.4  The gradient-tracking gene program
 Scissor+ vs. background DE yields **1,861 genes at padj < 0.05** on the backbone (Seurat-default Bonferroni); under the protocol's BH-FDR at full census the program is **3,903 of 4,541 tested genes at BH q < 0.05**. Top up-regulated genes are vascular/endothelial (**CCL14, ACKR1, RAMP3, PLVAP, APLNR, CYTL1, SPNS2**). On the backbone, **STAT3** is significant (**log2FC 0.43, padj 0.018**) but modest. At **full census this reverses**: STAT3 is not significant under the protocol's BH-FDR (log2FC 0.30, raw p = 0.12, **BH-FDR q = 0.13**; 42.7% vs 44.9% of cells expressing), confirming that the program is vascular-led, not STAT3-led — the STAT3 signal was a small-subset effect that does not hold at full resolution. All single-cell DE significance in this section follows the protocol's BH-FDR (`p.adjust(method="BH")`) over the tested gene family, replacing Seurat's default Bonferroni `p_val_adj`.
 
-![program](figures/fig_gradient_program.png)
+![program]({{artifact:art_449adcbc-efc4-4d89-98cb-f371cdf12467}})
 
 *Gradient-tracking gene program: volcano of Scissor+ vs background differential expression (1,861 genes at Bonferroni padj<0.05 on the backbone; 3,903/4,541 at BH-FDR q<0.05 at full census).*
 
-![stat3](figures/fig_stat3.png)
+![stat3]({{artifact:art_20472264-c5b9-4721-a814-44c7cf38f9f5}})
 
 *STAT3 expression across Scissor classes on the 20k backbone: elevated in Scissor+ (log2FC 0.43, padj 0.018). Note: this significance does not survive the full census (log2FC 0.30, raw p = 0.12, BH-FDR q = 0.13).*
 
@@ -110,7 +110,7 @@ NNLS deconvolution of the real SRP165679 bulk, tested for monotonic proportion t
 
 The three strongest-signal lineages are concordant: the endothelial signal reflects a **real compositional increase** in bulk tissue. Discordant cases are informative — NK cells *infiltrate* lesional tissue (bulk fraction rises) yet individual NK cells are depleted from the per-cell gradient-tracking set; keratinocytes dominate every tier. Per-cell tracking and bulk composition are different measurements that converge on clean compositional shifts and diverge otherwise.
 
-![deconv](figures/fig_deconv_validation.png)
+![deconv]({{artifact:art_2e5f091e-2575-42ad-acbe-44f4ab322554}})
 
 *Orthogonal bulk deconvolution vs Scissor direction, by cell type. Endothelial (lesional-tracking), Fibroblast and Melanocyte (normal-tracking) are concordant; NK and Keratinocyte discordant; DC non-significant.*
 
@@ -119,13 +119,13 @@ The three strongest-signal lineages are concordant: the endothelial signal refle
 The reframing yields a coherent, reproducible signal: a gradient-tracking population that is monotonic on NN→PN→PP, peaks at the peri-lesional margin, survives two orthogonal significance controls, and is corroborated by bulk deconvolution. The dominant biology is **vascular** — endothelial expansion and an angiogenic program — consistent with the histology of psoriatic progression and directing attention to the dermal vasculature at the advancing edge, not only the epidermal keratinocyte compartment. STAT3 shows the expected direction only at backbone scale and loses significance at full census, so it is clearly not the driver of the gradient-tracking program; any role appears embedded in a broader vascular/inflammatory circuit rather than as a marker of the gradient itself.
 
 ## 6  Limitations
-- **Backbone vs. full census** — primary results shown on the 20,023-cell subset; the full census (89,058 cells) has now been run and confirms the structural findings (endothelial-led, monotonic gradient, significance controls) but revises STAT3 to non-significant. §4 figures still depict the backbone pending a full-census figure refresh.
+- **Backbone vs. full census** — primary results shown on the 20,023-cell subset; the full census (89,058 cells) has now been run and confirms the structural findings (endothelial-led, monotonic gradient, significance controls) but revises STAT3 to non-significant. §4 figures have been regenerated from the full-census object (regen_fig4_fullcensus.R; figures_full/).
 - **Solver** — validated pure-R reimplementation, not compiled APML1; cross-check planned.
 - **Single bulk anchor** — Tier-1 uses SRP165679 only.
 - **Deconvolution method** — transparent NNLS, not a benchmarked choice.
 
 ## 7  Next steps
-1. ~~Full-census run (89,058 cells) on the cluster.~~ **Done** (SLURM 56882314; alpha=0.20, 14.67% selected; endothelial OR 5.24; STAT3 n.s.). Remaining: refresh §4 figures from the full-census object.
+1. ~~Full-census run (89,058 cells) on the cluster.~~ **Done** (SLURM 56882314; alpha=0.20, 14.67% selected; endothelial OR 5.24; STAT3 n.s.). §4 figures regenerated from the full-census object (regen_fig4_fullcensus.R).
 2. Compiled-Scissor cross-check.
 3. Benchmarked deconvolution (deconvBenchmarking).
 4. Robustness tiers — additional bulk anchors / tier definitions.
