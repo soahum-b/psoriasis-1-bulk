@@ -1,0 +1,39 @@
+# Conda environment for the psoriasis meta-analysis R pipeline.
+# Create with:  conda env create -f environment.yml
+# Then:         conda activate psoriasis-r
+#
+# Channels are ordered so bioconda/conda-forge resolve Bioconductor + CRAN packages.
+name: psoriasis-r
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  # --- R itself (pipeline developed on 4.5.x / Bioconductor 3.22) ---
+  - r-base>=4.4
+  - bioconductor-biocversion
+
+  # --- Bioconductor: data access, DE, enrichment, TF activity ---
+  - bioconductor-recount3
+  - bioconductor-summarizedexperiment
+  - bioconductor-edger
+  - bioconductor-limma
+  - bioconductor-fgsea
+  - bioconductor-clusterprofiler
+  - bioconductor-decoupler
+  - bioconductor-qvalue
+  - bioconductor-org.hs.eg.db
+
+  # --- CRAN: gene sets, meta-analysis, plotting, tables ---
+  - r-msigdbr
+  - r-metafor
+  - r-upsetr
+  - r-data.table
+  - r-dplyr
+  - r-ggplot2
+  - r-ggrepel
+  - r-patchwork
+  - r-pheatmap
+  - r-rcolorbrewer
+  - r-gridextra
+  - r-biocmanager

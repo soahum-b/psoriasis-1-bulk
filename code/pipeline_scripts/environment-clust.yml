@@ -1,0 +1,21 @@
+# Separate Python environment for the `clust` cross-study co-expression tool
+# (STEP 11.8). clust 1.18 uses numpy APIs removed in NumPy 2.0, so it needs
+# numpy<2 in its own env, kept isolated from the R stack.
+#
+# Create with:  conda env create -f environment-clust.yml
+# Then:         conda activate clust-env
+name: clust-env
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - numpy<2
+  - scipy
+  - scikit-learn
+  - pandas
+  - portalocker
+  - joblib
+  - pip
+  - pip:
+      - clust
