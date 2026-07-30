@@ -1,0 +1,51 @@
+# Master Bibliography — Psoriasis Druggability Pipeline White Papers
+
+All references verified against CrossRef. Sorted alphabetically by citation key.
+
+- **[alphafold2]** Jumper et al. Highly accurate protein structure prediction with AlphaFold. Nature. 2021. https://doi.org/10.1038/s41586-021-03819-2
+- **[amber_sim]** Salomon‐Ferrer et al. An overview of the Amber biomolecular simulation package. WIREs Computational Molecular Science. 2012. https://doi.org/10.1002/wcms.1121
+- **[autodock_vina]** Trott et al. AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading. Journal of Computational Chemistry. 2009. https://doi.org/10.1002/jcc.21334
+- **[benjamini_hochberg]** Benjamini et al. Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. Journal of the Royal Statistical Society Series B: Statistical Methodology. 1995. https://doi.org/10.1111/j.2517-6161.1995.tb02031.x
+- **[boltz1]** Wohlwend et al. Boltz-1 Democratizing Biomolecular Interaction Modeling. 2024. https://doi.org/10.1101/2024.11.19.624167
+- **[boltz2]** Passaro et al. Boltz-2: Towards Accurate and Efficient Binding Affinity Prediction. 2025. https://doi.org/10.1101/2025.06.14.659707
+- **[chembl_2024]** Zdrazil et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Research. 2023. https://doi.org/10.1093/nar/gkad1004
+- **[colabfold]** Mirdita et al. ColabFold: making protein folding accessible to all. Nature Methods. 2022. https://doi.org/10.1038/s41592-022-01488-1
+- **[collectri]** Müller-Dott et al. Expanding the coverage of regulons from high-confidence prior knowledge for accurate estimation of transcription factor activities. Nucleic Acids Research. 2023. https://doi.org/10.1093/nar/gkad841
+- **[cytoscape]** Shannon et al. Cytoscape: A Software Environment for Integrated Models of Biomolecular Interaction Networks. Genome Research. 2003. https://doi.org/10.1101/gr.1239303
+- **[decoupler]** Badia-i-Mompel et al. decoupleR: ensemble of computational methods to infer biological activities from omics data. Bioinformatics Advances. 2022. https://doi.org/10.1093/bioadv/vbac016
+- **[dersimonian_laird]** DerSimonian et al. Meta-analysis in clinical trials. Controlled Clinical Trials. 1986. https://doi.org/10.1016/0197-2456(86)90046-2
+- **[druggable_genome]** Hopkins et al. The druggable genome. Nature Reviews Drug Discovery. 2002. https://doi.org/10.1038/nrd892
+- **[ff14sb]** Maier et al. ff14SB: Improving the Accuracy of Protein Side Chain and Backbone Parameters from ff99SB. Journal of Chemical Theory and Computation. 2015. https://doi.org/10.1021/acs.jctc.5b00255
+- **[fpocket]** Le Guilloux et al. Fpocket: An open source platform for ligand pocket detection. BMC Bioinformatics. 2009. https://doi.org/10.1186/1471-2105-10-168
+- **[freeman_betweenness]** Freeman et al. A Set of Measures of Centrality Based on Betweenness. Sociometry. 1977. https://doi.org/10.2307/3033543
+- **[gaff]** Wang et al. Development and testing of a general amber force field. Journal of Computational Chemistry. 2004. https://doi.org/10.1002/jcc.20035
+- **[gencode]** Frankish et al. GENCODE reference annotation for the human and mouse genomes. Nucleic Acids Research. 2018. https://doi.org/10.1093/nar/gky955
+- **[gencode_v26]** Harrow et al. GENCODE: The reference human genome annotation for The ENCODE Project. Genome Research. 2012. https://doi.org/10.1101/gr.135350.111
+- **[gsea]** Subramanian et al. Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles. Proceedings of the National Academy of Sciences. 2005. https://doi.org/10.1073/pnas.0506580102
+- **[hmr]** Hopkins et al. Long-Time-Step Molecular Dynamics through Hydrogen Mass Repartitioning. Journal of Chemical Theory and Computation. 2015. https://doi.org/10.1021/ct5010406
+- **[il17_biology]** Pappu et al. The interleukin-17 cytokine family: critical players in host defence and inflammatory diseases. Immunology. 2011. https://doi.org/10.1111/j.1365-2567.2011.03465.x
+- **[jak3_immunity]** O'Shea et al. Jak3 and the pathogenesis of severe combined immunodeficiency. Molecular Immunology. 2004. https://doi.org/10.1016/j.molimm.2004.04.014
+- **[langevin_leimkuhler]** Leimkuhler et al. Robust and efficient configurational molecular sampling via Langevin dynamics. The Journal of Chemical Physics. 2013. https://doi.org/10.1063/1.4802990
+- **[lethality_centrality]** Jeong et al. Lethality and centrality in protein networks. Nature. 2001. https://doi.org/10.1038/35075138
+- **[li_psoriasis]** Li et al. Transcriptome Analysis of Psoriasis in a Large Case–Control Sample: RNA-Seq Provides Insights into Disease Mechanisms. Journal of Investigative Dermatology. 2014. https://doi.org/10.1038/jid.2014.28
+- **[limma]** Ritchie et al. limma powers differential expression analyses for RNA-sequencing and microarray studies. Nucleic Acids Research. 2015. https://doi.org/10.1093/nar/gkv007
+- **[lincs]** Hess et al. LINCS: A linear constraint solver for molecular simulations. Journal of Computational Chemistry. 1997. https://doi.org/10.1002/(sici)1096-987x(199709)18:12<1463::aid-jcc4>3.0.co;2-h
+- **[louvain]** Blondel et al. Fast unfolding of communities in large networks. Journal of Statistical Mechanics: Theory and Experiment. 2008. https://doi.org/10.1088/1742-5468/2008/10/p10008
+- **[meeko_forli]** Forli et al. Computational protein–ligand docking and virtual drug screening with the AutoDock suite. Nature Protocols. 2016. https://doi.org/10.1038/nprot.2016.051
+- **[network_biology]** Barabási et al. Network biology: understanding the cell's functional organization. Nature Reviews Genetics. 2004. https://doi.org/10.1038/nrg1272
+- **[network_medicine]** Barabási et al. Network medicine: a network-based approach to human disease. Nature Reviews Genetics. 2010. https://doi.org/10.1038/nrg2918
+- **[open_targets]** Ochoa et al. The next-generation Open Targets Platform: reimagined, redesigned, rebuilt. Nucleic Acids Research. 2022. https://doi.org/10.1093/nar/gkac1046
+- **[openff_sage]** Boothroyd et al. Development and Benchmarking of Open Force Field 2.0.0: The Sage Small Molecule Force Field. Journal of Chemical Theory and Computation. 2023. https://doi.org/10.1021/acs.jctc.3c00039
+- **[openmm]** Eastman et al. OpenMM 7: Rapid development of high performance algorithms for molecular dynamics. PLOS Computational Biology. 2017. https://doi.org/10.1371/journal.pcbi.1005659
+- **[pchembl]** Gaulton et al. ChEMBL: a large-scale bioactivity database for drug discovery. Nucleic Acids Research. 2011. https://doi.org/10.1093/nar/gkr777
+- **[pdb]** Berman et al. The Protein Data Bank. Nucleic Acids Research. 2000. https://doi.org/10.1093/nar/28.1.235
+- **[pme]** Essmann et al. A smooth particle mesh Ewald method. The Journal of Chemical Physics. 1995. https://doi.org/10.1063/1.470117
+- **[rdkit_etkdg]** Riniker et al. Better Informed Distance Geometry: Using What We Know To Improve Conformation Generation. Journal of Chemical Information and Modeling. 2015. https://doi.org/10.1021/acs.jcim.5b00654
+- **[recount3]** Wilks et al. recount3: summaries and queries for large-scale RNA-seq expression and splicing. Genome Biology. 2021. https://doi.org/10.1186/s13059-021-02533-6
+- **[rorgt_th17]** Ivanov et al. The Orphan Nuclear Receptor RORγt Directs the Differentiation Program of Proinflammatory IL-17+ T Helper Cells. Cell. 2006. https://doi.org/10.1016/j.cell.2006.07.035
+- **[stat3_sano]** Sano et al. Stat3 links activated keratinocytes and immunocytes required for development of psoriasis in a novel transgenic mouse model. Nature Medicine. 2004. https://doi.org/10.1038/nm1162
+- **[string_v12]** Szklarczyk et al. The STRING database in 2023: protein–protein association networks and functional enrichment analyses for any sequenced genome of interest. Nucleic Acids Research. 2022. https://doi.org/10.1093/nar/gkac1000
+- **[tip3p]** Jorgensen et al. Comparison of simple potential functions for simulating liquid water. The Journal of Chemical Physics. 1983. https://doi.org/10.1063/1.445869
+- **[uniprot_2023]** The UniProt Consortium. UniProt: the Universal Protein Knowledgebase in 2023. Nucleic Acids Research. 2022. https://doi.org/10.1093/nar/gkac1052
+- **[vina_1_2]** Eberhardt et al. AutoDock Vina 1.2.0: New Docking Methods, Expanded Force Field, and Python Bindings. Journal of Chemical Information and Modeling. 2021. https://doi.org/10.1021/acs.jcim.1c00203
+- **[voom]** Law et al. voom: precision weights unlock linear model analysis tools for RNA-seq read counts. Genome Biology. 2014. https://doi.org/10.1186/gb-2014-15-2-r29

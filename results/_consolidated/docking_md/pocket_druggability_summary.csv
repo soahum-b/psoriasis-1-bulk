@@ -1,0 +1,4 @@
+gene,pdb,domain,resolution_A,ref_ligand,docking_center_x,docking_center_y,docking_center_z,ligand_pocket_id,ligand_pocket_druggability,ligand_pocket_volume,ligand_pocket_hydrophob,best_pocket_druggability,chembl_potent_inhibitors
+STAT3,6NJS,SH2 / core,2.7,KQV,13.03,55.64,0.25,39,0.001,199.0,35.0,0.707,112
+RORC,5APH,Ligand-binding domain (LBD),1.54,VYI,-26.09,8.05,-15.49,1,0.936,1124.0,59.9,0.936,9766
+JAK3,5LWM,Kinase domain (ATP site),1.55,79T,37.57,26.28,51.7,25,0.016,1860.0,21.9,0.622,6069

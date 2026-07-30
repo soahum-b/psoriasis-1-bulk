@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "created_at": "2026-07-29T19:38:01.364Z",
+  "task_summary": "Consolidate all psoriasis arms into one reproducible repo on n013",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Audit & inventory",
+      "delegations": [
+        {
+          "name": "Recoverability audit",
+          "steps": [
+            {
+              "title": "Map every artifact to arm + code lineage",
+              "description": "For all ~370 artifacts across the ~13 frames, pull lineage and classify each as (a) has recoverable generating code, (b) terminal output with partial provenance, or (c) raw input/download. Produce REPRODUCIBILITY_GAP.md grouping by arm."
+            },
+            {
+              "title": "Diff repo contents vs artifact store",
+              "description": "For each arm, determine what is already committed in the n013 repo vs what exists only as artifacts, so consolidation only adds what is missing and never overwrites (additive rule)."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    },
+    {
+      "name": "Consolidate code & provenance",
+      "delegations": [
+        {
+          "name": "Skin arms",
+          "steps": [
+            {
+              "title": "Verify skin-arm reproducibility",
+              "description": "Confirm meta-analysis, Scissor, theory-1, lncRNA scripts in code/ regenerate their key outputs; add any missing generating scripts recovered from lineage; write per-arm REPRODUCE notes."
+            }
+          ]
+        },
+        {
+          "name": "Structural arms",
+          "steps": [
+            {
+              "title": "Organize docking/MD + isoforms",
+              "description": "Stage docking/MD artifacts (pdb, sdf, pdf, csv) and STAT3 isoform artifacts into results/docking_md/ and results/isoforms/ with a manifest; recover generating code where lineage has it, flag terminal-only outputs."
+            }
+          ]
+        },
+        {
+          "name": "Aux arms",
+          "steps": [
+            {
+              "title": "Organize pathway/TF, presentation, genome-browser",
+              "description": "Stage pathway/TF-activity tables, presentation figures/pptx, and the genome-browser tool into labelled subdirs with manifests; note which are re-runnable."
+            }
+          ]
+        }
+      ],
+      "id": "phase-1"
+    },
+    {
+      "name": "Top-level assembly & sync",
+      "delegations": [
+        {
+          "name": "Assembly",
+          "steps": [
+            {
+              "title": "Write master README + arm map",
+              "description": "Author a top-level README mapping every arm to its scripts/inputs/outputs and pointing to per-arm REPRODUCE notes, PROJECT_AUDIT.md, and NARRATIVE_walkthrough.md. Reconcile CHECKPOINT/PLAN."
+            },
+            {
+              "title": "Additive commit + push + verify",
+              "description": "Commit all additions to n013 repo (additive only, never overwrite existing files), push to GitHub, and verify 0 unpushed + working tree clean. Save the gap report + README as artifacts."
+            }
+          ]
+        }
+      ],
+      "id": "phase-2"
+    }
+  ],
+  "desired_outputs": [
+    "A single reproducible repo (psoriasis-1-bulk on n013 + GitHub) with every arm organized under code/, data/, results/, figures/, docs/",
+    "Top-level README mapping each arm to its scripts, inputs, and outputs",
+    "Per-arm REPRODUCE notes documenting how each result regenerates (or why it can't)",
+    "A reproducibility gap report: which artifacts have recoverable generating code vs which are terminal outputs",
+    "environment.yml / renv manifests captured per arm's toolchain"
+  ],
+  "feasibility": {
+    "confidence": "medium",
+    "rationale": "The skin arms (meta-analysis, Scissor, theory-1) already have code in the repo and are fully reproducible. The risk is in the older arms: docking/MD, isoforms, pathway, and presentation artifacts may be terminal outputs whose generating code was never saved to the repo and may not be fully recoverable from lineage — those become 'archived outputs with partial provenance,' not fully re-runnable pipelines. I'll audit recoverability first and be explicit per arm about what is re-runnable vs archival."
+  }
+}

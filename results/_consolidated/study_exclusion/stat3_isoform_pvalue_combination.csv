@@ -1,0 +1,8 @@
+"method","combined_p"
+"Stouffer weighted-Z (sqrt n)",0.044625026400684
+"Unweighted Stouffer",0.124264563117365
+"Fisher (unsigned)",0.193202567697226
+"LOO drop anchor",0.9133
+"LOO drop SRP165679",0.0113
+"LOO drop SRP126422",0.0449
+"LOO drop SRP154474",0.0655

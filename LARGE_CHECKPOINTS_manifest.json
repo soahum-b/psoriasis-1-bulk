@@ -1,0 +1,346 @@
+[
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "stat3_activity_3group.rds",
+  "vid": "324c85d2-d264-4a56-94bd-9c97fd46b64b",
+  "ct": "octet-stream",
+  "mb": 0.002,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "ssgsea_3group.rds",
+  "vid": "39d80619-4f97-4e84-95da-804bc824851a",
+  "ct": "octet-stream",
+  "mb": 0.009,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "class_enrichment.rds",
+  "vid": "0035527f-9bfe-4265-b86b-043351abab4e",
+  "ct": "octet-stream",
+  "mb": 0.001,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "trend_SRP165679.rds",
+  "vid": "d61263b9-9355-4e92-97d8-4987bcb38e86",
+  "ct": "octet-stream",
+  "mb": 1.532,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "gradient_de_genes.rds",
+  "vid": "a27965d8-adbb-4661-9b0b-bcd01c3bfb76",
+  "ct": "octet-stream",
+  "mb": 0.311,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "clust_out3.tar.gz",
+  "vid": "64d0808a-7732-42aa-9977-1e0714298203",
+  "ct": "gzip",
+  "mb": 19.976,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "clust_module_lfc.rds",
+  "vid": "9e4f2014-6045-4f96-a4e3-ca73d6991292",
+  "ct": "octet-stream",
+  "mb": 0.002,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "clust_module.rds",
+  "vid": "f47bd7fd-da30-44ab-a8a9-df3d23eb5ede",
+  "ct": "octet-stream",
+  "mb": 0.002,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "psi_meta_result.rds",
+  "vid": "8db01554-e157-48f1-878f-94270475f18a",
+  "ct": "octet-stream",
+  "mb": 0.002,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "psi_beta_allstudies.rds",
+  "vid": "89ae0be3-5030-4b54-aef3-5109d213be54",
+  "ct": "octet-stream",
+  "mb": 0.007,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "camera_perstudy_PPvsNN.rds",
+  "vid": "b1161da7-572a-42da-a4e7-e1e5d6d9b7e6",
+  "ct": "octet-stream",
+  "mb": 0.004,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "tf_activity_perstudy.rds",
+  "vid": "1fa473be-7455-47ed-ae1a-de8d85941ed3",
+  "ct": "octet-stream",
+  "mb": 0.109,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "meta_summary_stats.rds",
+  "vid": "7b8d327d-cae3-46d0-8a79-6dbfac547125",
+  "ct": "octet-stream",
+  "mb": 0.002,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "meta_de_results.rds",
+  "vid": "cd8c795b-33f1-461f-a02c-37996b4d3670",
+  "ct": "octet-stream",
+  "mb": 3.997,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "per_study_de.rds",
+  "vid": "8b4e71d3-763b-4c68-bcb0-0e21d1c0b496",
+  "ct": "octet-stream",
+  "mb": 10.159,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "leading_edge_sets.rds",
+  "vid": "c04465db-f557-4dc1-b802-76d653d0998e",
+  "ct": "octet-stream",
+  "mb": 0.002,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "ssgsea_panel.rds",
+  "vid": "213f77e5-2c69-4a51-9411-2fbd3d1fe630",
+  "ct": "octet-stream",
+  "mb": 0.02,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "ssgsea_scores.rds",
+  "vid": "f973b1cf-90e8-4199-9e68-83f1440fd368",
+  "ct": "octet-stream",
+  "mb": 0.015,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "voom_fit.rds",
+  "vid": "12fadcf7-d139-42dc-8020-c9eb75feb54c",
+  "ct": "octet-stream",
+  "mb": 50.085,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "method_comparison.rds",
+  "vid": "6cb23db2-4db8-43a5-82fb-64a055bf9e7e",
+  "ct": "octet-stream",
+  "mb": 0.003,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "camera_roast_results.rds",
+  "vid": "0144430b-37ba-456c-9103-4469bb684952",
+  "ct": "octet-stream",
+  "mb": 0.177,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "stat3_isoform_eftud2.rds",
+  "vid": "a4d91fd8-9345-4f42-8227-934edd8dda50",
+  "ct": "octet-stream",
+  "mb": 0.007,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "stat3_isoform_psi.rds",
+  "vid": "118993f9-c40d-4a88-a46c-127c7e560491",
+  "ct": "octet-stream",
+  "mb": 0.004,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "collectri_regulon.rds",
+  "vid": "34ad206e-28f3-42b3-9de6-c736f9abc2f3",
+  "ct": "octet-stream",
+  "mb": 0.405,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "tf_activity_collectri.rds",
+  "vid": "1c168e81-a2ac-4f7e-9812-fc12e4a96ecc",
+  "ct": "octet-stream",
+  "mb": 0.022,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "gsea_ora_merged.rds",
+  "vid": "f9b184e1-fdda-4eee-bd64-2b13ac681811",
+  "ct": "octet-stream",
+  "mb": 0.22,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "gsea_results_all.rds",
+  "vid": "c62a4b3f-8264-4b9b-8e81-29b537a930a6",
+  "ct": "octet-stream",
+  "mb": 0.728,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "gsea_ranks.rds",
+  "vid": "acdaa257-263c-43dc-9ac9-06cf76e0dc3f",
+  "ct": "octet-stream",
+  "mb": 0.43,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "de_results_full.rds",
+  "vid": "40f54a42-9257-485b-9795-a4c4c059d5e9",
+  "ct": "octet-stream",
+  "mb": 1.534,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "dge_filt_norm.rds",
+  "vid": "7fe8fcf7-90ca-4a27-abd2-7fd5bd62810a",
+  "ct": "octet-stream",
+  "mb": 10.135,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "A1_meta_analysis",
+  "filename": "GenomeInfoDbData_1.2.13.tar.gz",
+  "vid": "20500bb4-c941-4eb2-8b04-eca4f1e0b81c",
+  "ct": "gzip",
+  "mb": 12.924,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "deconv_result.rds",
+  "vid": "a702dd82-4cba-46af-964f-075076747a50",
+  "ct": "octet-stream",
+  "mb": 0.005,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "deconv_signature.rds",
+  "vid": "fd8dc30a-5768-4849-ae7b-9777dbfac5a9",
+  "ct": "octet-stream",
+  "mb": 1.279,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "scissor_repo_ship.tar.gz",
+  "vid": "cd755d82-4107-4890-8887-947d5b00a4f2",
+  "ct": "gzip",
+  "mb": 2.466,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "reference_subset20k_umap.rds",
+  "vid": "ea99c227-abdd-41bd-a571-3fa4a28675ce",
+  "ct": "octet-stream",
+  "mb": 276.449,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "permutation_null.rds",
+  "vid": "2030cff3-14ca-482a-a00c-9d7c116853b7",
+  "ct": "octet-stream",
+  "mb": 0.0,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "reliability_test.rds",
+  "vid": "36776557-a136-4970-adf5-243164d1151d",
+  "ct": "octet-stream",
+  "mb": 0.001,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "scissor_inputs.rds",
+  "vid": "a01cf77a-b6d5-4685-8769-fe9af0f893db",
+  "ct": "octet-stream",
+  "mb": 18.252,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "scissor_tuning.rds",
+  "vid": "2f894659-849e-4dfa-8961-9068c0dbb96a",
+  "ct": "octet-stream",
+  "mb": 1.194,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "scissor_result.rds",
+  "vid": "5951a328-abda-43dd-9fab-3947e289b53f",
+  "ct": "octet-stream",
+  "mb": 0.561,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "bulk_anchor.rds",
+  "vid": "a7a850eb-ad16-4c77-91bd-178aadea75f0",
+  "ct": "octet-stream",
+  "mb": 6.574,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "reference_processed.rds",
+  "vid": "701f5d00-6716-4e99-a423-4e21a3c7b061",
+  "ct": "octet-stream",
+  "mb": 1226.747,
+  "cls": "code_recoverable"
+ },
+ {
+  "arm": "B_scissor",
+  "filename": "reference_raw.rds",
+  "vid": "77f289a2-f05c-4ecc-a0b8-bf157880b0b0",
+  "ct": "octet-stream",
+  "mb": 512.31,
+  "cls": "code_recoverable"
+ }
+]

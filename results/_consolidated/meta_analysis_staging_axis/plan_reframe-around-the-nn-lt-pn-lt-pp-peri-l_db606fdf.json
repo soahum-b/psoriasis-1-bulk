@@ -1,0 +1,63 @@
+{
+  "version": 3,
+  "created_at": "2026-07-06T16:43:23.401Z",
+  "task_summary": "Reframe around the NN &lt; PN &lt; PP peri-lesional molecular staging axis",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Plan",
+      "delegations": [
+        {
+          "steps": [
+            {
+              "title": "Formal monotonic trend test across the staging axis",
+              "description": "Fit an ordinal/linear trend model (NN=0, PN=1, PP=2) per gene, primarily in SRP165679 (the deep three-group cohort) and pooled where PN data allows. Use limma with a numeric trend contrast plus a Jonckheere-Terpstra-style monotonicity check. Classify each lesional DE gene as monotonic (NN<PN<PP), non-monotonic, or flat at PN. Produce gradient_genes.csv with per-gene trend slope, monotonicity flag, and 'percent-of-lesional-reached-at-PN'. Deliverable: gradient_genes.csv + a summary of what fraction of the psoriasis program is monotonic."
+            },
+            {
+              "title": "Gradient-gene taxonomy: progressive / early / late",
+              "description": "Partition the monotonic and near-monotonic genes into interpretable classes: (a) progressive (smoothly rising NN<PN<PP), (b) early/PN-specific (already substantially changed in peri-lesional, incl. the 51 genes that move more in PN than PP - candidate pre-lesional drivers), (c) late/PP-specific (jump only at the lesional stage). Enrich each class (Hallmark/Reactome) to characterise its biology. Deliverable: gradient_gene_classes.csv + a bar/enrichment figure of the three classes' pathway signatures."
+            },
+            {
+              "title": "Pathway-timing along the axis (ssGSEA 3-group)",
+              "description": "Recompute per-sample ssGSEA scores in SRP165679 for the key Hallmark sets and plot each pathway's mean score across NN->PN->PP to show activation timing (which programs are already on in peri-lesional skin vs which switch on only in lesional). Test each pathway's trend. Deliverable: fig_pathway_timing.png (pathway score vs stage, faceted or lineplot) + pathway_timing_stats.csv."
+            },
+            {
+              "title": "Position STAT3 / IL-17 axis on the staging gradient",
+              "description": "Place the validated hubs (STAT3, STAT1, SOCS3, IL17A, the IL-17/keratinocyte core, STAT3 TF-activity) explicitly on the NN<PN<PP axis - showing they rise monotonically and confirming the axis recovers the known biology. This is the 'validation, not finding' framing made concrete. Deliverable: fig_stat3_il17_on_axis.png (staging positions of the canonical genes/pathway/TF-activity)."
+            },
+            {
+              "title": "Staging-axis overview figure",
+              "description": "Build the lead figure: a molecular-staging schematic/heatmap ordering samples NN->PN->PP with the gradient-gene blocks, plus a compact panel quantifying monotonicity (e.g. 86% monotonic in SRP165679) and the median 'percent-to-lesional-at-PN'. This becomes the new Figure 1-equivalent that carries the reframed narrative. Deliverable: fig_staging_axis.png."
+            },
+            {
+              "title": "Literature positioning vs prior non-lesional-skin work",
+              "description": "Survey the existing transcriptomic literature on uninvolved/non-lesional/'prepsoriatic' skin (Gudjonsson, Tsoi, Suarez-Farinas and related) via web_search and, where retrievable, article full text. Write a positioning section stating precisely what our contribution adds: cross-study monotonic replication, a staging framework with an explicit ordering statistic, the early/PN-specific gene class, and STAT3 positioning. Deliverable: literature_positioning.md with citations and a clear novelty statement."
+            },
+            {
+              "title": "Write a NEW staging-axis white paper (separate document)",
+              "description": "Create a NEW, standalone white paper (e.g. psoriasis_staging_axis_whitepaper.md) that leads with the peri-lesional NN<PN<PP molecular-staging axis as the central result, presents the STAT3/IL-17 confirmation as validation of the axis, and integrates the new gradient analyses (trend test, gradient-gene taxonomy, pathway-timing, early/PN-specific genes) plus the literature-positioning section. The original psoriasis_meta_analysis_whitepaper.md is left INTACT as the companion STAT3-led reference document - this is a second paper, not an overwrite. The new paper embeds the new figures with its own numbering and reference list, and cross-references the original where the shared meta-analysis methods/figures already live. Deliverable: psoriasis_staging_axis_whitepaper.md (new artifact)."
+            },
+            {
+              "title": "Append gradient analysis to pipeline + push to GitHub",
+              "description": "Add the trend-test, gradient-taxonomy, and pathway-timing code to psoriasis_pipeline.R as a STEP 12 (reproducible from checkpoints), then push all new figures (with GitHub-compatible relative paths), tables, the reframed white paper, and pipeline update to the GitHub repo. Deliverable: pipeline new version + synced GitHub commit."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    }
+  ],
+  "desired_outputs": [
+    "Formal monotonic trend-test results across NN<PN<PP (gradient gene table)",
+    "Gradient-gene taxonomy: progressive vs early/PN-specific vs late/PP-specific",
+    "Pathway-timing analysis (which programs activate early vs late along the axis)",
+    "New figures: staging axis, gradient heatmap, pathway-timing, PN-specific 'early' genes, STAT3/IL-17-on-the-axis",
+    "Literature-positioning section: what the cross-study staging framework adds to prior non-lesional-skin work",
+    "NEW standalone staging-axis white paper (original STAT3-led paper kept intact)",
+    "meta_analysis/pipeline updates for the new gradient analyses"
+  ],
+  "feasibility": {
+    "rationale": "The gradient is empirically supported: 86% of lesional DE genes are monotonic NN<PN<PP within the deep three-group cohort (SRP165679), core genes sit consistently intermediate, and 51 genes are peri-lesional-specific. Main constraint: the clean three-point axis is well-powered in one cohort and supported by pooled trends elsewhere, and peri-lesional effects are small (~16% of lesional), so the story is strongest at pathway/trend level. Positioning vs existing non-lesional-skin literature requires a genuine survey, which is achievable.",
+    "confidence": "high"
+  }
+}

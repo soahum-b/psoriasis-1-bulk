@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "created_at": "2026-07-17T01:04:51.359Z",
+  "task_summary": "Theory 2: sex-stratified psoriasis skin analysis + mLOY blood-arm feasibility",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Lock per-donor sex",
+      "delegations": [
+        {
+          "name": "Sex inference",
+          "steps": [
+            {
+              "title": "Extract sex-gene signal from 89k object",
+              "description": "On the cluster (n003, scissor-r env), load reference_scissor_full.rds and extract per-donor mean expression and % expressing for Y-genes (RPS4Y1, DDX3Y, UTY, EIF1AY, KDM5D, USP9Y) and XIST. Confirm the meta.data columns (donor, condition, tier, celltype, scissor) exist."
+            },
+            {
+              "title": "Assign and save donor→sex table",
+              "description": "Classify each donor male/female from high-RPS4Y1/low-XIST vs the reverse; flag any ambiguous donor. Save donor→sex table as an artifact. Cross-check against any sex field in the recount3 bulk metadata where donors overlap."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    },
+    {
+      "name": "Sex-stratified skin analysis",
+      "delegations": [
+        {
+          "name": "Composition & single-cell DE",
+          "steps": [
+            {
+              "title": "Sex × tier composition",
+              "description": "Tabulate male:female ratio across NN/PN/PP tiers. Report descriptively; explicitly note small donor N and that PN/PP are paired within psoriasis donors (sex constant across those two tiers), so the informative contrast is healthy vs psoriasis donors' sex distribution."
+            },
+            {
+              "title": "Sex-stratified single-cell DE",
+              "description": "Per lineage and within the Scissor+ gradient program, test sex-biased expression on the target axes (STAT3/JAK-STAT, IL-1/inflammasome, IL-36, endothelial vascular program). FindMarkers with recomputed BH-FDR over the tested gene family (not Seurat Bonferroni). Apply the sparse-gene detection-floor caveat."
+            },
+            {
+              "title": "Y-linked & X-escape genes by tier within sex",
+              "description": "Test whether Y genes (UTY/KDM6C, KDM5D, DDX3Y, USP9Y) and X-inactivation-escape genes differ by disease tier within each sex — the skin-level shadow of the mLOY hypothesis. BH-FDR."
+            }
+          ]
+        },
+        {
+          "name": "Bulk sex-covariate meta",
+          "steps": [
+            {
+              "title": "Recover per-study sex metadata",
+              "description": "For the k=4 plaque-psoriasis studies (SRP035988, SRP165679, SRP126422, SRP065812), extract sex from each recount3 sra.sample_attributes; where absent, infer from XIST/RPS4Y1 in the expression matrix."
+            },
+            {
+              "title": "Sex-covariate / interaction meta-analysis",
+              "description": "Re-run per-study DE adding sex as a covariate and a sex×condition interaction term; DerSimonian-Laird meta across studies. Focus on the project's target axes; report which genes are male-biased. BH-FDR, q<0.05."
+            }
+          ]
+        }
+      ],
+      "id": "phase-1"
+    },
+    {
+      "name": "mLOY blood-arm feasibility",
+      "delegations": [
+        {
+          "name": "Blood dataset screen",
+          "steps": [
+            {
+              "title": "State the mLOY-in-skin limit",
+              "description": "Write the explicit statement that mLOY cannot be measured from skin biopsy (it is a hematopoietic Y-dropout phenomenon needing a diploid blood baseline); skin supports only sex-stratification."
+            },
+            {
+              "title": "Screen GEO/CELLxGENE/ArrayExpress for psoriasis blood",
+              "description": "Search for psoriasis PBMC/whole-blood datasets with male donors and Y-chromosome coverage adequate for per-cell or per-sample Y-dropout. Exclude GPP. Build a feasibility table: accession, tissue, subtype, n male, platform, controls, mLOY-suitability verdict."
+            },
+            {
+              "title": "Outline mLOY quantification if a dataset qualifies",
+              "description": "For any usable blood dataset, outline the quantification: per-cell Y-gene expression fraction (single-cell) or Y-vs-autosome coverage ratio (bulk), male samples only, vs diploid baseline; then mLOY burden ~ psoriasis status/severity."
+            }
+          ]
+        }
+      ],
+      "id": "phase-2"
+    },
+    {
+      "name": "Integrate & deliver",
+      "delegations": [
+        {
+          "name": "Figure & writeup",
+          "steps": [
+            {
+              "title": "Summary figure",
+              "description": "Build a publication-grade figure (figure-style skill) summarizing any male/female differences on the project's target axes — single-cell and bulk panels — with sample sizes and BH-FDR flags."
+            },
+            {
+              "title": "Theory-2 writeup + update living docs",
+              "description": "Write theory2_sex_mLOY writeup: donor→sex results, sex-stratified findings, Y/X-escape trends, an explicit honest statement of what the skin data can and cannot show about mLOY, and the blood feasibility table. Save all artifacts; append additive updates to DECISIONS_LOG/METHODS/PLAN. Cluster repo: additive commits only."
+            }
+          ]
+        }
+      ],
+      "id": "phase-3"
+    }
+  ],
+  "desired_outputs": [
+    "donor→sex table (Y-gene/XIST inferred, per-donor)",
+    "sex × tier composition table + descriptive test",
+    "sex-stratified single-cell DE tables (per lineage, Scissor+ program, BH-FDR)",
+    "sex-covariate bulk meta-analysis on target axes (STAT3/JAK-STAT, IL-1, IL-36, endothelial)",
+    "Y-linked & X-escape gene tier trends within each sex",
+    "summary figure on the project's target axes (figure-style)",
+    "mLOY blood-dataset feasibility table (accession, tissue, subtype, n male, platform, controls)",
+    "theory2 markdown writeup with explicit skin-can/cannot-show-mLOY statement"
+  ],
+  "feasibility": {
+    "rationale": "Part A (sex-stratified skin) is fully feasible on existing data — sex is cleanly inferable per donor and the 89k full-census object is on the cluster. Two honest limits carry throughout: small donor N (~18 psoriasis + 8 healthy) makes sex×tier associations descriptive, not powered; and PN/PP are paired within donors so sex is constant across those two tiers. Part B (mLOY) cannot be measured in skin — it is a blood/hematopoietic phenomenon — so that arm is a feasibility screen for a future blood dataset, not an mLOY measurement.",
+    "confidence": "medium"
+  }
+}

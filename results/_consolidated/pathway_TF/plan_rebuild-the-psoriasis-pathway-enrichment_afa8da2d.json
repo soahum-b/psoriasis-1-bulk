@@ -1,0 +1,57 @@
+{
+  "version": 3,
+  "created_at": "2026-07-17T12:57:55.231Z",
+  "task_summary": "Rebuild the psoriasis pathway/enrichment layer on a statistically consistent footing",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Corrected enrichment re-run",
+      "delegations": [
+        {
+          "name": "GSEA on meta",
+          "steps": [
+            {
+              "title": "Build meta-ranked GSEA",
+              "description": "Rank genes by the random-effects meta statistic (pooled z from meta_de_PPvsNN.csv) for k=4, and repeat for the k=7 cohort (meta_de_PPvsNN_7study.csv). Run fgsea on Hallmark, Reactome, GO:BP, KEGG with eps=0, fixed seed. Contrast against the existing mega-analysis GSEA to quantify how much significance was inflated."
+            },
+            {
+              "title": "Rebuild competitive-meta pathway test",
+              "description": "Re-run per-study CAMERA on the FULL study set (k=4, and k=7 where available), then combine without the 1e-308 floor / Z=38 cap. Use precision-weighted Stouffer or a rank-based combination; report a combined statistic that is not saturated. Replace meta_pathway_camera_PPvsNN.csv."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    },
+    {
+      "name": "Consolidation & documentation",
+      "delegations": [
+        {
+          "name": "Synthesis",
+          "steps": [
+            {
+              "title": "Joint testing + redundancy collapse",
+              "description": "Apply multiple-testing across the combined collection set and collapse redundant gene sets (leading-edge overlap clustering / GO-hierarchy prune) into a non-redundant top-pathway table."
+            },
+            {
+              "title": "Figure + methods note",
+              "description": "Produce a consolidated pathway figure and a short methods note documenting the corrected methodology and a before/after comparison table (old mega/broken-CAMERA vs corrected meta-based results), so the change is auditable."
+            }
+          ]
+        }
+      ],
+      "id": "phase-1"
+    }
+  ],
+  "desired_outputs": [
+    "Corrected GSEA table ranked on random-effects meta statistic (k=4 and k=7)",
+    "Valid competitive-meta pathway table replacing the broken CAMERA pooling",
+    "Non-redundant top-pathway summary with joint multiple-testing",
+    "Consolidated pathway figure",
+    "Pathway methods note + before/after comparison documenting what changed and why"
+  ],
+  "feasibility": {
+    "confidence": "high",
+    "rationale": "All inputs exist as project artifacts (per-study and meta-analysis DE tables for k=4 and k=7, per-study SEs). The fixes are standard, well-established enrichment methods; no new data or external services required. Main judgment call is the redundancy-collapse threshold, which I'll set transparently."
+  }
+}

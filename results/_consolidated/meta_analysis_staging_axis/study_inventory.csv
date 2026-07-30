@@ -1,0 +1,6 @@
+srp,label,PP,PN,NN,total,median_M_reads,min_M_reads,pct_below10M,depth_flag
+SRP076982,Anatomic plaques,211,48,0,259,4,0.1,100,SHALLOW
+SRP035988,Li 2014 (case-control),95,0,83,178,40.8,9.9,1,ok
+SRP165679,Tsoi 2019 (AD/PSO cohort),28,27,38,93,31.8,8.2,1,ok
+SRP126422,Keratinocyte+biopsy,4,4,4,12,26.8,19.3,0,ok
+SRP016583,Early profiling,3,3,0,6,30.3,28.9,0,ok

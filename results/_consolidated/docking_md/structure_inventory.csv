@@ -1,0 +1,4 @@
+gene,pdb,ligand,resolution_A,domain,uniprot,pocket_center_x,pocket_center_y,pocket_center_z,box_x,box_y,box_z,n_chains
+STAT3,6NJS,KQV,2.7,SH2 / core,P40763,13.03,55.64,0.25,25.96,36.65,28.0,1
+RORC,5APH,VYI,1.54,Ligand-binding domain (LBD),P51449,-26.09,8.05,-15.49,23.28,25.16,21.77,2
+JAK3,5LWM,79T,1.55,Kinase domain (ATP site),P52333,37.57,26.28,51.7,23.05,27.58,26.6,1

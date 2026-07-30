@@ -1,0 +1,4 @@
+gene,degree,degree_rank,degree_pctile,betweenness,betweenness_rank,community
+STAT3,63,22,99,0.1114,2,Immune / JAK-STAT / chemokine
+RORC,10,265,84,0.0062,160,Lipid / metabolism
+JAK3,24,140,92,0.006,169,Immune / JAK-STAT / chemokine

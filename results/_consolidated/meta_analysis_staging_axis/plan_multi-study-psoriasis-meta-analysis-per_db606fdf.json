@@ -1,0 +1,65 @@
+{
+  "version": 3,
+  "created_at": "2026-07-05T20:48:33.611Z",
+  "task_summary": "Multi-study psoriasis meta-analysis: per-study DE then random-effects pooling",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Plan",
+      "delegations": [
+        {
+          "steps": [
+            {
+              "title": "Identify and curate psoriasis studies in recount3",
+              "description": "Fetch per-study sample metadata for candidate human SRA skin studies (starting from known psoriasis GEO/SRA accessions: SRP035988=GSE54456 anchor, plus search for others e.g. GSE41745, GSE121212, GSE13355, GSE30999-equivalents that exist in recount3). For each, pull recount3 sample metadata (sra.sample_attributes), parse tissue/condition fields, and classify samples as lesional (PP) vs healthy/normal (NN). Keep studies with >=5 per group and clear labels. Deliverable: study_inventory.csv (accession, n_PP, n_NN, platform, label-source) and a bar chart fig22_study_inventory.png of cohort sizes. Save both."
+            },
+            {
+              "title": "Per-study normalization + DE (harmonized gene space)",
+              "description": "For each included study: recount3 download -> filterByExpr -> TMM -> limma-voom DE with design ~group (reusing STEP 1-3 logic as a function). Harmonize to the common gene-symbol space across studies. Store per-study topTables (logFC, SE=logFC/t, t, P, adj.P) as a list. Deliverable: per_study_de.rds checkpoint + a facet volcano fig23_perstudy_volcano.png (one panel per study) showing each cohort's lesional signature. Save both."
+            },
+            {
+              "title": "Gene-level random-effects meta-analysis",
+              "description": "For every gene measured in >=2 studies, pool per-study logFC with inverse-variance random-effects (metafor::rma, DerSimonian-Laird tau-squared); also compute Stouffer's Z from per-study p-values as a sensitivity check. Report pooled logFC, SE, z, p, BH-FDR, I-squared, tau-squared, and k (studies). Quantify power gain: number of FDR<0.05 genes vs the single-study 3,477, and specifically genes newly significant only after pooling. Deliverable: meta_de_results.csv + fig24_meta_volcano.png (pooled) and fig25_power_gain.png (genes gained vs k). Save all."
+            },
+            {
+              "title": "STAT3 and key-gene forest plots",
+              "description": "Build forest plots (metafor::forest) for STAT3 and a curated panel (SOCS3, STAT1, IL17A, DEFB4A, S100A7, EFTUD2) showing each study's logFC +/- 95% CI, the pooled random-effects diamond, and I-squared. This is the headline clinical figure: does STAT3 up-regulation replicate across every cohort. Deliverable: fig26_stat3_forest.png + fig27_panel_forest.png. Save both."
+            },
+            {
+              "title": "Pooled pathway + STAT3 TF-activity meta-analysis",
+              "description": "Two arms. (a) TF-activity: run decoupleR run_ulm with the CollecTRI regulon on each study's t-statistic vector -> per-study STAT3 activity score+SE -> random-effects pool -> STAT3 activity forest plot. (b) Pathway: either meta-analyze per-study GSEA NES for the STAT3-axis Hallmark sets, or run CAMERA per study and pool. Deliverable: meta_tf_activity.csv, fig28_stat3_activity_forest.png, and a pooled pathway table/heatmap fig29_meta_pathway.png. Save all."
+            },
+            {
+              "title": "Cross-study isoform PSI_beta pooling",
+              "description": "For studies with junction-level recount3 data and adequate depth at the STAT3 alpha/beta donor junctions (min depth threshold as in STEP 8), compute per-study PSI_beta NN-vs-PP effect and pool (random-effects on the mean PSI_beta difference, or per-study Wilcoxon -> Stouffer). Report which studies had usable junction depth. Deliverable: meta_isoform_psi.csv + fig30_psi_forest.png. If <2 studies have usable depth, document that honestly and report the single-study result as the current ceiling. Save output."
+            },
+            {
+              "title": "clust cross-study co-expression modules",
+              "description": "Run clust (Abu-Jamous & Kelly 2018) in its multi-dataset consistency mode on the per-study normalized matrices to extract co-expression modules that are consistent across cohorts; annotate modules for STAT3/IL-17/keratinocyte membership and enrichment. Deliverable: clust_modules.csv + fig31_clust_modules.png (module expression profiles across studies). If clust is not installable in-sandbox, substitute a transparent cross-study WGCNA-style or correlation-consensus module approach and document the substitution. Save output."
+            },
+            {
+              "title": "Write-up: white-paper section 11 + meta deep-dive + pipeline STEP 11+",
+              "description": "Add white-paper section 11 (multi-study meta-analysis: methods, forest plots, power gain, heterogeneity, STAT3 replication verdict) embedding Figs 22-31 with new references [41+] (metafor/DerSimonian-Laird, Stouffer, Cochran's Q/I-squared, ComBat-seq if used). Write meta_analysis_deep_dive.md (random-effects vs fixed-effects, tau-squared estimation, I-squared interpretation, Stouffer vs inverse-variance, mega vs meta rationale). Append the meta-analysis to psoriasis_pipeline.R as STEP 11+ (parse-checked and run-verified). Save all with correct version_of."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    }
+  ],
+  "desired_outputs": [
+    "Curated table of included recount3 psoriasis studies with sample counts and QC",
+    "Per-study DE results (harmonized gene space)",
+    "STAT3 random-effects forest plot with I-squared/tau-squared",
+    "Meta-analysis gene table (pooled logFC, FDR) with count of new genes gained over single study",
+    "Pooled pathway and TF-activity (STAT3) meta-results",
+    "Cross-study isoform PSI_beta pooling where junction depth allows",
+    "clust cross-study co-expression modules",
+    "New white-paper section (11) + meta_analysis_deep_dive.md",
+    "Meta-analysis appended to psoriasis_pipeline.R as STEP 11+"
+  ],
+  "feasibility": {
+    "rationale": "recount3 hosts many SRA skin studies; SRP035988 is confirmed present. Identifying 3-6 lesional-vs-normal psoriasis cohorts from per-study metadata is tractable, and the per-study-then-pool architecture reuses the STEP 1-10 pipeline we already validated. Main uncertainty is how many studies have clean PP/NN labels and sufficient junction depth for the isoform arm; the DE/pathway/TF arms are robust regardless.",
+    "confidence": "high"
+  }
+}

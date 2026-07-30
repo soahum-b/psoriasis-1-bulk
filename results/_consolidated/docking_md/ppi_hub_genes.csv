@@ -1,0 +1,985 @@
+gene,degree,betweenness,direction,logFC,protein_class,ot_sm_bucket,community_name,evidence_rank
+CDK1,89,0.0340209153633106,up,1.399,Enzyme,Advanced clinical,Cell cycle / proliferation,1636.0
+CD8A,86,0.0650705296134385,up,1.271,,,Immune / JAK-STAT / chemokine,843.0
+STAT1,81,0.1018596204033548,up,1.862,Transcription factor,Discovery precedence,Interferon / antiviral,142.0
+CCNB1,77,0.0060033521653583,up,1.931,,,Cell cycle / proliferation,437.0
+CCNA2,74,0.0015713448920249,up,1.441,,,Cell cycle / proliferation,1646.0
+BUB1,72,0.0012796866985209,up,1.31,,,Cell cycle / proliferation,1923.0
+BIRC5,72,0.0310387620237688,up,1.482,,,Cell cycle / proliferation,288.0
+BUB1B,71,0.0023569057543824,up,1.06,,,Cell cycle / proliferation,2236.0
+CDC20,71,0.00335067938011,up,1.582,,,Cell cycle / proliferation,1466.0
+AURKB,70,0.0014136122872677,up,1.489,Enzyme,Advanced clinical,Cell cycle / proliferation,1097.0
+DLGAP5,70,0.0020958208933955,up,1.575,,,Cell cycle / proliferation,1628.0
+NUF2,67,0.0005063789198022,up,1.151,,,Cell cycle / proliferation,2118.0
+PLK1,67,0.0041042432530638,up,1.408,Enzyme,Advanced clinical,Cell cycle / proliferation,325.0
+MELK,67,0.0010672424601959,up,1.457,,,Cell cycle / proliferation,1809.0
+KIF2C,66,0.0013142498721757,up,1.489,,,Cell cycle / proliferation,1469.0
+CCNB2,65,0.0009004637300637,up,1.442,,,Cell cycle / proliferation,1380.0
+KIF20A,65,0.0016715481462706,up,1.565,,,Cell cycle / proliferation,1651.0
+PBK,64,0.0042833020949205,up,1.457,,,Cell cycle / proliferation,1272.0
+TOP2A,64,0.0013077577228444,up,1.117,,,Cell cycle / proliferation,2114.0
+CDCA8,64,0.0009416746083982,up,1.065,,,Cell cycle / proliferation,1867.0
+CDC45,64,0.0062851436317343,up,1.517,,,Cell cycle / proliferation,1326.0
+CXCL10,63,0.0161975173022546,up,4.082,Secreted protein,Discovery precedence,Immune / JAK-STAT / chemokine,60.0
+STAT3,63,0.1113686166051475,up,1.246,Transcription factor,Discovery precedence,Immune / JAK-STAT / chemokine,825.0
+TPX2,61,0.0024046970530733,up,1.085,,,Cell cycle / proliferation,980.0
+UBE2C,61,0.0021615035539215,up,1.394,,,Cell cycle / proliferation,1582.0
+KIF4A,60,0.0012133561228037,up,1.237,,,Cell cycle / proliferation,2038.0
+MAD2L1,60,0.0004097556116441,up,1.161,,,Cell cycle / proliferation,1275.0
+ASPM,59,0.0004312003619999,up,1.005,,,Cell cycle / proliferation,2377.0
+TTK,59,0.0005161875421063,up,1.235,,,Cell cycle / proliferation,1999.0
+CEP55,59,0.000283296566413,up,1.577,,,Cell cycle / proliferation,601.0
+NCAPG,58,0.0004009102098145,up,1.013,,,Cell cycle / proliferation,2322.0
+NUSAP1,58,0.0009260155577283,up,1.08,,,Cell cycle / proliferation,1985.0
+HJURP,57,0.0017569079779905,up,1.294,,,Cell cycle / proliferation,1883.0
+AURKA,56,0.0333769632514001,up,1.71,Enzyme,Advanced clinical,Cell cycle / proliferation,1263.0
+CDCA5,55,0.0025991099743725,up,1.195,,,Cell cycle / proliferation,1946.0
+HMMR,54,0.0010344614042458,up,1.092,,,Cell cycle / proliferation,2287.0
+CENPE,54,0.0003104712463018,up,1.267,,,Cell cycle / proliferation,2058.0
+RRM2,54,0.0087003852747839,up,1.937,Enzyme,Approved drug,Cell cycle / proliferation,570.0
+ZWINT,53,0.0007477231423803,up,1.19,,,Cell cycle / proliferation,1692.0
+FOXM1,52,0.0155411095920909,up,1.394,,,Cell cycle / proliferation,652.0
+FN1,52,0.1378718190992048,down,-1.273,,,ECM / matrix remodeling,824.0
+CCR7,51,0.0064124559851578,up,2.694,Membrane receptor,Discovery precedence,Immune / JAK-STAT / chemokine,32.0
+KIF23,51,0.0027347142313768,up,1.338,,,Cell cycle / proliferation,1410.0
+NDC80,50,0.00012953164265,up,1.271,,,Cell cycle / proliferation,1939.0
+PRC1,50,0.000450128656555,up,1.06,,,Cell cycle / proliferation,1479.0
+EXO1,49,0.0044524791058173,up,1.25,,,Cell cycle / proliferation,1806.0
+CCL2,49,0.0382786267803801,up,1.744,Secreted protein,Discovery precedence,Immune / JAK-STAT / chemokine,113.0
+NEK2,49,0.0003358585369156,up,1.141,,,Cell cycle / proliferation,2143.0
+MCM10,48,0.0075196951650864,up,1.512,,,Cell cycle / proliferation,1698.0
+PTTG1,48,0.0003231411611295,up,1.315,,,Cell cycle / proliferation,335.0
+CCL5,47,0.014593790203451,up,1.211,,,Immune / JAK-STAT / chemokine,353.0
+KIF14,46,0.0003892594332706,up,1.372,,,Cell cycle / proliferation,1866.0
+NCAPH,45,0.0001546769114709,up,1.45,,,Cell cycle / proliferation,1554.0
+CCR5,44,0.0194746763290602,up,1.605,,,Immune / JAK-STAT / chemokine,312.0
+DDX58,44,0.0122510816183229,up,1.224,,,Interferon / antiviral,1975.0
+IFIH1,44,0.0031622630841794,up,1.522,Enzyme,Discovery precedence,Interferon / antiviral,98.0
+CXCR4,44,0.0274543584209829,up,2.491,,,Immune / JAK-STAT / chemokine,1066.0
+SPAG5,44,8.22117372609023e-05,up,1.128,,,Cell cycle / proliferation,1733.0
+ISG15,44,0.0057758303620632,up,2.861,,,Interferon / antiviral,253.0
+CD2,42,0.0033728835934455,up,1.81,,,Immune / JAK-STAT / chemokine,565.0
+CTLA4,42,0.0106668163918227,up,3.125,Surface antigen,Discovery precedence,Immune / JAK-STAT / chemokine,68.0
+IL17A,42,0.0097421470536242,up,5.604,Secreted protein,Discovery precedence,Immune / JAK-STAT / chemokine,11.0
+CDKN3,41,0.0002494813932894,up,1.42,,,Cell cycle / proliferation,1507.0
+CXCL9,41,0.0025705362479203,up,4.294,Unclassified,Unknown,Immune / JAK-STAT / chemokine,76.0
+IRF7,41,0.0128806893878135,up,2.256,,,Interferon / antiviral,263.0
+TRIP13,41,5.337637414186655e-05,up,1.154,,,Cell cycle / proliferation,1751.0
+FCGR3A,40,0.0154130337572378,up,1.993,,,Immune / JAK-STAT / chemokine,1329.0
+KIF18A,40,0.000255859752911,up,1.122,,,Cell cycle / proliferation,2228.0
+PCLAF,40,0.0002141683890302,up,1.456,,,Cell cycle / proliferation,1724.0
+IFIT3,40,0.0008258367414269,up,2.186,,,Interferon / antiviral,422.0
+CDC25C,40,0.0243642530848453,up,1.133,,,Cell cycle / proliferation,1911.0
+CDC6,40,0.0028581650499598,up,1.445,,,Cell cycle / proliferation,1570.0
+GZMB,39,0.0147733262942405,up,3.948,Enzyme,Druggable pocket,Immune / JAK-STAT / chemokine,30.0
+IL7R,39,0.0082983544598283,up,1.984,Unclassified,Unknown,Immune / JAK-STAT / chemokine,51.0
+CDCA2,39,0.0003169317575653,up,1.171,,,Cell cycle / proliferation,2185.0
+MX1,38,0.0014919100275943,up,3.29,,,Interferon / antiviral,216.0
+IFI44,38,0.000775624528381,up,3.332,,,Interferon / antiviral,207.0
+OAS1,37,0.000629962761294,up,2.471,Unclassified,Discovery precedence,Interferon / antiviral,126.0
+CD28,37,0.0036675824832484,up,1.76,,,Immune / JAK-STAT / chemokine,266.0
+EGF,37,0.0867748201354405,down,-1.581,,,ECM / matrix remodeling,1686.0
+CXCR3,37,0.0005986408164893,up,1.578,,,Immune / JAK-STAT / chemokine,501.0
+CD80,37,0.0039634400274952,up,2.622,,,Immune / JAK-STAT / chemokine,415.0
+IFI44L,37,0.0006697681823304,up,2.404,,,Interferon / antiviral,186.0
+SKA1,37,5.75934394992613e-05,up,1.442,,,Cell cycle / proliferation,1742.0
+RSAD2,36,0.0004358920731193,up,3.26,,,Interferon / antiviral,203.0
+OAS2,36,0.0008321659493108,up,3.923,Unclassified,Unknown,Interferon / antiviral,118.0
+IFIT1,36,0.0008037280005223,up,1.921,Unclassified,Unknown,Interferon / antiviral,119.0
+CD274,35,0.005946623686278,up,2.605,,,Immune / JAK-STAT / chemokine,192.0
+TK1,35,0.0081095958205141,up,1.279,,,Cell cycle / proliferation,1710.0
+XAF1,34,0.0003163689978222,up,2.546,Unclassified,Unknown,Interferon / antiviral,86.0
+OASL,34,0.0005527620809262,up,4.055,,,Interferon / antiviral,170.0
+MMP9,34,0.0415287726878283,up,1.787,Enzyme,Advanced clinical,ECM / matrix remodeling,290.0
+LCK,34,0.0099422671474973,up,1.905,,,Immune / JAK-STAT / chemokine,620.0
+SPC25,33,2.658188261045537e-05,up,1.338,,,Cell cycle / proliferation,1987.0
+FOXP3,33,0.004637408944371,up,1.527,,,Immune / JAK-STAT / chemokine,688.0
+ICOS,32,0.0007365634552696,up,2.904,Unclassified protein,Unknown,Immune / JAK-STAT / chemokine,44.0
+SKA3,32,2.197149920416112e-05,up,1.345,,,Cell cycle / proliferation,2073.0
+ITGAX,31,0.0103794648110026,up,1.295,,,Immune / JAK-STAT / chemokine,2190.0
+CCL4,31,0.0010621453230963,up,3.466,,,Immune / JAK-STAT / chemokine,261.0
+IRF9,31,0.0018928252848185,up,1.44,,,Interferon / antiviral,457.0
+KNL1,30,8.443006338795667e-06,up,1.155,,,Cell cycle / proliferation,2209.0
+USP18,30,0.0006208337483284,up,1.798,,,Interferon / antiviral,544.0
+PDCD1,30,0.0016787566127926,up,2.354,,,Immune / JAK-STAT / chemokine,226.0
+OAS3,30,0.0002122740361813,up,2.058,,,Interferon / antiviral,469.0
+RAD51AP1,30,0.0001045803605798,up,1.08,,,Cell cycle / proliferation,1426.0
+SELL,30,0.0096209109686863,up,1.673,,,Immune / JAK-STAT / chemokine,746.0
+IRF1,30,0.0042484397745209,up,1.44,,,Interferon / antiviral,159.0
+PARP9,29,0.0008737147931917,up,2.191,,,Interferon / antiviral,622.0
+CD247,29,0.0011340965912945,up,1.491,,,Immune / JAK-STAT / chemokine,533.0
+APOE,29,0.0535202344415968,down,-1.412,,,Lipid / metabolism,1918.0
+MX2,29,0.0005569333860357,up,1.528,,,Interferon / antiviral,157.0
+DDX60,28,0.0006576568818693,up,1.043,,,Interferon / antiviral,1026.0
+CXCR2,28,0.0012596354427393,up,2.416,Membrane receptor,Advanced clinical,Immune / JAK-STAT / chemokine,243.0
+CKAP2L,28,1.1497849494223394e-05,up,1.017,,,Cell cycle / proliferation,2346.0
+CENPN,28,2.72233218967454e-05,up,1.086,,,Cell cycle / proliferation,1716.0
+GBP1,28,0.0004286847305119,up,2.062,,,Interferon / antiviral,477.0
+CCR1,28,0.0012082165423082,up,1.047,,,Immune / JAK-STAT / chemokine,536.0
+CD3E,28,0.001179685222284,up,1.484,,,Immune / JAK-STAT / chemokine,702.0
+TLR2,28,0.0253451045149649,up,1.142,,,Immune / JAK-STAT / chemokine,970.0
+CXCL11,27,0.0006108042557075,up,3.184,Unclassified,Discovery precedence,Immune / JAK-STAT / chemokine,117.0
+IL2RA,27,0.0053089867791192,up,2.157,Membrane receptor,Unknown,Immune / JAK-STAT / chemokine,50.0
+CCL20,27,0.0003949677698216,up,3.425,Unclassified,Discovery precedence,Immune / JAK-STAT / chemokine,61.0
+CCL3,27,0.0006992365280111,up,3.344,Unclassified,Unknown,Immune / JAK-STAT / chemokine,141.0
+IFI6,27,0.0001140741598031,up,3.36,,,Interferon / antiviral,397.0
+LAG3,27,0.000890309302658,up,1.684,,,Immune / JAK-STAT / chemokine,376.0
+CXCL13,27,0.0003173342140702,up,5.544,Unclassified,Unknown,Immune / JAK-STAT / chemokine,25.0
+CCL19,26,0.000128798418826,up,1.214,,,Immune / JAK-STAT / chemokine,896.0
+CCL17,26,0.0001182897463524,up,1.144,,,Immune / JAK-STAT / chemokine,462.0
+TACC3,26,4.361243544023417e-05,up,1.105,,,Cell cycle / proliferation,1892.0
+SHCBP1,26,1.5032644933563053e-05,up,1.405,,,Cell cycle / proliferation,1433.0
+EPSTI1,26,0.0002717261323301,up,2.41,,,Interferon / antiviral,393.0
+CCL22,26,0.00033100547454,up,1.678,,,Immune / JAK-STAT / chemokine,609.0
+GZMA,26,0.0028801167123721,up,2.575,,,Immune / JAK-STAT / chemokine,449.0
+HERC5,25,7.555388781205797e-05,up,1.073,,,Interferon / antiviral,2138.0
+HERC6,25,3.9884222712679434e-05,up,3.019,,,Interferon / antiviral,173.0
+CXCR1,25,0.0004877678027499,up,1.172,Membrane receptor,Advanced clinical,Immune / JAK-STAT / chemokine,2077.0
+CMPK2,25,0.016035824651289,up,2.779,,,Interferon / antiviral,260.0
+CCRL2,25,0.0035342558442399,up,1.45,,,Immune / JAK-STAT / chemokine,845.0
+CD38,25,0.0341012693588396,up,3.033,,,Immune / JAK-STAT / chemokine,321.0
+JAK3,24,0.0060058525626432,up,1.545,Enzyme,Approved drug,Immune / JAK-STAT / chemokine,738.0
+CXCL2,24,0.0007096765251488,up,2.286,,,Immune / JAK-STAT / chemokine,228.0
+RTP4,24,5.6028763032319e-06,up,2.627,,,Interferon / antiviral,356.0
+TROAP,24,0.0001941027912467,up,1.406,,,Cell cycle / proliferation,1517.0
+TIGIT,24,0.0007307040191751,up,2.079,,,Immune / JAK-STAT / chemokine,172.0
+CD36,23,0.0614705762747992,up,1.84,,,Lipid / metabolism,687.0
+KIF18B,23,0.0001371343191734,up,1.078,,,Cell cycle / proliferation,2326.0
+CCND1,23,0.0388275661801657,down,-1.011,,,ECM / matrix remodeling,1095.0
+CALML3,23,0.0751465480418277,up,1.847,,,Neuronal / Ca²⁺ signaling,1144.0
+CCL27,23,3.0774710508914575e-05,down,-2.587,,,Immune / JAK-STAT / chemokine,900.0
+IFI27,23,2.957589545624277e-05,up,4.563,Unclassified,Unknown,Interferon / antiviral,143.0
+IDO1,23,0.0048547369053252,up,3.086,Enzyme,Advanced clinical,Immune / JAK-STAT / chemokine,48.0
+CD34,22,0.0097836178611792,down,-1.356,,,Immune / JAK-STAT / chemokine,813.0
+CKS2,22,2.232418278297717e-05,up,1.408,,,Cell cycle / proliferation,1527.0
+ASF1B,22,0.0003234731507707,up,1.287,,,Cell cycle / proliferation,1531.0
+APOB,22,0.0396915826841916,down,-1.242,,,Lipid / metabolism,736.0
+GZMK,22,0.0070690287248118,up,1.074,,,Immune / JAK-STAT / chemokine,525.0
+CDC25A,22,0.0011528189295911,up,1.654,,,Cell cycle / proliferation,505.0
+MYBL2,21,0.0004232372212386,up,1.684,,,Cell cycle / proliferation,1235.0
+IFITM3,21,0.0001094747468934,up,1.222,,,Interferon / antiviral,976.0
+CD3D,21,0.0001522782170355,up,1.759,,,Immune / JAK-STAT / chemokine,682.0
+ERCC6L,21,0.002081688784305,up,1.222,,,Cell cycle / proliferation,2234.0
+TNFRSF9,21,0.0022133531781087,up,2.878,Membrane receptor,Discovery precedence,Immune / JAK-STAT / chemokine,122.0
+UBE2T,21,2.674500613764821e-05,up,1.323,,,Cell cycle / proliferation,1063.0
+CYP2E1,21,0.0332170997685237,up,1.166,,,,2016.0
+FASLG,20,0.00883167438173,up,1.758,,,Immune / JAK-STAT / chemokine,295.0
+GTSE1,20,0.0020727351447359,up,1.313,,,Cell cycle / proliferation,1926.0
+KLRD1,20,0.000640627246272,up,1.075,,,Immune / JAK-STAT / chemokine,751.0
+SPC24,20,1.270368779677162e-05,up,1.074,,,Cell cycle / proliferation,1797.0
+DEPDC1B,19,6.591531001789656e-06,up,1.579,,,Cell cycle / proliferation,1635.0
+IFITM1,19,9.190846113351296e-07,up,1.706,,,Interferon / antiviral,748.0
+SPRR1B,19,0.0136777026499105,up,3.361,,,,534.0
+SH2D1A,19,0.0021403736039902,up,1.53,,,Immune / JAK-STAT / chemokine,223.0
+CD3G,19,0.0001527059954403,up,1.79,,,Immune / JAK-STAT / chemokine,679.0
+CAMK2A,18,0.0491599879747173,down,-1.09,,,Neuronal / Ca²⁺ signaling,1929.0
+ELN,18,0.0087846395644903,down,-1.521,,,ECM / matrix remodeling,1885.0
+DCN,18,0.027150279393725,down,-1.411,,,ECM / matrix remodeling,1621.0
+KPNA2,18,0.0080095556782011,up,1.624,,,Cell cycle / proliferation,1284.0
+KLRB1,18,0.0059042110875883,up,1.746,,,Immune / JAK-STAT / chemokine,286.0
+CCL26,18,2.2662478954821226e-05,down,-1.567,,,Immune / JAK-STAT / chemokine,1831.0
+ITGAL,17,0.0034509493045903,up,1.278,,,Immune / JAK-STAT / chemokine,588.0
+UBE2L6,17,0.0025979308730687,up,1.614,,,Interferon / antiviral,334.0
+ITK,17,0.0028278728980088,up,1.281,,,Immune / JAK-STAT / chemokine,430.0
+IL2RG,17,0.0014911038147848,up,1.076,,,Immune / JAK-STAT / chemokine,241.0
+CD48,17,0.0001640086268839,up,1.161,,,Immune / JAK-STAT / chemokine,945.0
+PARP14,17,0.0001658084431103,up,1.646,Enzyme,Discovery precedence,Interferon / antiviral,134.0
+CYP3A4,17,0.0118282130246776,down,-1.955,,,,605.0
+SPRR1A,17,0.0073538046139392,up,2.705,,,,917.0
+SPP1,17,0.0127695072595092,up,1.484,,,ECM / matrix remodeling,662.0
+LOR,17,0.0083446502982064,down,-1.824,,,,669.0
+LCE3D,16,0.0010109634786248,up,5.053,Unclassified,Unknown,,96.0
+IL4R,16,0.0016130062710742,up,1.34,,,Immune / JAK-STAT / chemokine,946.0
+NKG7,16,0.0017478307372732,up,1.725,,,Immune / JAK-STAT / chemokine,1549.0
+ISG20,16,8.473799785734514e-07,up,1.337,,,Interferon / antiviral,732.0
+TIMELESS,16,0.0092055238173849,up,1.038,,,Cell cycle / proliferation,1657.0
+PDGFRA,16,0.0117302744616331,down,-1.003,,,ECM / matrix remodeling,2093.0
+ADIPOQ,15,0.0497124032858693,down,-1.799,,,Lipid / metabolism,460.0
+SAMD9,15,1.5390278732631916e-05,up,2.404,,,Interferon / antiviral,882.0
+PPARGC1A,15,0.0241629789542439,down,-1.96,,,Lipid / metabolism,621.0
+CLSPN,15,0.0014448027792715,up,1.231,,,Cell cycle / proliferation,2091.0
+IVL,15,0.006113070054217,up,1.82,,,,710.0
+CAMK2B,15,0.0331840206258964,down,-2.602,Enzyme,Discovery precedence,Neuronal / Ca²⁺ signaling,109.0
+UHRF1,15,1.0601121578625882e-05,up,1.235,,,Cell cycle / proliferation,1921.0
+SGO2,15,2.1195722450980297e-07,up,1.084,,,Cell cycle / proliferation,1585.0
+FLNC,15,0.0418966354424773,down,-1.016,,,ECM / matrix remodeling,2339.0
+SPRR2B,15,0.0041808826482678,up,7.012,Unclassified,Unknown,,45.0
+ACKR2,15,5.001694117086884e-05,up,2.371,,,Immune / JAK-STAT / chemokine,862.0
+LYN,15,0.0273458531689248,up,1.751,,,Immune / JAK-STAT / chemokine,681.0
+LPL,15,0.0184245675953645,down,-1.139,,,Lipid / metabolism,2005.0
+ENPP3,15,0.0406761815864911,down,-1.051,,,Neuronal / Ca²⁺ signaling,2266.0
+IL12RB1,14,0.0002631649959543,up,1.837,Membrane receptor,Unknown,Immune / JAK-STAT / chemokine,220.0
+SOCS3,14,0.0014526599412116,up,2.163,Unclassified,Unknown,Immune / JAK-STAT / chemokine,131.0
+GATA3,14,0.0095820882654916,down,-1.531,,,ECM / matrix remodeling,1603.0
+CD6,14,0.0022818720601264,up,1.325,,,Immune / JAK-STAT / chemokine,1633.0
+CDC25B,14,0.0006176291088537,up,1.039,,,Cell cycle / proliferation,2371.0
+UBE2S,14,0.0024005582830703,up,1.089,,,Cell cycle / proliferation,1644.0
+HPGDS,13,0.0054522667667959,down,-1.68,,,,1691.0
+POLE2,13,0.0001276415121716,up,1.012,,,Cell cycle / proliferation,1612.0
+FCGR1A,13,0.0036251688209268,up,1.932,,,Immune / JAK-STAT / chemokine,264.0
+LTF,13,0.0106978510952401,up,5.7,Enzyme,Discovery precedence,ECM / matrix remodeling,14.0
+CDKN2A,13,0.0039679565380968,up,1.056,,,Cell cycle / proliferation,975.0
+GRIN2A,13,0.0282386629612413,down,-1.972,,,Neuronal / Ca²⁺ signaling,935.0
+ORC1,13,0.0001165464499536,up,1.235,,,Cell cycle / proliferation,1588.0
+TNFRSF4,13,3.616941676113206e-06,up,1.632,,,Immune / JAK-STAT / chemokine,697.0
+GNLY,13,0.0030960965973595,up,1.749,,,Immune / JAK-STAT / chemokine,479.0
+TGM1,13,0.0097547304992254,up,2.348,,,,403.0
+AR,12,0.0203799095550094,down,-1.276,,,ECM / matrix remodeling,847.0
+CCR4,12,2.173310422403451e-06,up,1.536,,,Immune / JAK-STAT / chemokine,464.0
+LCN2,12,0.0316035663089236,up,4.332,,,ECM / matrix remodeling,152.0
+ALOX12B,12,0.0169342881950968,up,1.895,,,,1339.0
+CDH2,12,0.0233845727661829,down,-1.627,,,ECM / matrix remodeling,657.0
+PARP12,12,3.092578250924994e-05,up,1.171,,,Interferon / antiviral,484.0
+CLEC7A,12,0.0059440431630764,up,3.033,,,Immune / JAK-STAT / chemokine,772.0
+SOCS1,12,0.0019745157606691,up,1.179,,,Immune / JAK-STAT / chemokine,385.0
+ADH1C,12,0.001405391932028,down,-1.915,,,,347.0
+SPRR2A,12,0.0029960021534143,up,8.786,Unclassified,Unknown,,20.0
+ADH1B,12,0.0012867284315091,down,-1.94,,,,433.0
+ADH1A,12,0.0012826204448547,down,-1.79,,,,869.0
+TRIM22,12,1.9912823460526225e-07,up,1.86,,,Interferon / antiviral,1170.0
+ADH6,12,0.0014369131833599,down,-1.955,,,,1351.0
+CCL18,12,0.0,up,2.5,,,Immune / JAK-STAT / chemokine,1025.0
+H2AX,12,0.000944217296654,,,,,Cell cycle / proliferation,
+IL21R,12,0.0002309532970188,up,1.747,,,Immune / JAK-STAT / chemokine,1337.0
+LIF,11,0.00152523459161,down,-1.524,,,Immune / JAK-STAT / chemokine,795.0
+RORA,11,0.0147820301038546,down,-1.015,Transcription factor,Discovery precedence,Lipid / metabolism,2186.0
+SELE,11,0.010718666259278,up,1.668,,,Immune / JAK-STAT / chemokine,571.0
+MMP1,11,0.0011570328620153,up,3.206,Enzyme,Approved drug,ECM / matrix remodeling,304.0
+ITGA11,11,0.010719741596346,down,-1.475,,,ECM / matrix remodeling,1823.0
+SPRR2D,11,4.719324569587296e-05,up,5.364,Unclassified,Unknown,,77.0
+CD1B,11,0.0001548289996252,up,1.575,,,Immune / JAK-STAT / chemokine,1802.0
+FASN,11,0.0268336396169924,down,-1.102,,,Lipid / metabolism,395.0
+MMP7,11,0.0008274493452567,down,-1.374,,,ECM / matrix remodeling,837.0
+GSTA3,11,0.002694597954772,down,-2.526,Enzyme,Druggable pocket,,84.0
+MAPT,11,0.0170710961524895,down,-1.202,,,Neuronal / Ca²⁺ signaling,1668.0
+WNT5A,11,0.0047815724587369,up,1.936,,,,252.0
+EPHA2,11,0.0179217938751,up,1.043,,,ECM / matrix remodeling,2359.0
+IFI16,11,0.0036508630993948,up,1.535,,,Interferon / antiviral,489.0
+GSTM5,11,0.0021097974455901,down,-2.125,,,,1260.0
+PRKCB,11,0.0089975897166666,down,-1.478,,,Immune / JAK-STAT / chemokine,838.0
+ERBB4,11,0.0235970810471007,down,-3.708,,,ECM / matrix remodeling,542.0
+SAA1,11,0.0076344777172585,up,2.164,,,Lipid / metabolism,247.0
+ALDH1A2,11,0.0011467445497127,down,-1.888,,,,750.0
+S100A7,11,0.0202263388040433,up,8.11,Unclassified,Discovery precedence,Lipid / metabolism,13.0
+ALDH1A3,11,0.0011467445497127,up,1.958,,,,1421.0
+WNT3A,11,0.0198221513635051,down,-1.055,,,,1016.0
+CACNG4,10,0.0036319676251872,down,-1.822,,,Neuronal / Ca²⁺ signaling,485.0
+SLAMF1,10,0.0001040644455432,up,1.959,,,Immune / JAK-STAT / chemokine,594.0
+GSN,10,0.0192025308146346,down,-1.001,,,ECM / matrix remodeling,2137.0
+ELANE,10,0.0105285021148764,down,-1.553,,,ECM / matrix remodeling,1704.0
+ESCO2,10,1.3615049888507966e-06,up,1.247,,,Cell cycle / proliferation,2026.0
+ACE2,10,0.0223253757905121,up,1.286,,,ECM / matrix remodeling,1297.0
+SPRR2F,10,0.0016167985745314,up,6.69,Unclassified,Unknown,,56.0
+RORC,10,0.0062101554742798,down,-2.473,Transcription factor,Phase 1,Lipid / metabolism,7.0
+PRKG2,10,0.0257308892600188,down,-1.11,,,,2210.0
+MUC1,10,0.0121382340100766,down,-1.821,,,,435.0
+SPRR2E,10,2.8301673730518076e-05,up,4.239,Unclassified,Unknown,,58.0
+GPX2,10,0.02997153032546,up,1.062,,,,2286.0
+SPRR2G,10,5.187060123399181e-05,up,5.012,,,,162.0
+CD7,10,0.0001516262253516,up,2.069,Unclassified,Unknown,Immune / JAK-STAT / chemokine,129.0
+LDB3,10,0.0190809548606014,down,-1.39,,,,369.0
+ADH7,10,0.0012857306594419,up,3.325,,,,339.0
+MGST1,10,0.001940958840832,down,-1.326,,,,580.0
+PLIN1,10,0.0121578173556119,down,-1.746,,,Lipid / metabolism,814.0
+LCE3E,9,2.5217162294149337e-05,up,4.853,Unclassified,Unknown,,123.0
+BCO1,9,0.0004253341151365,down,-1.55,,,,1035.0
+FLG,9,0.0014898545842992,down,-1.266,,,,578.0
+DKK1,9,0.0004149282491763,down,-1.704,,,,1180.0
+GINS4,9,7.900268567567249e-05,up,1.183,,,Cell cycle / proliferation,1212.0
+AOC3,9,0.0002367302492489,down,-1.039,,,Immune / JAK-STAT / chemokine,986.0
+CNTNAP2,9,0.0078738401077584,up,1.758,,,,1176.0
+CD83,9,0.0015929929628134,up,1.385,Unclassified,Unknown,Immune / JAK-STAT / chemokine,100.0
+DKK2,9,0.0004149282491763,down,-1.436,,,,399.0
+IL19,9,0.0006289909260232,up,8.112,Unclassified,Unknown,Immune / JAK-STAT / chemokine,17.0
+BATF,9,0.0025024352360348,up,1.112,,,Immune / JAK-STAT / chemokine,309.0
+DSG3,9,0.0142383729182239,up,1.44,,,,1924.0
+UGT1A7,9,0.000193781141708,up,1.11,,,,2278.0
+GPC3,9,0.004762730011519,down,-1.949,,,,1478.0
+HELZ2,9,5.111550665090437e-07,up,1.783,,,Interferon / antiviral,379.0
+PI3,9,0.0370898285877285,up,6.611,Unclassified,Unknown,,59.0
+APOC2,9,0.0002225609601505,down,-1.433,,,Lipid / metabolism,703.0
+NRXN1,9,0.0068966394526536,down,-1.849,,,,1211.0
+IL12RB2,9,9.053489494490964e-05,up,1.272,Unclassified,Unknown,Immune / JAK-STAT / chemokine,2157.0
+IL23A,9,1.6030277116876444e-05,up,1.633,Unclassified,Discovery precedence,Immune / JAK-STAT / chemokine,291.0
+CD1A,9,9.470833168973423e-05,down,-1.028,,,Immune / JAK-STAT / chemokine,1100.0
+TICRR,9,6.80042391430079e-05,up,1.502,,,Cell cycle / proliferation,1195.0
+PGM2,9,0.0058859281566634,up,1.233,,,Neuronal / Ca²⁺ signaling,1957.0
+LGALS9B,9,0.0040844589981483,up,3.036,,,Immune / JAK-STAT / chemokine,743.0
+FZD8,9,0.0044791835215977,down,-1.29,,,,1784.0
+EPCAM,9,0.0153669544429151,down,-1.374,,,,1443.0
+CD226,9,7.241822529434726e-05,up,1.355,,,Immune / JAK-STAT / chemokine,1518.0
+CD244,9,4.980090744893958e-05,up,1.008,,,Immune / JAK-STAT / chemokine,2148.0
+WIF1,9,0.0004147432597237,down,-5.159,,,,208.0
+PLPP3,9,0.0030020105086397,down,-1.207,,,Lipid / metabolism,696.0
+PGR,9,0.0065073749726285,down,-1.406,,,ECM / matrix remodeling,1849.0
+IRF8,8,0.0004757144582852,up,1.33,,,Immune / JAK-STAT / chemokine,822.0
+CACNB4,8,0.0056501641634879,up,1.29,,,Neuronal / Ca²⁺ signaling,2075.0
+PLPP4,8,0.002392506543971,down,-1.039,,,Lipid / metabolism,1556.0
+CD96,8,1.853237368411868e-05,up,1.323,,,Immune / JAK-STAT / chemokine,796.0
+CH25H,8,0.0046362133569935,up,1.457,,,,715.0
+FPR1,8,0.0035918617854164,up,2.612,,,Immune / JAK-STAT / chemokine,358.0
+ORC6,8,1.466407624523082e-05,up,1.131,,,Cell cycle / proliferation,1913.0
+LGALS9C,8,2.7477120637588475e-05,up,2.792,,,Immune / JAK-STAT / chemokine,915.0
+WNT6,8,3.717622684674076e-05,down,-1.575,,,,1769.0
+FGF22,8,0.0030521343847861,down,-1.399,,,ECM / matrix remodeling,1084.0
+GBP4,8,1.4005866346819429e-05,up,1.5,,,Interferon / antiviral,848.0
+WNT2,8,3.717622684674076e-05,down,-4.903,,,,268.0
+GINS3,8,3.435565807847619e-05,up,1.321,,,Cell cycle / proliferation,1905.0
+SLAMF6,8,2.5407331283533123e-05,up,1.618,,,Immune / JAK-STAT / chemokine,1203.0
+CASP7,8,0.0032757122823875,up,1.134,,,Neuronal / Ca²⁺ signaling,886.0
+NOD2,8,0.005148625130499,up,1.739,,,Interferon / antiviral,368.0
+HSD3B1,8,0.0020986932227334,down,-3.883,,,,206.0
+PYGM,8,0.0107036140221406,down,-1.159,,,Neuronal / Ca²⁺ signaling,2247.0
+BLM,8,0.000170889879705,up,1.413,,,Cell cycle / proliferation,1625.0
+SLC2A4,8,0.003815769050183,down,-1.505,,,Lipid / metabolism,1877.0
+WNT2B,8,3.717622684674076e-05,down,-1.145,,,,2152.0
+WNT7B,8,3.717622684674076e-05,down,-1.717,,,,888.0
+HASPIN,8,0.0,,,,,Cell cycle / proliferation,
+CRY2,8,0.0021855343188694,down,-1.257,,,Lipid / metabolism,1922.0
+ADCY2,8,0.0089493764660644,down,-1.573,,,Neuronal / Ca²⁺ signaling,868.0
+DLG2,8,0.0157328310878142,down,-1.366,,,,1715.0
+MYH11,8,0.0017893901398487,down,-1.539,,,,1299.0
+FLG2,8,0.0221895836209161,down,-2.54,Adhesion,Unknown,,95.0
+ATP12A,8,0.013040183459927,up,4.085,,,,361.0
+SERPINA1,8,0.001486991198285,up,2.601,,,ECM / matrix remodeling,391.0
+CNN1,8,0.0084282042053144,down,-1.904,,,,285.0
+PLSCR1,8,0.0,up,1.504,,,Interferon / antiviral,254.0
+TNNT2,8,0.0024762604463247,down,-1.828,Unclassified,Advanced clinical,,78.0
+ARG1,8,0.0076419620170076,up,2.175,,,Neuronal / Ca²⁺ signaling,373.0
+KCNA1,8,0.0090505519511042,down,-2.084,,,,1245.0
+SGCE,7,0.0048254588790759,down,-1.213,,,Neuronal / Ca²⁺ signaling,1893.0
+PNP,7,0.0050901706341339,up,1.448,,,Neuronal / Ca²⁺ signaling,365.0
+PIF1,7,0.0001146473922272,up,1.625,,,Cell cycle / proliferation,1384.0
+HK2,7,0.0087992052825263,up,1.361,,,Neuronal / Ca²⁺ signaling,807.0
+AIM2,7,0.001871057977138,up,3.348,,,Interferon / antiviral,576.0
+GRIA4,7,0.0064904286639868,down,-2.867,,,Neuronal / Ca²⁺ signaling,878.0
+TG,7,0.0264979037861082,down,-2.168,,,,480.0
+NOTUM,7,0.0004141512934752,down,-1.691,,,,1290.0
+PPIF,7,0.0106428952218121,up,1.199,,,Lipid / metabolism,2115.0
+LMNB1,7,0.0041856894969361,up,1.115,,,Cell cycle / proliferation,2151.0
+ACTG2,7,0.0014867408603369,down,-1.774,,,,461.0
+AWAT2,7,0.0004253341151365,down,-5.175,Enzyme,Unknown,,115.0
+SLAMF7,7,0.0001870903178356,up,1.767,,,Immune / JAK-STAT / chemokine,636.0
+PRKCQ,7,0.0027455245869528,up,2.601,,,Immune / JAK-STAT / chemokine,388.0
+PPARD,7,0.0044071651271072,up,1.22,,,Lipid / metabolism,1943.0
+ACTC1,7,0.0045879644899119,down,-2.301,,,,988.0
+GCH1,7,0.0073078477301522,up,1.134,,,Neuronal / Ca²⁺ signaling,749.0
+CYP4F8,7,0.0063655555826053,down,-2.372,,,,543.0
+CYP2J2,7,0.0119867503712263,down,-1.37,,,,2129.0
+PRKN,7,0.0073027234994883,,,,,Neuronal / Ca²⁺ signaling,
+MEFV,7,0.002583824628942,up,2.321,Unclassified protein,Discovery precedence,Interferon / antiviral,74.0
+FOXA1,7,0.00681438995048,down,-1.649,,,ECM / matrix remodeling,756.0
+ITGA7,7,0.0070153254088794,down,-1.016,,,ECM / matrix remodeling,2232.0
+GJB2,7,0.0106897537721364,up,4.057,Unclassified protein,Discovery precedence,,150.0
+NT5C3A,7,0.0031852461438085,up,1.752,,,Neuronal / Ca²⁺ signaling,450.0
+GBP5,7,0.0002208491501902,up,2.658,,,Interferon / antiviral,624.0
+PDE6A,7,0.0164184035752476,down,-2.327,,,Neuronal / Ca²⁺ signaling,446.0
+PLN,7,0.0142912287615013,down,-1.433,,,,575.0
+CLDN16,7,0.003497629295996,down,-1.935,,,,984.0
+SFRP5,7,0.0004141512934752,down,-1.984,,,,1079.0
+LCE3A,7,3.510688723460632e-06,up,7.678,Unclassified,Unknown,,36.0
+CBS,7,0.009119388048971,down,-1.195,,,Neuronal / Ca²⁺ signaling,319.0
+ESPN,7,0.0128146709875657,down,-1.154,,,ECM / matrix remodeling,1775.0
+APOD,7,0.0016136455871193,down,-1.672,,,Lipid / metabolism,1367.0
+NLGN3,7,0.0036485178771916,down,-1.16,,,,440.0
+CXCL17,7,0.0,up,3.16,Unclassified,Unknown,Immune / JAK-STAT / chemokine,140.0
+SAA2,7,0.0011312306016904,up,2.511,,,Lipid / metabolism,793.0
+CLDN23,7,0.0021835592396457,down,-1.757,,,,1717.0
+FBLN5,6,0.0013178656477542,down,-1.158,,,ECM / matrix remodeling,2155.0
+DEFB4A,6,0.0075926630562185,up,10.592,Unclassified,Discovery precedence,Lipid / metabolism,21.0
+SLC26A4,6,0.0033173304872631,up,2.137,,,,227.0
+PLCB4,6,0.0082573239450904,down,-1.114,,,Neuronal / Ca²⁺ signaling,2224.0
+TYMP,6,0.0041831779995391,up,3.379,,,Neuronal / Ca²⁺ signaling,198.0
+TAC1,6,0.0258870431196135,down,-2.935,,,,765.0
+PYCARD,6,0.00183033871483,up,1.022,,,Interferon / antiviral,1748.0
+CIDEA,6,0.0079192639373502,down,-1.027,,,Lipid / metabolism,1976.0
+GPT,6,0.0493646956542122,down,-1.412,,,,1430.0
+LEPR,6,0.0026698460322172,down,-1.327,,,Immune / JAK-STAT / chemokine,1845.0
+NAMPT,6,0.0134850489726684,up,1.788,,,Neuronal / Ca²⁺ signaling,596.0
+F3,6,0.0149358614531251,down,-2.35,,,ECM / matrix remodeling,359.0
+ADAM22,6,0.0019733555854154,down,-1.091,,,,2097.0
+MYLK,6,0.0037981320806998,down,-1.137,,,,1960.0
+CGAS,6,7.004123414430501e-05,,,,,Interferon / antiviral,
+PGM5,6,0.0020061831817608,down,-1.399,,,Neuronal / Ca²⁺ signaling,1279.0
+MYL9,6,0.0005203398297846,down,-1.145,,,,1178.0
+PDE10A,6,0.0031088584704552,,,,,Neuronal / Ca²⁺ signaling,
+CBSL,6,0.0050543558208485,down,-1.187,,,Neuronal / Ca²⁺ signaling,707.0
+MFAP5,6,0.0020399403574272,down,-1.611,,,ECM / matrix remodeling,1737.0
+PLA2G2A,6,0.0076964059160531,up,1.037,Enzyme,Advanced clinical,,344.0
+STIL,6,0.0002377899173544,up,1.14,,,Cell cycle / proliferation,2160.0
+PYGL,6,0.0040164389819406,up,1.192,,,Neuronal / Ca²⁺ signaling,2117.0
+PLAT,6,0.0084056284610509,up,2.212,,,ECM / matrix remodeling,506.0
+FST,6,0.0108695409678793,down,-1.109,,,,313.0
+AREG,6,0.001011991365799,up,1.815,,,ECM / matrix remodeling,518.0
+KRT6A,6,0.0074716602288816,up,3.193,,,,753.0
+FUT1,6,0.0101328835968421,up,1.15,,,,2069.0
+ATP1A2,6,0.002573222937104,down,-1.79,Unclassified,Approved drug,,149.0
+NOS2,6,0.0216772526469218,up,5.196,Enzyme,Advanced clinical,Neuronal / Ca²⁺ signaling,27.0
+ATP1B1,6,0.002573222937104,up,1.336,,,,2140.0
+TJP3,6,0.0001489712437148,down,-1.092,,,,360.0
+BHLHE41,6,0.0001339488923307,down,-1.25,,,Lipid / metabolism,1580.0
+CLDN3,6,0.0035984133366045,down,-2.829,,,,914.0
+FGF13,6,0.0029118905624261,down,-1.082,,,ECM / matrix remodeling,1550.0
+PRDM1,6,4.646214235562669e-05,up,1.162,,,Immune / JAK-STAT / chemokine,1001.0
+TNNT1,6,0.0039286750671621,down,-1.71,,,,526.0
+CLDN1,6,0.0038895189547425,down,-1.763,,,,1243.0
+CYP27A1,6,0.0100130678164697,down,-1.064,,,,1706.0
+APOL1,6,1.186980316992924e-05,up,3.194,,,Lipid / metabolism,611.0
+MUC16,6,0.0027040125676438,down,-2.611,,,,495.0
+TNNT3,6,0.0010133654495186,down,-3.068,,,,648.0
+TREM2,6,0.0044171605106596,up,1.452,,,Lipid / metabolism,1798.0
+AGTR1,6,0.0039911162992507,down,-1.801,,,ECM / matrix remodeling,729.0
+CFH,6,0.001877012851605,down,-1.109,,,Lipid / metabolism,2293.0
+PTPN22,6,3.013187416677125e-06,up,1.388,,,Immune / JAK-STAT / chemokine,265.0
+MOGAT1,6,6.0379675306629294e-05,down,-3.358,,,Lipid / metabolism,238.0
+PACRG,6,0.0030539480976782,down,-1.585,,,Neuronal / Ca²⁺ signaling,519.0
+CYP2S1,6,0.000127051114918,up,1.224,,,,1552.0
+ENKUR,6,0.0057546297759166,up,4.394,,,Neuronal / Ca²⁺ signaling,160.0
+DGAT2,6,0.000632516993001,down,-1.126,,,Lipid / metabolism,217.0
+LILRB1,5,0.002782600664913,up,1.536,,,Immune / JAK-STAT / chemokine,1768.0
+DTX3L,5,4.923565431839491e-07,up,1.487,Unclassified,Druggable pocket,Interferon / antiviral,135.0
+CDH20,5,0.0040681400509268,down,-2.725,,,ECM / matrix remodeling,299.0
+MUC6,5,0.0023996586944368,down,-1.213,,,,2153.0
+CD207,5,0.0004605319403256,down,-1.202,,,Immune / JAK-STAT / chemokine,1875.0
+CLDN8,5,0.0,down,-2.963,,,,774.0
+TNNC1,5,0.0,down,-3.44,,,,607.0
+UPP1,5,0.0004066413408336,up,2.324,,,Neuronal / Ca²⁺ signaling,517.0
+TM4SF19,5,3.4531364493055394e-07,up,1.528,,,Cell cycle / proliferation,1105.0
+LIPG,5,5.996529893271263e-05,up,1.804,,,Lipid / metabolism,1376.0
+NPR1,5,0.0021173738745761,down,-1.179,,,Neuronal / Ca²⁺ signaling,1398.0
+TNNC2,5,0.0,down,-1.368,,,,727.0
+SHC2,5,0.0040888417500816,down,-1.05,,,ECM / matrix remodeling,1721.0
+MOGAT2,5,5.996529893271263e-05,down,-3.57,,,Lipid / metabolism,419.0
+SERPINA5,5,0.0061643785935714,down,-1.593,,,ECM / matrix remodeling,504.0
+HMOX1,5,0.0230671408716626,up,1.348,Enzyme,Discovery precedence,,33.0
+PNPLA7,5,0.0002662027905571,down,-1.317,,,,1881.0
+FBLN1,5,0.0009940661876737,down,-1.135,,,ECM / matrix remodeling,2306.0
+FPR2,5,0.0065739002266185,up,2.132,,,Immune / JAK-STAT / chemokine,1292.0
+PSME2,5,1.033773722122448e-05,up,1.135,,,Interferon / antiviral,805.0
+SGCG,5,0.0060278167809221,down,-1.642,,,Neuronal / Ca²⁺ signaling,1553.0
+S100A8,5,0.00223555502895,up,7.763,Unclassified protein,Discovery precedence,Lipid / metabolism,31.0
+TGM3,5,0.0002994018582544,up,2.454,,,,167.0
+POSTN,5,0.0017652723866869,down,-1.845,,,ECM / matrix remodeling,1419.0
+PIP5K1B,5,0.0045522173762413,down,-1.121,,,ECM / matrix remodeling,1909.0
+SSPN,5,0.000106302922789,down,-1.313,,,Neuronal / Ca²⁺ signaling,1741.0
+HSD11B1,5,0.0071093927759366,down,-3.04,,,,689.0
+SYT1,5,0.0080134561718655,down,-1.362,,,,2086.0
+CDK5R1,5,0.0001377384309796,up,1.386,,,Cell cycle / proliferation,910.0
+SGCA,5,0.000106302922789,down,-1.965,,,Neuronal / Ca²⁺ signaling,279.0
+MYO3A,5,0.0012365483395427,down,-3.022,,,ECM / matrix remodeling,259.0
+S100A9,5,0.0047963619091814,up,7.94,Unclassified protein,Discovery precedence,Lipid / metabolism,5.0
+CSTA,5,0.0002006978713281,up,1.597,,,,1513.0
+TNNI2,5,0.0,down,-1.491,,,,1787.0
+BHMT,5,0.0010162580570306,down,-1.211,,,Neuronal / Ca²⁺ signaling,932.0
+CFAP45,5,0.0,up,1.464,,,Neuronal / Ca²⁺ signaling,1807.0
+LMOD1,5,0.0,down,-1.474,,,,330.0
+BHMT2,5,0.0010162580570306,down,-1.429,,,Neuronal / Ca²⁺ signaling,1824.0
+REN,5,0.0028836505318275,up,3.423,Enzyme,Approved drug,ECM / matrix remodeling,83.0
+CACNA2D3,5,0.0012542900522731,up,1.128,,,Neuronal / Ca²⁺ signaling,456.0
+CACNA2D2,5,3.3925971077589836e-06,down,-1.689,,,Neuronal / Ca²⁺ signaling,1281.0
+SHANK1,5,0.0087299513836382,down,-1.156,,,,1879.0
+ANGPTL4,5,0.0011880431372788,up,1.812,,,Lipid / metabolism,1499.0
+FXYD1,5,0.0086408604046816,down,-1.754,,,,1574.0
+TEKT3,5,0.0,down,-2.364,,,Neuronal / Ca²⁺ signaling,1190.0
+FAM166B,5,0.0,down,-1.721,,,Neuronal / Ca²⁺ signaling,306.0
+GPIHBP1,5,0.0001588015492944,down,-1.223,,,Lipid / metabolism,777.0
+PLA2G3,5,0.0012229442369722,up,1.954,,,,969.0
+C5orf49,5,0.0,down,-3.146,,,Neuronal / Ca²⁺ signaling,711.0
+RBM20,5,0.0053973725785722,down,-1.309,,,,2112.0
+BIRC3,5,0.0014260350145027,up,1.379,Enzyme,Advanced clinical,Interferon / antiviral,55.0
+TMPRSS2,5,0.0031103540082304,down,-1.971,,,ECM / matrix remodeling,1255.0
+CBX7,5,4.943170195447258e-05,down,-1.043,,,Cell cycle / proliferation,1192.0
+SIGLEC9,5,0.0021193975623611,up,1.051,,,,1013.0
+ZBTB16,5,0.0052719315311091,down,-2.808,,,ECM / matrix remodeling,798.0
+GBA,5,0.002752598784364,up,1.251,,,Neuronal / Ca²⁺ signaling,1132.0
+PCSK9,5,0.0005264186537091,up,2.297,,,Lipid / metabolism,401.0
+CFB,5,0.0010762734645877,up,2.049,,,Lipid / metabolism,164.0
+CARD11,5,0.0003158566956418,up,1.14,,,Immune / JAK-STAT / chemokine,1012.0
+FOLH1,5,0.0040625876970816,up,1.864,,,,1390.0
+PLA2G2F,5,0.0010408612565757,up,2.142,Enzyme,Discovery precedence,,52.0
+FUT3,5,1.3812545797222158e-06,up,3.042,,,,666.0
+SOD2,5,0.0028806641220959,up,1.427,,,Lipid / metabolism,292.0
+TNFSF10,5,0.0004403354184507,up,1.477,,,Neuronal / Ca²⁺ signaling,741.0
+MMP12,5,9.806724919889448e-05,up,5.339,Enzyme,Advanced clinical,ECM / matrix remodeling,28.0
+GNG7,5,0.0035544505581371,down,-1.106,,,Immune / JAK-STAT / chemokine,1586.0
+TIMP3,5,3.101526112141674e-05,down,-1.268,,,ECM / matrix remodeling,892.0
+CARD14,5,0.0064437483635562,up,1.265,,,Immune / JAK-STAT / chemokine,174.0
+NR1D1,5,0.0019761558352256,down,-1.273,,,Lipid / metabolism,1752.0
+ADRB2,5,0.0061208994462153,down,-1.598,,,ECM / matrix remodeling,1671.0
+FUT2,5,1.3812545797222158e-06,up,2.295,,,,560.0
+CPEB1,5,8.287527478333295e-08,down,-1.125,,,Cell cycle / proliferation,1677.0
+CD24,5,0.0011743084177963,up,1.786,,,Immune / JAK-STAT / chemokine,694.0
+RORB,5,8.683087617230468e-05,down,-1.312,,,Lipid / metabolism,1945.0
+DHRS9,5,0.0014927042648123,up,1.87,,,,219.0
+HK3,5,0.0009777238940411,up,1.167,,,Neuronal / Ca²⁺ signaling,920.0
+USP41,4,0.0,up,1.348,,,Interferon / antiviral,755.0
+GATM,4,0.0091347719914951,down,-1.072,,,Neuronal / Ca²⁺ signaling,1758.0
+SLPI,4,0.0383986817290916,up,1.071,,,ECM / matrix remodeling,701.0
+BATF2,4,3.313003504157425e-05,up,2.973,Unclassified,Unknown,Immune / JAK-STAT / chemokine,87.0
+ERVFRD-1,4,0.0013908651286596,down,-1.109,,,ECM / matrix remodeling,1130.0
+ABO,4,0.0,down,-1.362,,,,731.0
+CNTN4,4,0.0040829885376588,down,-2.578,,,,1049.0
+KIF4B,4,0.0,up,1.015,,,Cell cycle / proliferation,2300.0
+CYP7B1,4,0.0010212328398556,up,1.111,,,,1855.0
+GRIK1,4,0.0022225728610508,down,-1.148,,,Neuronal / Ca²⁺ signaling,1935.0
+FUT5,4,0.0,up,1.785,,,,1169.0
+DIO2,4,0.0035798282183729,up,1.455,,,Lipid / metabolism,674.0
+NR3C2,4,0.008193404112356,down,-1.615,,,ECM / matrix remodeling,1319.0
+CYP21A2,4,0.0012407640687175,down,-1.916,,,,1532.0
+GRIK4,4,0.0024868365174618,down,-1.232,,,Neuronal / Ca²⁺ signaling,1336.0
+ALCAM,4,6.214142065034747e-05,down,-1.103,,,Immune / JAK-STAT / chemokine,757.0
+EGR2,4,0.0067538457896414,down,-1.108,,,Lipid / metabolism,444.0
+MFAP4,4,5.17970467395831e-07,down,-1.055,,,ECM / matrix remodeling,2282.0
+PDGFC,4,0.0001690095449815,down,-1.186,,,ECM / matrix remodeling,1602.0
+EFNB2,4,5.179704673958309e-06,down,-1.05,,,ECM / matrix remodeling,1501.0
+FBN2,4,0.0025571602119715,up,1.718,,,ECM / matrix remodeling,1431.0
+NTF3,4,0.0026139208136751,down,-1.845,,,ECM / matrix remodeling,1465.0
+EDN3,4,0.0007681388550884,down,-1.505,,,ECM / matrix remodeling,740.0
+CNTN2,4,0.0001258732888651,down,-2.269,,,,944.0
+TIGAR,4,0.0003659812160708,up,1.047,,,Neuronal / Ca²⁺ signaling,2367.0
+AKR1B10,4,0.0032217357233679,up,5.748,Enzyme,Discovery precedence,Neuronal / Ca²⁺ signaling,103.0
+GK,4,0.00223898345153,up,1.677,,,Lipid / metabolism,800.0
+RDH16,4,5.088961671956082e-06,up,2.383,Unclassified,Unknown,,16.0
+ACP5,4,0.0059830436052021,up,1.222,,,Neuronal / Ca²⁺ signaling,2194.0
+MYH14,4,0.0018380664239041,down,-2.061,,,,583.0
+DDX60L,4,0.0,up,1.607,,,Interferon / antiviral,320.0
+SCIN,4,0.002834894769927,down,-2.227,,,ECM / matrix remodeling,1154.0
+TGFBI,4,0.0001559088182767,down,-1.04,,,ECM / matrix remodeling,2281.0
+FSCN1,4,0.0101404984346939,up,1.019,,,ECM / matrix remodeling,1072.0
+NFKBIZ,4,0.002200727764995,up,1.722,,,Immune / JAK-STAT / chemokine,1428.0
+UBD,4,2.5489744511870563e-05,up,2.219,,,Immune / JAK-STAT / chemokine,1239.0
+PDK4,4,0.0001665971082406,down,-2.157,,,Lipid / metabolism,1265.0
+MSMB,4,0.0048848382029796,down,-3.335,,,Neuronal / Ca²⁺ signaling,586.0
+TAP1,4,0.0020345879959308,up,1.068,,,Interferon / antiviral,375.0
+LRP8,4,0.005799124715284,up,1.54,,,Lipid / metabolism,1565.0
+LCE5A,4,8.529324786062552e-06,down,-2.931,Unclassified,Unknown,,57.0
+RCC1,4,0.0020362837608226,up,1.078,,,Cell cycle / proliferation,1328.0
+UGT2A2,4,5.5595496833819185e-06,down,-3.51,,,,171.0
+PSMB10,4,8.295982193361777e-05,up,1.065,,,Interferon / antiviral,978.0
+CES1,4,5.17970467395831e-07,down,-1.936,,,,1301.0
+CBX2,4,0.0,up,1.036,,,Cell cycle / proliferation,2198.0
+MAT1A,4,0.0,down,-1.529,,,Neuronal / Ca²⁺ signaling,1687.0
+ABCA4,4,0.0020345879959308,down,-1.256,,,Neuronal / Ca²⁺ signaling,562.0
+BLNK,4,0.0001299828995046,up,1.357,,,Immune / JAK-STAT / chemokine,384.0
+CYP4F22,4,7.867245681867168e-05,up,1.124,,,,158.0
+VTCN1,4,0.0,down,-1.833,,,Immune / JAK-STAT / chemokine,1373.0
+FFAR4,4,0.0065133154965386,down,-1.349,,,ECM / matrix remodeling,1870.0
+PTAFR,4,0.0036134987065389,up,1.383,,,Immune / JAK-STAT / chemokine,546.0
+HTR3A,4,0.0,up,4.233,Ion channel,Approved drug,Neuronal / Ca²⁺ signaling,79.0
+ABCA12,4,0.0003275135922321,up,1.077,,,,2350.0
+CNGA1,4,0.0028980153646525,down,-1.35,,,Neuronal / Ca²⁺ signaling,2076.0
+DSG2,4,0.006568206810622,down,-1.116,,,,211.0
+COMP,4,0.0008593032550194,up,1.586,,,ECM / matrix remodeling,684.0
+BATF3,4,8.590402382999663e-05,up,1.227,,,Immune / JAK-STAT / chemokine,2127.0
+UCHL1,4,0.0012903649760355,down,-1.093,,,Neuronal / Ca²⁺ signaling,937.0
+GAP43,4,0.0205576238359736,down,-2.15,,,Neuronal / Ca²⁺ signaling,516.0
+SHISA9,4,0.0,down,-2.488,,,Neuronal / Ca²⁺ signaling,860.0
+S100A12,4,0.0073288922561892,up,8.802,Unclassified,Druggable pocket,Lipid / metabolism,4.0
+SNTB1,4,0.0,down,-2.368,,,Neuronal / Ca²⁺ signaling,1135.0
+SORBS2,3,0.00157904118627,down,-1.228,,,Neuronal / Ca²⁺ signaling,1441.0
+DUOXA2,3,0.0005087318448155,up,1.076,,,,2222.0
+CRYAB,3,0.0007085603342533,down,-1.292,Unclassified protein,Discovery precedence,ECM / matrix remodeling,82.0
+RGS9BP,3,0.0101397898697407,down,-2.155,,,Neuronal / Ca²⁺ signaling,412.0
+RIMS1,3,0.0003845219306294,down,-2.901,,,,863.0
+GDF7,3,0.0056889357925764,down,-1.36,,,,872.0
+SCD5,3,0.008613002967595,down,-1.646,,,Lipid / metabolism,1689.0
+SERPINA12,3,0.0236605009742023,down,-2.378,Unclassified,Unknown,,62.0
+APBA1,3,0.0037375878824508,down,-1.213,,,,2273.0
+MYO3B,3,0.0,down,-1.773,,,ECM / matrix remodeling,1321.0
+IYD,3,6.906272898611079e-07,down,-2.992,,,,248.0
+GDA,3,0.000291224595413,up,4.693,,,Neuronal / Ca²⁺ signaling,276.0
+CSF2RB,3,0.0060913326965749,up,1.167,,,,940.0
+CTSC,3,6.523954045463843e-05,up,1.017,,,Immune / JAK-STAT / chemokine,1099.0
+CST7,3,1.1050036637777726e-06,up,1.727,,,Immune / JAK-STAT / chemokine,1412.0
+ACPP,3,0.000533040993595,up,1.183,,,Neuronal / Ca²⁺ signaling,593.0
+ADAMTS4,3,2.195208171344236e-06,up,2.294,,,ECM / matrix remodeling,342.0
+FOXE1,3,0.0005087318448155,up,3.246,,,,183.0
+TMPRSS6,3,0.004067104109992,down,-2.874,Enzyme,Discovery precedence,ECM / matrix remodeling,89.0
+FUT7,3,0.0121453715194974,up,1.671,,,Immune / JAK-STAT / chemokine,454.0
+PLEK,3,0.004067104109992,up,1.428,,,Neuronal / Ca²⁺ signaling,786.0
+LILRB4,3,0.0002687713380258,up,1.575,,,Immune / JAK-STAT / chemokine,1257.0
+CST6,3,4.596761344750865e-05,down,-1.774,,,,1372.0
+PLA2G4B,3,3.1488050831139964e-05,up,1.997,,,,367.0
+PLA2G4D,3,3.1488050831139964e-05,up,4.104,Enzyme,Discovery precedence,,105.0
+AMPH,3,0.0020345879959308,down,-1.428,,,,423.0
+MYOM2,3,0.0008372395051565,down,-1.395,,,Interferon / antiviral,1949.0
+KRT2,3,0.0020345879959308,down,-1.303,,,,1087.0
+CATSPERG,3,0.0,down,-1.267,,,Neuronal / Ca²⁺ signaling,558.0
+CATSPERB,3,0.0,up,1.134,,,Neuronal / Ca²⁺ signaling,1316.0
+SERPINB3,3,0.0020345879959308,up,6.342,Unclassified,Unknown,Lipid / metabolism,38.0
+PRKAA2,3,0.0022222322283939,down,-1.205,,,Lipid / metabolism,1109.0
+MYOCD,3,8.419467247014038e-05,down,-1.644,,,,459.0
+OGN,3,0.0060913326965749,down,-2.066,,,ECM / matrix remodeling,962.0
+FBP1,3,0.0,down,-1.601,,,Neuronal / Ca²⁺ signaling,535.0
+CASP5,3,0.0,up,4.115,,,Interferon / antiviral,166.0
+ADAM23,3,0.0003084701639898,up,2.594,,,,992.0
+SLC17A7,3,0.0020345879959308,down,-2.291,,,,1216.0
+CASQ2,3,0.0027401065882904,down,-1.772,,,,278.0
+F12,3,0.0020345879959308,up,1.15,,,ECM / matrix remodeling,2211.0
+F10,3,0.0003130912286558,down,-1.614,,,ECM / matrix remodeling,1325.0
+OMD,3,0.0020345879959308,down,-1.62,,,ECM / matrix remodeling,1773.0
+EDA,3,0.008119705046897,down,-1.196,,,,2270.0
+GJB6,3,0.0001172267940171,up,3.099,,,,237.0
+P2RX1,3,0.004067104109992,down,-1.163,,,Neuronal / Ca²⁺ signaling,2309.0
+TRPM6,3,0.0110434369689614,up,1.56,,,,1874.0
+CLDN17,3,0.0,up,4.039,,,,378.0
+IL11RA,3,2.9203668256983997e-06,down,-1.014,,,Immune / JAK-STAT / chemokine,2196.0
+ATP6V1B1,3,0.0020345879959308,down,-2.304,,,,1140.0
+WEE2,3,0.0,down,-1.082,,,Cell cycle / proliferation,1076.0
+CKMT1B,3,0.0040650322281224,up,1.35,,,Neuronal / Ca²⁺ signaling,1638.0
+PDZK1,3,0.0056610623691329,down,-1.626,,,ECM / matrix remodeling,1632.0
+LAMC3,3,0.0007763028616369,down,-1.544,,,ECM / matrix remodeling,1515.0
+IL36RN,3,0.004067104109992,up,2.497,Unclassified,Unknown,Immune / JAK-STAT / chemokine,858.0
+CHRNA9,3,0.0040650322281224,up,3.31,,,,552.0
+CARNS1,3,0.0020538108128076,down,-1.104,,,Neuronal / Ca²⁺ signaling,1725.0
+FOSL1,3,0.0013877452102857,up,2.259,,,Neuronal / Ca²⁺ signaling,493.0
+NMI,3,4.806439527460889e-06,up,1.483,Unclassified,Unknown,Interferon / antiviral,18.0
+CHRM1,3,0.0020345879959308,down,-2.615,,,Neuronal / Ca²⁺ signaling,1004.0
+ZBP1,3,0.002227995251129,up,2.894,,,Interferon / antiviral,346.0
+PRLR,3,0.0001720028033855,down,-1.755,,,Immune / JAK-STAT / chemokine,1291.0
+CASP10,3,1.9718242431194944e-05,up,1.057,,,Neuronal / Ca²⁺ signaling,874.0
+PCARE,3,0.0,,,,,Neuronal / Ca²⁺ signaling,
+ABCC9,3,0.0025984481314103,down,-1.102,,,,2227.0
+ELOVL3,3,0.0020345879959308,down,-3.319,,,Lipid / metabolism,380.0
+B3GALT5,3,0.0,down,-2.0,,,,1177.0
+TIMP4,3,0.0,down,-1.786,,,ECM / matrix remodeling,1400.0
+IL18RAP,3,0.0020345879959308,up,1.817,,,Immune / JAK-STAT / chemokine,229.0
+MUC4,3,0.0,up,3.744,,,,194.0
+HAL,3,0.0013798585961891,up,1.889,,,Neuronal / Ca²⁺ signaling,1395.0
+CNTFR,3,0.0004198345029561,down,-2.266,,,Immune / JAK-STAT / chemokine,582.0
+LDLR,3,0.0,up,1.002,,,Lipid / metabolism,1009.0
+GPD1,3,0.0007485510566665,down,-3.429,,,Lipid / metabolism,566.0
+CNFN,3,0.0,up,2.814,,,,190.0
+C1QB,3,0.0007352814225159,up,1.002,,,Lipid / metabolism,1008.0
+FABP5,3,0.0033010086361963,up,3.385,Auxiliary transport protein,Discovery precedence,Lipid / metabolism,148.0
+PIP,3,0.000236666831384,down,-2.501,,,ECM / matrix remodeling,472.0
+NRXN3,3,3.495798723326784e-05,down,-1.408,,,,1982.0
+TREM1,3,0.0012178352329077,up,1.924,,,Lipid / metabolism,699.0
+HSPB2,3,0.0016251041752759,down,-1.187,,,ECM / matrix remodeling,706.0
+BTC,3,0.0,down,-3.293,,,ECM / matrix remodeling,677.0
+MSH5,3,5.610702075887847e-07,,,,,Cell cycle / proliferation,
+MERTK,3,8.148755649744786e-05,down,-1.614,,,Immune / JAK-STAT / chemokine,1324.0
+NETO1,3,0.004038505196339,down,-2.678,,,Neuronal / Ca²⁺ signaling,902.0
+EPHB1,3,0.0020345879959308,down,-1.061,,,ECM / matrix remodeling,2213.0
+SCN7A,3,0.0040650322281224,down,-2.047,,,Neuronal / Ca²⁺ signaling,1215.0
+GDPD3,2,0.0073045648454761,up,2.442,Unclassified,Unknown,Neuronal / Ca²⁺ signaling,97.0
+SERPINB4,2,0.0,up,8.73,Unclassified,Unknown,Lipid / metabolism,22.0
+SAA2-SAA4,2,0.0,up,2.27,,,Lipid / metabolism,828.0
+ELF3,2,1.7265682246527697e-07,up,2.197,,,,1199.0
+RGS6,2,0.0060913326965749,down,-1.62,,,Neuronal / Ca²⁺ signaling,1727.0
+GRXCR2,2,0.0,down,-1.965,,,ECM / matrix remodeling,1202.0
+LOXL4,2,0.0,down,-1.685,,,ECM / matrix remodeling,468.0
+PRSS3,2,0.0020345879959308,up,1.367,,,,833.0
+LGI3,2,0.0,down,-1.779,,,,1165.0
+SCO2,2,0.0002833752812044,up,1.576,,,Neuronal / Ca²⁺ signaling,1799.0
+ASTN2,2,0.0020345879959308,down,-1.211,,,,1435.0
+KRT8,2,0.0,down,-1.128,,,,776.0
+SLC1A6,2,0.0020345879959308,down,-1.727,,,Lipid / metabolism,1120.0
+FADS2,2,0.0011475915073019,down,-2.838,,,Lipid / metabolism,835.0
+TNFRSF21,2,0.0,up,1.459,,,Neuronal / Ca²⁺ signaling,866.0
+KRT18,2,0.0,down,-1.26,,,,1309.0
+SCN3B,2,0.0020345879959308,down,-1.054,,,Neuronal / Ca²⁺ signaling,1083.0
+MGP,2,7.176175758146221e-06,down,-1.209,,,ECM / matrix remodeling,1781.0
+THRSP,2,0.0,down,-4.46,Unclassified,Unknown,Lipid / metabolism,110.0
+POLQ,2,2.7152552752829583e-06,up,1.081,,,Cell cycle / proliferation,2261.0
+SLC26A3,2,0.0020345879959308,down,-3.753,,,ECM / matrix remodeling,222.0
+PIWIL2,2,0.0020345879959308,down,-1.649,,,Immune / JAK-STAT / chemokine,1461.0
+GRIK5,2,0.0,down,-1.293,,,Neuronal / Ca²⁺ signaling,1288.0
+NTRK3,2,1.8067998206118873e-05,down,-1.252,,,ECM / matrix remodeling,1282.0
+NPTXR,2,0.0002405891398186,down,-1.329,,,Neuronal / Ca²⁺ signaling,1888.0
+SORBS1,2,0.0002994320281162,down,-1.572,,,Neuronal / Ca²⁺ signaling,598.0
+GJA3,2,0.0,up,1.76,,,,769.0
+GJB4,2,0.0,down,-2.697,,,,959.0
+GJC2,2,0.0,down,-1.025,,,,2314.0
+TMPRSS4,2,0.0,up,2.977,,,ECM / matrix remodeling,685.0
+RUNX1T1,2,0.0014828025696597,down,-1.309,,,ECM / matrix remodeling,2145.0
+NPTX2,2,0.0002610027104869,down,-1.28,,,Neuronal / Ca²⁺ signaling,1208.0
+SCUBE3,2,0.0020345879959308,down,-1.317,,,ECM / matrix remodeling,2156.0
+S100A2,2,0.0020345879959308,up,1.896,,,Lipid / metabolism,1432.0
+FFAR2,2,0.0,up,1.464,,,ECM / matrix remodeling,176.0
+LTB4R,2,0.0020345879959308,up,1.377,Membrane receptor,Advanced clinical,Immune / JAK-STAT / chemokine,1248.0
+STAC,2,0.0006214335307584,down,-1.823,,,Neuronal / Ca²⁺ signaling,673.0
+IRAK2,2,0.0,up,1.649,,,Immune / JAK-STAT / chemokine,273.0
+IRAK3,2,0.0,up,1.239,,,Immune / JAK-STAT / chemokine,887.0
+PDLIM3,2,0.0004060088560884,down,-1.258,,,,1726.0
+IRS4,2,0.0,down,-2.109,,,Immune / JAK-STAT / chemokine,725.0
+TCN1,2,0.0,up,6.612,Unclassified,Discovery precedence,ECM / matrix remodeling,107.0
+LAMB4,2,0.0,down,-1.481,,,ECM / matrix remodeling,1236.0
+SLC22A17,2,0.0020345879959308,down,-1.043,,,ECM / matrix remodeling,2320.0
+KRT16,2,0.0067405652034607,up,2.483,,,,1108.0
+NTN1,2,0.0040650322281224,down,-1.133,,,ECM / matrix remodeling,2171.0
+GBP3,2,0.0,up,1.179,,,Interferon / antiviral,1200.0
+SMPD3,2,0.0,up,1.463,,,Neuronal / Ca²⁺ signaling,1141.0
+PRELP,2,0.0,down,-1.481,,,ECM / matrix remodeling,1927.0
+GPR84,2,0.0,up,2.126,,,ECM / matrix remodeling,1111.0
+SLC5A1,2,0.0005166495398202,up,1.823,,,ECM / matrix remodeling,909.0
+FGFBP1,2,5.17970467395831e-07,up,1.328,,,ECM / matrix remodeling,2107.0
+FGFBP2,2,0.0,down,-2.413,,,Immune / JAK-STAT / chemokine,1085.0
+FHL1,2,0.0,down,-1.531,,,Immune / JAK-STAT / chemokine,1937.0
+KCND2,2,0.0020345879959308,down,-1.889,,,ECM / matrix remodeling,1382.0
+FNDC5,2,0.0010819775677662,down,-1.747,,,Lipid / metabolism,451.0
+ABCA3,2,0.0020345879959308,down,-1.414,,,,628.0
+IGFBP5,2,0.0020345879959308,down,-1.786,,,ECM / matrix remodeling,1555.0
+MYOC,2,0.0020345879959308,down,-2.571,,,ECM / matrix remodeling,232.0
+PSCA,2,3.989354628326338e-05,down,-2.159,,,,233.0
+GATA6,2,0.0020345879959308,down,-1.481,,,ECM / matrix remodeling,1415.0
+OSR2,2,0.0020345879959308,down,-1.689,,,,1422.0
+FPR3,2,0.0,up,1.099,,,Immune / JAK-STAT / chemokine,2080.0
+HSH2D,2,0.0040650322281224,up,1.085,,,Immune / JAK-STAT / chemokine,394.0
+SPOCK2,2,0.0125074910399512,up,1.658,,,,708.0
+CSF2RA,2,0.0040650322281224,up,1.519,,,,720.0
+PEG10,2,0.0020345879959308,down,-1.263,,,Neuronal / Ca²⁺ signaling,1816.0
+LYPD6,2,0.0020345879959308,down,-1.186,,,,1133.0
+TGM4,2,0.0,down,-1.281,,,Neuronal / Ca²⁺ signaling,1150.0
+PDZK1IP1,2,9.052297611739016e-05,up,2.187,,,ECM / matrix remodeling,212.0
+ZC3H12A,2,6.469306081455023e-05,up,3.07,Unclassified,Unknown,Immune / JAK-STAT / chemokine,128.0
+ADGRL3,2,0.0081134894012882,down,-1.328,,,ECM / matrix remodeling,1801.0
+DBN1,2,0.0002214415648851,down,-1.006,,,ECM / matrix remodeling,2295.0
+CRCT1,2,0.0,up,1.105,,,,1978.0
+AQP7,2,0.0001571955616615,down,-2.351,,,Lipid / metabolism,1077.0
+BMP5,2,0.0005122231985082,down,-1.019,,,,1700.0
+CSTB,2,0.0,up,1.242,,,Lipid / metabolism,2106.0
+LYVE1,2,0.0003987457551335,down,-1.637,,,Immune / JAK-STAT / chemokine,1623.0
+TF,2,0.0,down,-1.168,,,ECM / matrix remodeling,881.0
+APOBEC3B,2,0.0,up,1.399,,,Lipid / metabolism,1713.0
+PTCHD1,2,0.0,down,-2.241,,,,366.0
+APOBEC3A,2,0.0,up,2.321,,,Lipid / metabolism,956.0
+GREM2,2,0.0018410110507129,down,-2.004,,,,185.0
+C2CD4A,2,0.0020345879959308,up,1.271,,,,966.0
+NALCN,2,0.0040650322281224,down,-1.291,,,,604.0
+CSPG4,2,0.0,down,-1.22,,,ECM / matrix remodeling,1702.0
+ARNTL2,2,0.0,up,1.313,,,Lipid / metabolism,2193.0
+LAMP3,2,7.897870579916407e-07,up,1.734,,,Immune / JAK-STAT / chemokine,625.0
+CTPS1,2,0.0008686347246569,up,1.116,,,Neuronal / Ca²⁺ signaling,1864.0
+C7,2,0.0,down,-1.765,,,Lipid / metabolism,1355.0
+PPP2R2B,2,0.0,down,-1.205,,,Neuronal / Ca²⁺ signaling,780.0
+TNXB,2,0.0022161793685803,down,-1.746,,,,1619.0
+CYP27B1,2,0.0004252275919457,up,1.459,,,Lipid / metabolism,1159.0
+RXRG,2,9.616186556809904e-05,down,-1.693,,,Lipid / metabolism,1595.0
+HSD17B2,2,0.0,up,1.129,,,,2150.0
+DCLK1,2,0.0040650322281224,down,-1.264,,,Neuronal / Ca²⁺ signaling,1354.0
+PLA2G4E,2,2.071881869583324e-06,up,2.133,,,,871.0
+ERC2,2,0.0011646329765112,up,1.569,,,,1289.0
+AQP9,2,8.208561093845926e-05,down,-2.631,,,Lipid / metabolism,189.0
+LSP1,2,1.754178855772489e-05,down,-1.501,,,Immune / JAK-STAT / chemokine,1833.0
+KLK6,2,0.0020345879959308,up,3.615,,,,458.0
+CDH4,2,0.0,down,-2.468,,,ECM / matrix remodeling,390.0
+HMGCS2,2,0.0027012096311395,down,-3.031,,,,651.0
+FCN1,2,1.9813603640908148e-05,up,1.152,,,Lipid / metabolism,742.0
+CFHR3,2,0.0,down,-1.289,,,Lipid / metabolism,2134.0
+DCHS1,2,0.0020345879959308,down,-1.018,,,ECM / matrix remodeling,2231.0
+PTGIS,2,0.0006306464062832,down,-1.581,,,,1858.0
+SOAT1,2,0.0,down,-1.335,,,,1350.0
+CHAC2,2,0.0,up,1.039,,,,2349.0
+CTNND2,2,0.0020345879959308,down,-1.585,,,ECM / matrix remodeling,1516.0
+CDON,2,0.0054124410197543,down,-1.02,,,ECM / matrix remodeling,2379.0
+CHRNA3,2,0.0,up,1.605,,,,1596.0
+CHRNA5,2,0.0,up,1.663,,,,1220.0
+CDH3,2,0.0,up,1.184,,,ECM / matrix remodeling,2233.0
+CLEC2A,2,0.0020345879959308,down,-1.68,,,Immune / JAK-STAT / chemokine,600.0
+CDH12,2,0.0,down,-3.727,,,ECM / matrix remodeling,537.0
+COX7A1,2,0.0020345879959308,down,-1.057,,,Lipid / metabolism,520.0
+CKMT1A,2,0.0,up,1.221,,,Neuronal / Ca²⁺ signaling,1897.0
+CKMT2,2,0.0,down,-1.165,,,Neuronal / Ca²⁺ signaling,639.0
+ATP2B2,2,0.0012764593822038,down,-2.286,,,,1031.0
+LYZ,2,0.0,up,1.884,,,ECM / matrix remodeling,1497.0
+DMGDH,2,0.0,down,-1.05,,,Neuronal / Ca²⁺ signaling,643.0
+FXYD6,2,0.0,down,-1.579,,,,1476.0
+LTB,2,8.180963646331824e-05,up,1.446,,,Immune / JAK-STAT / chemokine,187.0
+BIRC7,2,0.0,down,-1.506,,,Neuronal / Ca²⁺ signaling,1163.0
+ATP6V0A4,2,0.0,down,-1.567,,,,1622.0
+NBEA,2,0.0020345879959308,down,-1.07,,,Neuronal / Ca²⁺ signaling,2302.0
+CYP8B1,2,0.0,up,1.615,,,,1810.0
+CAMK2N2,2,0.0,up,1.54,,,Neuronal / Ca²⁺ signaling,1258.0
+ALPL,2,0.0014363336741538,up,1.528,,,Neuronal / Ca²⁺ signaling,1317.0
+EPHB2,2,0.0,up,2.739,,,ECM / matrix remodeling,877.0
+RNASE7,2,0.0,up,1.331,,,Lipid / metabolism,300.0
+EPHA7,2,0.0,down,-1.113,,,ECM / matrix remodeling,1152.0
+GFRA1,2,0.0002026353522955,down,-1.898,,,ECM / matrix remodeling,1514.0
+DSC2,2,0.0,up,2.146,,,,1181.0
+SYNM,2,0.0020345879959308,down,-1.408,,,ECM / matrix remodeling,1521.0
+AK7,2,0.001768791324219,down,-1.182,,,Neuronal / Ca²⁺ signaling,2043.0
+PAX9,2,0.0040650322281224,up,1.022,,,,1910.0
+PYDC1,2,0.0,up,1.088,,,Interferon / antiviral,1060.0
+EDN2,2,0.0,down,-1.002,,,ECM / matrix remodeling,1451.0
+CFD,2,0.0001505067735721,down,-1.556,,,Lipid / metabolism,1846.0
+ASPA,2,0.0004225086528301,down,-1.093,,,,2280.0
+ADSS1,2,0.0002973018747662,,,,,,
+TNMD,2,0.0076312007323986,down,-1.471,,,ECM / matrix remodeling,705.0
+DPYSL3,2,0.0,down,-1.097,,,ECM / matrix remodeling,1919.0
+CNNM4,2,0.0,up,1.205,,,Neuronal / Ca²⁺ signaling,1157.0
+DSG4,2,0.0020345879959308,down,-1.228,,,,810.0
+SDR9C7,2,0.0,up,1.392,,,,1815.0
+RGMB,2,0.0020345879959308,down,-1.01,,,ECM / matrix remodeling,2365.0
+AMY2A,2,0.0,down,-1.182,,,Neuronal / Ca²⁺ signaling,2260.0
+SH3GL3,2,0.0013915822726697,up,1.386,,,ECM / matrix remodeling,864.0
+ANG,2,0.0020345879959308,down,-1.326,,,,1298.0
+IGLON5,2,0.0,up,2.051,,,,1196.0
+KCNQ3,2,0.0020345879959308,down,-1.028,,,Neuronal / Ca²⁺ signaling,1483.0
+ID4,2,0.0020345879959308,down,-1.782,,,Lipid / metabolism,1420.0
+SPTLC2,2,0.0020345879959308,up,1.113,,,Neuronal / Ca²⁺ signaling,2082.0
+FLRT1,2,0.0101315023422624,down,-1.003,,,ECM / matrix remodeling,1505.0
+MEGF10,2,0.0002895269082375,down,-1.189,,,Immune / JAK-STAT / chemokine,1030.0
+UNC5C,2,0.0060913326965749,down,-1.136,,,ECM / matrix remodeling,2122.0
+NLRX1,2,0.0,up,1.432,,,Interferon / antiviral,1217.0
+NEUROD2,1,0.0,down,-2.663,,,Cell cycle / proliferation,928.0
+KRT77,1,0.0,down,-4.177,,,,352.0
+SLC1A1,1,0.0,up,1.006,,,Lipid / metabolism,2244.0
+MLKL,1,0.0,up,1.11,,,Interferon / antiviral,2335.0
+MEGF6,1,0.0,down,-1.16,,,ECM / matrix remodeling,1974.0
+PYHIN1,1,0.0,up,1.534,,,Interferon / antiviral,1323.0
+UNC13D,1,0.0,up,1.166,,,Immune / JAK-STAT / chemokine,2085.0
+KRT31,1,0.0,down,-1.315,,,,1821.0
+LYNX1,1,0.0,up,1.729,,,,1184.0
+KRT6C,1,0.0,up,2.884,,,,873.0
+AASS,1,0.0,up,1.692,,,Lipid / metabolism,1377.0
+SIRPG,1,0.0,up,1.364,,,Lipid / metabolism,1617.0
+RHOH,1,0.0,up,1.065,,,Immune / JAK-STAT / chemokine,528.0
+CYP39A1,1,0.0,down,-1.271,,,,2008.0
+STXBP6,1,0.0,down,-1.501,,,ECM / matrix remodeling,1038.0
+LTB4R2,1,0.0,up,1.149,,,Immune / JAK-STAT / chemokine,1440.0
+SIT1,1,0.0,up,1.42,,,Immune / JAK-STAT / chemokine,619.0
+SLC9A2,1,0.0,down,-1.957,,,ECM / matrix remodeling,1229.0
+SPON2,1,0.0,down,-1.365,,,Cell cycle / proliferation,2096.0
+CDHR1,1,0.0,down,-1.59,,,Neuronal / Ca²⁺ signaling,1366.0
+LRP1B,1,0.0,down,-1.037,,,,2192.0
+POC1A,1,0.0,up,1.052,,,Cell cycle / proliferation,2002.0
+SPTSSA,1,0.0,up,1.368,,,Neuronal / Ca²⁺ signaling,1648.0
+TAP2,1,0.0,up,1.023,,,Interferon / antiviral,1051.0
+BCL3,1,0.0,up,1.298,Unclassified protein,Discovery precedence,Interferon / antiviral,63.0
+TACR2,1,0.0,down,-1.287,,,,2172.0
+SPINK1,1,0.0,down,-3.964,Unclassified,Unknown,,65.0
+SERPINB13,1,0.0,up,2.555,,,Lipid / metabolism,311.0
+MRGPRX2,1,0.0,down,-1.348,,,,2018.0
+S100A7A,1,0.0,up,9.923,Unclassified,Unknown,Lipid / metabolism,10.0
+PCP4,1,0.0,down,-2.258,,,Neuronal / Ca²⁺ signaling,257.0
+CAB39L,1,0.0,down,-1.122,,,Lipid / metabolism,2239.0
+FA2H,1,0.0,down,-2.659,,,,389.0
+WFDC12,1,0.0,up,2.304,Unclassified,Unknown,,111.0
+PIEZO2,1,0.0,down,-1.536,,,Cell cycle / proliferation,1389.0
+PLCH1,1,0.0,down,-1.067,,,ECM / matrix remodeling,1796.0
+PLCH2,1,0.0,down,-1.144,,,ECM / matrix remodeling,305.0
+MAP6,1,0.0,down,-1.536,,,Neuronal / Ca²⁺ signaling,1005.0
+TRPV3,1,0.0,up,1.09,,,Neuronal / Ca²⁺ signaling,2263.0
+CALB1,1,0.0,down,-1.756,,,,893.0
+TDRD5,1,0.0,down,-1.51,,,Immune / JAK-STAT / chemokine,963.0
+PLD4,1,0.0,down,-1.115,,,Lipid / metabolism,2109.0
+RGS9,1,0.0,down,-1.092,,,Neuronal / Ca²⁺ signaling,2321.0
+RGS1,1,0.0,up,2.975,,,Neuronal / Ca²⁺ signaling,294.0
+PLIN4,1,0.0,down,-1.135,,,Lipid / metabolism,1994.0
+SLC8A3,1,0.0,down,-1.056,,,,971.0
+PEG3,1,0.0,down,-1.058,,,Neuronal / Ca²⁺ signaling,2334.0
+RND1,1,0.0,up,4.564,,,,213.0
+PI16,1,0.0,down,-1.555,,,Neuronal / Ca²⁺ signaling,1894.0
+NRN1,1,0.0,down,-1.095,,,ECM / matrix remodeling,1647.0
+CRTAM,1,0.0,up,1.234,,,Immune / JAK-STAT / chemokine,846.0
+SDCBP2,1,0.0,up,1.061,,,Immune / JAK-STAT / chemokine,733.0
+UPB1,1,0.0,down,-2.352,,,Neuronal / Ca²⁺ signaling,434.0
+SNCG,1,0.0,down,-1.401,,,ECM / matrix remodeling,2067.0
+PLAAT5,1,0.0,,,,,Immune / JAK-STAT / chemokine,
+TMPRSS11E,1,0.0,down,-2.073,,,ECM / matrix remodeling,447.0
+SCUBE1,1,0.0,down,-3.086,,,ECM / matrix remodeling,686.0
+NXPH3,1,0.0,down,-1.28,,,,1048.0
+P2RY6,1,0.0,up,1.385,,,Neuronal / Ca²⁺ signaling,2074.0
+SFTPC,1,0.0,down,-1.976,,,,1032.0
+MYEOV,1,0.0,down,-1.77,,,ECM / matrix remodeling,1615.0
+SCNN1D,1,0.0,up,2.412,,,Neuronal / Ca²⁺ signaling,277.0
+GRID1,1,0.0,down,-1.254,,,Neuronal / Ca²⁺ signaling,2214.0
+ROS1,1,0.0,down,-3.095,,,Immune / JAK-STAT / chemokine,638.0
+CD248,1,0.0,down,-1.34,,,ECM / matrix remodeling,2017.0
+P2RY4,1,0.0,down,-2.331,,,Neuronal / Ca²⁺ signaling,541.0
+SERPINB1,1,0.0,up,1.288,,,ECM / matrix remodeling,2187.0
+KYNU,1,0.0,up,4.652,Enzyme,Discovery precedence,Immune / JAK-STAT / chemokine,34.0
+KRT15,1,0.0,down,-1.486,,,,1512.0
+JMJD7-PLA2G4B,1,0.0,up,1.504,,,,538.0
+FKBPL,1,0.0,up,1.02,,,Cell cycle / proliferation,1989.0
+HSPB7,1,0.0,down,-2.026,,,ECM / matrix remodeling,1227.0
+DDIAS,1,0.0,up,1.277,,,Cell cycle / proliferation,1488.0
+RNASE4,1,0.0,down,-1.493,,,,1490.0
+SYNPO2,1,0.0,down,-1.418,,,ECM / matrix remodeling,1129.0
+ANGPT4,1,0.0,down,-1.135,,,ECM / matrix remodeling,1330.0
+LGALS3BP,1,0.0,up,1.621,,,ECM / matrix remodeling,281.0
+DCHS2,1,0.0,down,-1.4,,,ECM / matrix remodeling,1996.0
+PLAG1,1,0.0,down,-1.1,,,,1694.0
+FOXL2,1,0.0,down,-1.091,,,,1223.0
+CNTNAP3,1,0.0,down,-1.114,,,,2285.0
+IKZF3,1,0.0,up,1.639,,,Immune / JAK-STAT / chemokine,195.0
+FMO5,1,0.0,down,-1.004,,,,2262.0
+INHBB,1,0.0,down,-1.095,,,,511.0
+VSIG2,1,0.0,up,1.029,,,,2333.0
+WFIKKN1,1,0.0,down,-1.176,,,,735.0
+WFIKKN2,1,0.0,down,-3.06,Unclassified,Unknown,,121.0
+CYBRD1,1,0.0,down,-1.026,,,ECM / matrix remodeling,2337.0
+SOX7,1,0.0,up,1.426,,,ECM / matrix remodeling,1401.0
+ANKRD2,1,0.0,down,-1.607,,,,1361.0
+EPN3,1,0.0,up,1.105,,,,2206.0
+DEFB4B,1,0.0,up,9.769,Unclassified,Unknown,Lipid / metabolism,9.0
+DES,1,0.0,down,-2.501,,,ECM / matrix remodeling,221.0
+FERMT1,1,0.0,up,1.11,,,Neuronal / Ca²⁺ signaling,2271.0
+NR4A3,1,0.0,up,2.064,Transcription factor,Discovery precedence,Lipid / metabolism,144.0
+ADGRD1,1,0.0,down,-1.899,,,Cell cycle / proliferation,1551.0
+ADCYAP1R1,1,0.0,down,-1.543,,,Immune / JAK-STAT / chemokine,287.0
+ADAMTSL3,1,0.0,down,-2.413,,,,811.0
+TSPAN8,1,0.0,down,-2.931,,,,804.0
+EDAR,1,0.0,down,-1.732,,,,1254.0
+ZIC2,1,0.0,up,1.052,,,ECM / matrix remodeling,1067.0
+ECM2,1,0.0,down,-1.105,,,ECM / matrix remodeling,2301.0
+KRT81,1,0.0,down,-1.601,,,,968.0
+ADAMTS10,1,0.0,down,-1.048,,,ECM / matrix remodeling,2347.0
+ADRA1A,1,0.0,down,-1.984,,,Immune / JAK-STAT / chemokine,1353.0
+ETV4,1,0.0,up,1.02,,,ECM / matrix remodeling,2303.0
+DRGX,1,0.0,down,-1.611,,,ECM / matrix remodeling,1114.0
+GPRASP1,1,0.0,down,-1.526,,,ECM / matrix remodeling,1417.0
+TPPP,1,0.0,down,-2.086,,,ECM / matrix remodeling,1296.0
+AGR2,1,0.0,down,-1.478,,,ECM / matrix remodeling,615.0
+TNFRSF6B,1,0.0,up,1.427,,,Immune / JAK-STAT / chemokine,1712.0
+OLAH,1,0.0,down,-2.195,,,Lipid / metabolism,438.0
+PTGFR,1,0.0,down,-1.064,,,ECM / matrix remodeling,2294.0
+RETREG1,1,0.0,,,,,ECM / matrix remodeling,
+APOBEC2,1,0.0,down,-1.28,,,Lipid / metabolism,834.0
+KLK8,1,0.0,up,1.418,,,ECM / matrix remodeling,1471.0
+CHRM3,1,0.0,down,-1.89,,,Neuronal / Ca²⁺ signaling,1276.0
+ID1,1,0.0,up,1.48,,,Lipid / metabolism,1840.0
+INMT,1,0.0,down,-1.228,,,Immune / JAK-STAT / chemokine,2013.0
+IGFBP6,1,0.0,down,-1.547,,,ECM / matrix remodeling,1007.0
+ACADL,1,0.0,down,-2.58,,,Lipid / metabolism,931.0
+IL17RE,1,0.0,down,-1.051,,,Immune / JAK-STAT / chemokine,1785.0
+IL37,1,0.0,down,-3.141,Unclassified,Unknown,Immune / JAK-STAT / chemokine,53.0
+IL36A,1,0.0,up,10.061,Unclassified,Unknown,Immune / JAK-STAT / chemokine,2.0
+IL36G,1,0.0,up,4.835,Secreted protein,Discovery precedence,Immune / JAK-STAT / chemokine,88.0
+NCOA7,1,0.0,up,1.024,,,,1424.0
+CHAD,1,0.0,down,-1.633,,,ECM / matrix remodeling,1776.0
+GCNT4,1,0.0,up,1.752,,,,1214.0
+AWAT1,1,0.0,down,-3.892,,,Lipid / metabolism,209.0
+IRX1,1,0.0,down,-1.158,,,ECM / matrix remodeling,1750.0
+RASGRP1,1,0.0,up,1.324,,,Immune / JAK-STAT / chemokine,745.0
+KCNA6,1,0.0,down,-2.081,,,,1343.0
+KCNJ18,1,0.0,up,1.062,,,Neuronal / Ca²⁺ signaling,2356.0
+KCNMB4,1,0.0,down,-1.573,,,,1294.0
+KIF21A,1,0.0,down,-1.094,,,Cell cycle / proliferation,2277.0
+KLK1,1,0.0,down,-1.72,,,ECM / matrix remodeling,1680.0
+KLK13,1,0.0,up,3.65,Enzyme,Unknown,,85.0
+HRH2,1,0.0,up,3.574,,,,411.0
+HRNR,1,0.0,up,3.042,,,Lipid / metabolism,734.0
+TXNIP,1,0.0,down,-1.238,,,,510.0
+TMPRSS11D,1,0.0,up,6.933,Enzyme,Discovery precedence,ECM / matrix remodeling,40.0
+CRABP2,1,0.0,up,2.412,,,Lipid / metabolism,832.0
+COX6B2,1,0.0,down,-1.033,,,Lipid / metabolism,859.0
+ACP7,1,0.0,up,3.435,Unclassified,Unknown,Neuronal / Ca²⁺ signaling,145.0
+GDF15,1,0.0,down,-1.239,,,ECM / matrix remodeling,884.0
+CORO2B,1,0.0,down,-1.279,,,ECM / matrix remodeling,1951.0
+PAEP,1,0.0,up,1.832,,,,1221.0
+GLIS1,1,0.0,down,-1.311,,,,1703.0
+GLRB,1,0.0,down,-1.403,,,Neuronal / Ca²⁺ signaling,2045.0
+PSAPL1,1,0.0,down,-1.925,,,Immune / JAK-STAT / chemokine,308.0
+HS6ST2,1,0.0,down,-2.026,,,,1188.0
+GPR1,1,0.0,up,1.498,,,Neuronal / Ca²⁺ signaling,1561.0
+GRHL3,1,0.0,up,1.111,,,,2351.0
+TGFBR3,1,0.0,down,-1.255,,,Immune / JAK-STAT / chemokine,1730.0
+KLRF2,1,0.0,down,-2.739,,,Immune / JAK-STAT / chemokine,165.0
+NETO2,1,0.0,up,1.696,,,Neuronal / Ca²⁺ signaling,1538.0
+PPP1R1B,1,0.0,down,-2.686,,,Neuronal / Ca²⁺ signaling,999.0
+MFHAS1,1,0.0,up,1.201,,,,2064.0
+SERPINB9,1,0.0,up,1.783,,,Immune / JAK-STAT / chemokine,1485.0
+SRGN,1,0.0,up,1.396,,,Immune / JAK-STAT / chemokine,770.0
+A2ML1,1,0.0,up,1.712,,,,1589.0

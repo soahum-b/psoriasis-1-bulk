@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "created_at": "2026-07-18T03:07:27.542Z",
+  "task_summary": "Full lncRNA arm for the psoriasis PP-vs-NN meta-analysis",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Annotate & rank",
+      "delegations": [
+        {
+          "name": "Annotation",
+          "steps": [
+            {
+              "title": "Fetch GENCODE biotypes",
+              "description": "Pull GENCODE/Ensembl gene biotypes and map to the 25,062 symbols in meta_de_PPvsNN_4study; classify lncRNA vs protein-coding vs other, resolving alias/legacy symbols so the count isn't limited to LINC*/-AS patterns."
+            },
+            {
+              "title": "Build annotated meta-DE table",
+              "description": "Add biotype + lncRNA flag columns to the meta-DE table; recompute a lncRNA-restricted BH-FDR view; save annotated CSV."
+            },
+            {
+              "title": "Rank and visualize",
+              "description": "Rank significant lncRNAs by effect size with k and I2 heterogeneity flags; produce a lncRNA volcano + top-hits figure using the project figure style."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    },
+    {
+      "name": "Link to STAT3 / IL-1",
+      "delegations": [
+        {
+          "name": "Linkage",
+          "steps": [
+            {
+              "title": "Rebuild per-sample logCPM",
+              "description": "From recount3, rebuild TMM-logCPM matrices for the 4 studies (SRP035988, SRP165679, SRP126422, SRP065812), harmonized to the meta gene space, for co-expression."
+            },
+            {
+              "title": "Co-expression guilt-by-association",
+              "description": "Correlate top significant lncRNAs against STAT3, its isoform markers, and the IL-1/inflammasome + JAK-STAT gene sets within each study; meta-combine correlations; flag consistent partners."
+            },
+            {
+              "title": "Curated lncRNA-target linkage",
+              "description": "Query curated lncRNA-target resources (LncTarD / RNAInter and literature via web_search) for documented STAT3 / IL-1 / JAK-STAT mechanisms of the top lncRNAs; build a linkage table separating correlational from curated evidence."
+            }
+          ]
+        }
+      ],
+      "id": "phase-1"
+    },
+    {
+      "name": "Synthesis",
+      "delegations": [
+        {
+          "name": "Writeup",
+          "steps": [
+            {
+              "title": "Write lncRNA arm section",
+              "description": "Compose a written section mirroring the STAT3 isoform formal evaluation: methods, ranked table, co-expression + curated linkage, caveats (correlational, annotation lower bound, heterogeneity). Save as MD artifact alongside the tables and figure."
+            }
+          ]
+        }
+      ],
+      "id": "phase-2"
+    }
+  ],
+  "desired_outputs": [
+    "Biotype-annotated meta-DE table with lncRNA flag (CSV)",
+    "Ranked significant-lncRNA table with heterogeneity/k flags (CSV)",
+    "lncRNA volcano + summary figure (PNG)",
+    "lncRNA-to-STAT3/IL-1 linkage table via co-expression + curated DBs (CSV)",
+    "lncRNA arm written section mirroring STAT3 isoform work (MD)"
+  ],
+  "feasibility": {
+    "confidence": "high",
+    "rationale": "The meta-DE table already quantifies lncRNAs at symbol level, so annotation and ranking are straightforward. Pathway linkage relies on rebuilding per-sample logCPM from recount3 for co-expression, plus curated lncRNA-target databases; co-expression is correlational, so mechanistic STAT3 links are hypotheses, not proof."
+  }
+}

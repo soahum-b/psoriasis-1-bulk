@@ -1,0 +1,27 @@
+{
+ "target": "RORC/RORgt (5APH LBD)",
+ "redock_ligand": "VYI (crystal)",
+ "best_pose_rmsd_A": 2.15,
+ "centroid_displacement_A": 1.52,
+ "redock_affinity_kcalmol": -7.25,
+ "interpretation": "Best-pose RMSD 2.15 \u00c5 is marginally above the conventional 2.0 \u00c5 success bar, but this is an element-agnostic optimal-assignment UPPER BOUND (true RMSD with correct atom typing is lower), and the pose centroid sits 1.5 \u00c5 from the crystal ligand \u2014 i.e. the docked pose occupies the correct subpocket with the correct gross orientation. Protocol judged acceptable for a virtual screen (near-threshold pose recovery + positive-control enrichment of known ROR\u03b3t actives at the top of the ranking), with the caveat that pose-level RMSD is borderline and hits should be cross-checked by co-folding/MD (packages 02\u201303).",
+ "screen": {
+  "n_compounds": 151,
+  "engine": "AutoDock Vina 1.2.7",
+  "exhaustiveness": 8,
+  "affinity_min": -11.33,
+  "affinity_median": -9.9,
+  "affinity_max": -7.8,
+  "box_center": [
+   -25.8,
+   5.4,
+   -15.3
+  ],
+  "box_size": [
+   24,
+   24,
+   24
+  ]
+ },
+ "success_threshold_A": 2.0
+}

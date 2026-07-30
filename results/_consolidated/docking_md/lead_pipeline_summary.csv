@@ -1,0 +1,4 @@
+gene,direction,meta_logFC,meta_FDR,protein_class,disease_axis,ot_tractability,chembl_potent_inhib,pdb,domain,resolution_A,fpocket_druggability,docked
+STAT3,up,1.25,2.2e-07,Transcription factor,JAK-STAT,Discovery precedence,112,6NJS,SH2 / core,2.7,0.001,cluster package ready
+RORC,down,-2.47,9.3e-227,Transcription factor,Th17/IL-17 axis,Phase 1,9766,5APH,Ligand-binding domain (LBD),1.54,0.936,yes (151-cmpd screen)
+JAK3,up,1.54,1.2e-04,Enzyme,JAK-STAT,Approved drug,6069,5LWM,Kinase domain (ATP site),1.55,0.016,cluster package ready

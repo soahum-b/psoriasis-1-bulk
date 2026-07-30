@@ -1,0 +1,10 @@
+metric,20k_backbone,full_census
+Cells analyzed,"20,023 (subset)","89,058 (full census)"
+Selected alpha (tuning),0.40,0.20
+Scissor+ / Scissor−,"1,574 / 1,397","6,837 / 6,228"
+% selected,14.84%,14.67%
+Reliability CV-MSE (real vs null),0.147 vs 0.779,0.135 vs ~0.835
+Endothelial enrichment (OR),11.26,5.24
+Endothelial Scissor+ fraction,(top lineage),0.220 vs 0.051 bg
+STAT3 in Scissor+ program,"log2FC 0.43, padj 0.018 (sig)","log2FC 0.30, p=0.12, padj=1 (n.s.)"
+Dominant gradient-tracker,Endothelial,Endothelial (confirmed)

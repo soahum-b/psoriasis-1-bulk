@@ -1,0 +1,155 @@
+gene,ensembl,approvedName,protein_class,logFC,FDR,direction,evidence_rank,pathway_support,in_leading_edge,stat3_target,ot_sm_bucket,ot_sm_bucket_rank,sm_has_ligand,sm_hq_ligand,sm_hq_pocket,sm_mq_pocket,sm_druggable_family,ab_clinical,ot_drug_candidates,chembl_target_id,n_potent_inhib,n_active_inhib
+AADACL3,ENSG00000188984,arylacetamide deacetylase like 3,Unclassified,-6.062,1.16046507096926e-18,down,67,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+ACP7,ENSG00000183760,"acid phosphatase 7, tartrate resistant (putative)",Unclassified,3.435,3.70702294619857e-29,up,145,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+AGR3,ENSG00000173467,"anterior gradient 3, protein disulphide isomerase family member",Unclassified,-5.438,1.4442047661997402e-31,down,93,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+AKR1B10,ENSG00000198074,aldo-keto reductase family 1 member B10,Enzyme,5.748,1.24921493634178e-26,up,103,0,False,False,Discovery precedence,3,True,True,True,False,True,False,0,CHEMBL5983,81,129
+AKR1B10P1,ENSG00000213606,aldo-keto reductase family 1 member B10 pseudogene 1,Unclassified,6.093,9.32667936312606e-36,up,70,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+AKR1B15,ENSG00000227471,aldo-keto reductase family 1 member B15,Unclassified,5.299,2.86056210423157e-50,up,71,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+AP000439.3,ENSG00000255774,long independently transcribed non-coding RNA 2747,Unclassified,-3.865,8.14487533292593e-141,down,35,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+ARL11,ENSG00000152213,ARF like GTPase 11,Unclassified,1.459,3.26022049510949e-132,up,69,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+ARSF,ENSG00000062096,arylsulfatase F,Unclassified,3.502,3.22130464684807e-181,up,23,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+ATP1A2,ENSG00000018625,ATPase Na+/K+ transporting subunit alpha 2,Unclassified,-1.79,3.0649519658687803e-97,down,149,0,False,False,Approved drug,6,False,True,False,False,True,False,6,,0,0
+AURKA,ENSG00000087586,aurora kinase A,Enzyme,1.71,9.102257109857607e-11,up,1263,0,False,False,Advanced clinical,5,True,True,True,False,True,False,19,CHEMBL4722,2162,3340
+AURKB,ENSG00000178999,aurora kinase B,Enzyme,1.489,1.33285131751699e-17,up,1097,0,False,False,Advanced clinical,5,True,True,False,False,True,False,18,CHEMBL2185,1422,2412
+AWAT2,ENSG00000147160,acyl-CoA wax alcohol acyltransferase 2,Enzyme,-5.175,9.32897987524071e-17,down,115,0,False,False,Unknown,0,False,False,False,False,False,False,0,CHEMBL2375204,0,0
+BATF2,ENSG00000168062,basic leucine zipper ATF-like transcription factor 2,Unclassified,2.973,2.1641190605969e-49,up,87,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+BCL3,ENSG00000069399,BCL3 transcription coactivator,Unclassified protein,1.298,2.5120626999321494e-55,up,63,2,True,True,Discovery precedence,3,False,True,False,False,False,False,0,CHEMBL4523197,4,10
+BEST2,ENSG00000039987,bestrophin 2,Unclassified,-2.969,2.0665643256879495e-82,down,106,0,False,False,Discovery precedence,3,True,False,False,False,False,False,0,,0,0
+BIRC3,ENSG00000023445,baculoviral IAP repeat containing 3,Enzyme,1.379,1.1487760560601e-73,up,55,2,True,True,Advanced clinical,5,False,True,False,False,True,False,1,CHEMBL5335,189,223
+C10orf99,ENSG00000188373,G protein-coupled receptor 15 ligand,Unclassified,5.233,1.07765279477971e-39,up,108,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+CAMK2B,ENSG00000058404,calcium/calmodulin dependent protein kinase II beta,Enzyme,-2.602,7.73598408981174e-92,down,109,0,False,False,Discovery precedence,3,True,True,False,False,True,False,0,CHEMBL4121,23,52
+CCL2,ENSG00000108691,C-C motif chemokine ligand 2,Secreted protein,1.744,1.08844768230025e-29,up,113,2,True,True,Discovery precedence,3,False,True,False,False,False,True,1,CHEMBL1649052,32,56
+CCL20,ENSG00000115009,C-C motif chemokine ligand 20,Unclassified,3.425,0.0154127908989544,up,61,3,True,True,Discovery precedence,3,True,False,False,False,False,False,0,,0,0
+CCL3,ENSG00000277632,C-C motif chemokine ligand 3,Unclassified,3.344,5.4735580084806e-57,up,141,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+CCR7,ENSG00000126353,C-C motif chemokine receptor 7,Membrane receptor,2.694,4.16081205718351e-136,up,32,1,True,False,Discovery precedence,3,True,False,False,False,True,False,0,CHEMBL4594,20,27
+CD7,ENSG00000173762,CD7 molecule,Unclassified,2.069,2.28536057569943e-57,up,129,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+CD83,ENSG00000112149,CD83 molecule,Unclassified,1.385,7.07470912761585e-77,up,100,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+CDK1,ENSG00000170312,cyclin dependent kinase 1,Enzyme,1.399,6.08580502904221e-09,up,1636,0,False,False,Advanced clinical,5,True,True,False,False,True,False,12,CHEMBL308,593,1201
+CHI3L2,ENSG00000064886,chitinase 3 like 2,Unclassified protein,4.384,3.730363786037929e-256,up,3,0,False,False,Unknown,0,False,False,False,False,False,False,0,CHEMBL6066218,2,2
+CHP2,ENSG00000166869,calcineurin like EF-hand protein 2,Unclassified,-2.323,2.93025328028022e-183,down,29,0,False,False,Druggable pocket,2,False,False,False,True,False,False,0,,0,0
+CHRM4,ENSG00000180720,cholinergic receptor muscarinic 4,Membrane receptor,-4.58,7.81425433384877e-39,down,146,0,False,False,Approved drug,6,True,True,False,False,True,False,10,CHEMBL1821,886,1932
+CRYAB,ENSG00000109846,crystallin alpha B,Unclassified protein,-1.292,1.3806465224838297e-126,down,82,0,False,False,Discovery precedence,3,True,True,False,False,False,False,0,CHEMBL3621022,4,6
+CTA-384D8.34,ENSG00000273272,long independently transcribed non-coding RNA 3232,Unclassified,4.413,3.9796203329959e-143,up,15,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+CTLA4,ENSG00000163599,cytotoxic T-lymphocyte associated protein 4,Surface antigen,3.125,2.21057928611993e-101,up,68,0,False,False,Discovery precedence,3,True,False,False,False,False,True,6,CHEMBL2364164,0,0
+CXCL10,ENSG00000169245,C-X-C motif chemokine ligand 10,Secreted protein,4.082,1.33942720004152e-20,up,60,2,True,True,Discovery precedence,3,True,True,True,False,False,True,2,CHEMBL3712964,0,0
+CXCL11,ENSG00000169248,C-X-C motif chemokine ligand 11,Unclassified,3.184,2.43369990036028e-08,up,117,2,True,True,Discovery precedence,3,True,False,False,False,False,False,0,,0,0
+CXCL13,ENSG00000156234,C-X-C motif chemokine ligand 13,Unclassified,5.544,4.28716710382635e-76,up,25,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+CXCL17,ENSG00000189377,C-X-C motif chemokine ligand 17,Unclassified,3.16,1.80086204094958e-62,up,140,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+CXCL9,ENSG00000138755,C-X-C motif chemokine ligand 9,Unclassified,4.294,2.60678646314089e-05,up,76,2,True,True,Unknown,0,False,False,False,False,False,False,0,,0,0
+CXCR1,ENSG00000163464,C-X-C motif chemokine receptor 1,Membrane receptor,1.172,0.0154184446213615,up,2077,0,False,False,Advanced clinical,5,False,True,False,False,True,False,5,CHEMBL4029,122,231
+CXCR2,ENSG00000180871,C-X-C motif chemokine receptor 2,Membrane receptor,2.416,1.14090994204271e-27,up,243,1,False,True,Advanced clinical,5,True,True,False,False,True,False,7,CHEMBL2434,697,1082
+DBX2,ENSG00000185610,developing brain homeobox 2,Unclassified,-3.508,1.95192292335285e-73,down,90,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+DEFB103B,ENSG00000177243,defensin beta 103B,Unclassified,5.334,2.9804155742008997e-12,up,75,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+DEFB4A,ENSG00000171711,defensin beta 4A,Unclassified,10.592,4.68930593744309e-07,up,21,0,False,False,Discovery precedence,3,True,False,False,False,False,False,0,,0,0
+DEFB4B,ENSG00000177257,defensin beta 4B,Unclassified,9.769,1.62302305024037e-58,up,9,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+DGAT2L6,ENSG00000184210,diacylglycerol O-acyltransferase 2 like 6,Enzyme,-5.431,6.380235174879512e-19,down,92,0,False,False,Unknown,0,False,False,False,False,False,False,0,CHEMBL5465322,0,0
+DTX3L,ENSG00000163840,deltex E3 ubiquitin ligase 3L,Unclassified,1.487,2.72899828149726e-108,up,135,0,False,False,Druggable pocket,2,False,False,True,False,False,False,0,,0,0
+FABP5,ENSG00000164687,fatty acid binding protein 5,Auxiliary transport protein,3.385,1.21346474342701e-32,up,148,1,False,False,Discovery precedence,3,True,True,False,True,False,False,0,CHEMBL3674,129,287
+FABP5P10,ENSG00000213201,fatty acid binding protein 5 pseudogene 10,Unclassified,3.331,1.89193318841986e-93,up,72,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+FABP5P11,ENSG00000240122,fatty acid binding protein 5 pseudogene 11,Unclassified,3.329,6.23555899921043e-133,up,43,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+FABP5P7,ENSG00000234964,fatty acid binding protein 5 pseudogene 7,Unclassified,3.457,9.88187987633824e-54,up,94,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+FAM43A,ENSG00000185112,family with sequence similarity 43 member A,Unclassified,2.002,1.32697749493668e-87,up,64,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+FLG2,ENSG00000143520,filaggrin 2,Adhesion,-2.54,1.02966734262806e-84,down,95,0,False,False,Unknown,0,False,False,False,False,False,False,0,CHEMBL5724685,0,0
+GDPD3,ENSG00000102886,glycerophosphodiester phosphodiesterase domain containing 3,Unclassified,2.442,2.4997348109806e-65,up,97,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+GJB2,ENSG00000165474,gap junction protein beta 2,Unclassified protein,4.057,1.9190633427677e-17,up,150,1,False,False,Discovery precedence,3,True,True,False,True,False,False,0,CHEMBL4295738,0,0
+GLT1D1,ENSG00000151948,glycosyltransferase 1 domain containing 1,Unclassified,1.627,1.19141703265682e-102,up,114,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+GSTA3,ENSG00000174156,glutathione S-transferase alpha 3,Enzyme,-2.526,3.2606730910380404e-104,down,84,0,False,False,Druggable pocket,2,False,False,True,False,False,False,0,CHEMBL4866,0,0
+GZMB,ENSG00000100453,granzyme B,Enzyme,3.948,1.79081128526603e-110,up,30,1,True,False,Druggable pocket,2,False,False,False,True,True,False,0,CHEMBL2316,17,91
+HEPHL1,ENSG00000181333,hephaestin like 1,Unclassified,5.023,0.0045084016407607,up,130,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+HMOX1,ENSG00000100292,heme oxygenase 1,Enzyme,1.348,6.591301622620219e-116,up,33,2,True,True,Discovery precedence,3,True,True,True,False,False,False,0,CHEMBL2823,1,8
+HRH3,ENSG00000101180,histamine receptor H3,Membrane receptor,4.329,9.33831457451687e-102,up,47,0,False,False,Approved drug,6,True,True,False,False,True,False,16,CHEMBL264,4896,5880
+HS3ST6,ENSG00000162040,heparan sulfate-glucosamine 3-sulfotransferase 6,Unclassified,-2.765,1.02805815554914e-84,down,133,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+HSD17B13,ENSG00000170509,hydroxysteroid 17-beta dehydrogenase 13,Enzyme,-3.397,9.88291754569694e-63,down,127,0,False,False,Discovery precedence,3,True,False,False,False,False,False,0,CHEMBL5305042,181,268
+HTR3A,ENSG00000166736,5-hydroxytryptamine receptor 3A,Ion channel,4.233,1.22312390545296e-60,up,79,0,False,False,Approved drug,6,True,True,False,False,True,False,29,CHEMBL1899,815,1058
+ICOS,ENSG00000163600,inducible T cell costimulator,Unclassified protein,2.904,6.898874222329069e-103,up,44,1,False,True,Unknown,0,False,False,False,False,False,True,4,CHEMBL3712953,0,0
+IDO1,ENSG00000131203,"indoleamine 2,3-dioxygenase 1",Enzyme,3.086,2.58706871918645e-94,up,48,1,True,False,Advanced clinical,5,True,True,True,False,True,False,2,CHEMBL4685,1911,3581
+IFI27,ENSG00000165949,interferon alpha inducible protein 27,Unclassified,4.563,2.12007810859004e-06,up,143,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+IFIH1,ENSG00000115267,interferon induced with helicase C domain 1,Enzyme,1.522,8.79180830406447e-76,up,98,1,True,False,Discovery precedence,3,True,False,False,False,False,False,0,CHEMBL4739862,0,0
+IFIT1,ENSG00000185745,interferon induced protein with tetratricopeptide repeats 1,Unclassified,1.921,1.22858555857875e-49,up,119,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+IL12RB1,ENSG00000096996,interleukin 12 receptor subunit beta 1,Membrane receptor,1.837,4.54135835404034e-44,up,220,1,True,False,Unknown,0,False,False,False,False,False,False,0,CHEMBL4523226,0,0
+IL12RB2,ENSG00000081985,interleukin 12 receptor subunit beta 2,Unclassified,1.272,0.0025063189029527,up,2157,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+IL17A,ENSG00000112115,interleukin 17A,Secreted protein,5.604,7.560101103235948e-125,up,11,1,False,True,Discovery precedence,3,True,True,False,False,False,True,11,CHEMBL3390822,28,53
+IL19,ENSG00000142224,interleukin 19,Unclassified,8.112,2.3780319432168e-65,up,17,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+IL23A,ENSG00000110944,interleukin 23 subunit alpha,Unclassified,1.633,0.003323095773921,up,291,2,True,True,Discovery precedence,3,True,False,False,False,False,True,8,,0,0
+IL2RA,ENSG00000134460,interleukin 2 receptor subunit alpha,Membrane receptor,2.157,4.83871458860955e-79,up,50,2,True,True,Unknown,0,False,False,False,False,False,True,7,CHEMBL1778,0,0
+IL36A,ENSG00000136694,interleukin 36 alpha,Unclassified,10.061,7.206907281450409e-92,up,2,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+IL36G,ENSG00000136688,interleukin 36 gamma,Secreted protein,4.835,1.10948892091732e-20,up,88,1,False,False,Discovery precedence,3,True,False,False,False,False,False,0,CHEMBL5291561,1,1
+IL36RN,ENSG00000136695,interleukin 36 receptor antagonist,Unclassified,2.497,3.03333588377393e-12,up,858,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+IL37,ENSG00000125571,interleukin 37,Unclassified,-3.141,1.56701232349015e-118,down,53,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+IL7R,ENSG00000168685,interleukin 7 receptor,Unclassified,1.984,8.459646904676592e-110,up,51,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+JAK3,ENSG00000105639,Janus kinase 3,Enzyme,1.545,0.0001172658014326,up,738,1,False,True,Approved drug,6,True,True,True,False,True,False,20,CHEMBL2148,6069,8832
+KLK13,ENSG00000167759,kallikrein related peptidase 13,Enzyme,3.65,3.243022547683041e-44,up,85,1,False,False,Unknown,0,False,False,False,False,False,False,0,CHEMBL4863,0,1
+KYNU,ENSG00000115919,kynureninase,Enzyme,4.652,4.01468224351229e-48,up,34,2,True,False,Discovery precedence,3,True,True,False,True,True,False,0,CHEMBL5100,5,5
+LCE3A,ENSG00000185962,late cornified envelope 3A,Unclassified,7.678,1.64510927782409e-05,up,36,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+LCE3D,ENSG00000163202,late cornified envelope 3D,Unclassified,5.053,1.32840915788915e-12,up,96,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+LCE3E,ENSG00000185966,late cornified envelope 3E,Unclassified,4.853,2.39688819077802e-07,up,123,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+LCE5A,ENSG00000186207,late cornified envelope 5A,Unclassified,-2.931,1.1802187389635899e-123,down,57,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+LINC01206,ENSG00000242512,long independently transcribed non-coding RNA 1206,Unclassified,5.227,3.00765594380137e-142,up,19,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+LTB4R,ENSG00000213903,leukotriene B4 receptor,Membrane receptor,1.377,2.36205660980027e-19,up,1248,0,False,False,Advanced clinical,5,True,True,False,False,True,False,4,CHEMBL3911,375,524
+LTF,ENSG00000012223,lactotransferrin,Enzyme,5.7,1.1125379734746e-107,up,14,1,True,False,Discovery precedence,3,True,False,True,False,False,False,0,CHEMBL4523161,0,0
+MEFV,ENSG00000103313,"MEFV innate immunity regulator, pyrin",Unclassified protein,2.321,3.06491001575465e-78,up,74,1,True,False,Discovery precedence,3,True,False,False,False,False,False,0,CHEMBL6196061,0,0
+MMP1,ENSG00000196611,matrix metallopeptidase 1,Enzyme,3.206,0.0108891679622064,up,304,1,False,True,Approved drug,6,True,True,False,True,True,False,4,CHEMBL332,971,1818
+MMP12,ENSG00000262406,matrix metallopeptidase 12,Enzyme,5.339,1.65261179448983e-73,up,28,1,True,False,Advanced clinical,5,True,True,True,False,False,False,3,CHEMBL4393,408,594
+MMP9,ENSG00000100985,matrix metallopeptidase 9,Enzyme,1.787,0.0061697067256682,up,290,2,True,True,Advanced clinical,5,True,True,True,False,True,True,5,CHEMBL321,1809,2434
+NMI,ENSG00000123609,N-myc and STAT interactor,Unclassified,1.483,6.37351461436693e-195,up,18,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+NOS2,ENSG00000007171,nitric oxide synthase 2,Enzyme,5.196,8.03807898512038e-38,up,27,2,True,True,Advanced clinical,5,True,True,True,False,True,False,4,CHEMBL4481,260,571
+NR4A3,ENSG00000119508,nuclear receptor subfamily 4 group A member 3,Transcription factor,2.064,9.11487027608514e-46,up,144,1,True,False,Discovery precedence,3,False,True,False,False,True,False,0,CHEMBL1961792,5,7
+OAS1,ENSG00000089127,2'-5'-oligoadenylate synthetase 1,Unclassified,2.471,1.03133080979122e-48,up,126,1,False,True,Discovery precedence,3,True,False,False,False,False,False,0,,0,0
+OAS2,ENSG00000111335,2'-5'-oligoadenylate synthetase 2,Unclassified,3.923,9.68301772299363e-24,up,118,1,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+PARK2,ENSG00000185345,parkin RBR E3 ubiquitin protein ligase,Unclassified,-1.427,4.27941540054152e-123,down,81,0,False,False,Discovery precedence,3,True,False,False,False,False,False,0,,0,0
+PARP14,ENSG00000173193,poly(ADP-ribose) polymerase family member 14,Enzyme,1.646,4.42276984262394e-66,up,134,1,True,False,Discovery precedence,3,True,True,True,False,False,False,0,CHEMBL2176777,27,83
+PGLYRP4,ENSG00000163218,peptidoglycan recognition protein 4,Unclassified,1.643,3.4459768459786e-105,up,102,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+PI3,ENSG00000124102,peptidase inhibitor 3,Unclassified,6.611,0.0002857215676403,up,59,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+PLA2G2A,ENSG00000188257,phospholipase A2 group IIA,Enzyme,1.037,0.0049957815808664,up,344,2,True,True,Advanced clinical,5,True,True,True,False,True,False,2,CHEMBL3474,149,288
+PLA2G2F,ENSG00000158786,phospholipase A2 group IIF,Enzyme,2.142,4.41697869760966e-145,up,52,0,False,False,Discovery precedence,3,False,True,False,False,True,False,0,CHEMBL4278,3,8
+PLA2G4D,ENSG00000159337,phospholipase A2 group IVD,Enzyme,4.104,9.11521644331468e-32,up,105,1,False,False,Discovery precedence,3,True,False,False,False,False,False,0,CHEMBL2287,0,0
+PLBD1,ENSG00000121316,phospholipase B domain containing 1,Unclassified,2.05,5.9771883078659605e-173,up,26,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+PLK1,ENSG00000166851,polo like kinase 1,Enzyme,1.408,2.19308852825916e-05,up,325,2,False,True,Advanced clinical,5,True,True,True,False,True,False,8,CHEMBL3024,751,1118
+PM20D1,ENSG00000162877,peptidase M20 domain containing 1,Unclassified,-4.895,1.81120987937024e-21,down,124,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+PRSS27,ENSG00000172382,serine protease 27,Enzyme,4.192,6.32626527804343e-223,up,6,0,False,False,Unknown,0,False,False,False,False,False,False,0,CHEMBL6196117,0,0
+RDH16,ENSG00000139547,retinol dehydrogenase 16,Unclassified,2.383,6.58297841634332e-172,up,16,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+REN,ENSG00000143839,renin,Enzyme,3.423,2.36356916688984e-38,up,83,1,False,True,Approved drug,6,True,True,True,False,True,False,4,CHEMBL286,3205,4029
+RORA,ENSG00000069667,RAR related orphan receptor A,Transcription factor,-1.015,7.45895635608652e-05,down,2186,0,False,False,Discovery precedence,3,True,True,False,True,True,False,0,CHEMBL5868,5,21
+RORC,ENSG00000143365,RAR related orphan receptor C,Transcription factor,-2.473,9.30744833846091e-227,down,7,1,False,True,Phase 1,4,True,True,True,False,True,False,0,CHEMBL1741186,9766,14698
+RRM2,ENSG00000171848,ribonucleotide reductase regulatory subunit M2,Enzyme,1.937,4.56239493658658e-06,up,570,1,False,False,Approved drug,6,False,False,False,False,True,False,10,CHEMBL1954,0,4
+S100A12,ENSG00000163221,S100 calcium binding protein A12,Unclassified,8.802,1.63741833874838e-81,up,4,1,True,False,Druggable pocket,2,False,False,True,False,False,False,0,,0,0
+S100A7,ENSG00000143556,S100 calcium binding protein A7,Unclassified,8.11,4.98670435214668e-60,up,13,1,False,False,Discovery precedence,3,True,False,False,True,False,False,0,,0,0
+S100A7A,ENSG00000184330,S100 calcium binding protein A7A,Unclassified,9.923,9.35816208285372e-24,up,10,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+S100A8,ENSG00000143546,S100 calcium binding protein A8,Unclassified protein,7.763,3.78048122419265e-22,up,31,1,False,False,Discovery precedence,3,True,False,False,False,False,False,0,CHEMBL5725128,0,0
+S100A9,ENSG00000163220,S100 calcium binding protein A9,Unclassified protein,7.94,3.01369564684045e-21,up,5,3,True,True,Discovery precedence,3,True,True,False,False,False,False,0,CHEMBL4296265,2,17
+SCEL,ENSG00000136155,sciellin,Unclassified,-1.765,1.38714650782959e-93,down,137,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SEC14L6,ENSG00000214491,SEC14 like lipid binding 6,Unclassified,-4.161,6.68562675354573e-42,down,125,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SERPINA12,ENSG00000165953,serpin family A member 12,Unclassified,-2.378,8.32917123824343e-115,down,62,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SERPINB11,ENSG00000206072,serpin family B member 11,Unclassified,6.244,7.17856052658332e-38,up,39,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SERPINB3,ENSG00000057149,serpin family B member 3,Unclassified,6.342,8.32960547693203e-38,up,38,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SERPINB4,ENSG00000206073,serpin family B member 4,Unclassified,8.73,4.21349401198297e-17,up,22,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SLC26A9,ENSG00000174502,solute carrier family 26 member 9,Transporter,2.979,1.38615889149751e-94,up,49,1,False,False,Unknown,0,False,False,False,False,False,False,0,CHEMBL4523359,0,0
+SLC46A2,ENSG00000119457,solute carrier family 46 member 2,Unclassified,-2.282,3.704350987086e-91,down,132,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SLC6A14,ENSG00000268104,solute carrier family 6 member 14,Unclassified protein,4.324,2.80762245799215e-26,up,99,1,False,False,Discovery precedence,3,False,True,False,False,True,False,0,CHEMBL4680044,0,0
+SOCS3,ENSG00000184557,suppressor of cytokine signaling 3,Unclassified,2.163,2.29647935138402e-23,up,131,2,True,True,Unknown,0,False,False,False,False,False,False,0,,0,0
+SPINK1,ENSG00000164266,serine peptidase inhibitor Kazal type 1,Unclassified,-3.964,2.5433931362944e-84,down,65,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SPRR2A,ENSG00000241794,small proline rich protein 2A,Unclassified,8.786,7.32372689048778e-20,up,20,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SPRR2B,ENSG00000196805,small proline rich protein 2B,Unclassified,7.012,9.13960058596247e-11,up,45,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SPRR2C,ENSG00000229035,small proline rich protein 2C (pseudogene),Unclassified,5.969,0.0004218000838843,up,66,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SPRR2D,ENSG00000163216,small proline rich protein 2D,Unclassified,5.364,9.29012940192857e-15,up,77,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SPRR2E,ENSG00000203785,small proline rich protein 2E,Unclassified,4.239,6.71587258616668e-55,up,58,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+SPRR2F,ENSG00000244094,small proline rich protein 2F,Unclassified,6.69,6.74311748572103e-05,up,56,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+STAT1,ENSG00000115415,signal transducer and activator of transcription 1,Transcription factor,1.862,3.79613668235924e-32,up,142,2,True,True,Discovery precedence,3,False,True,False,False,True,False,0,CHEMBL6101,10,50
+STAT3,ENSG00000168610,signal transducer and activator of transcription 3,Transcription factor,1.246,2.19753287372143e-07,up,825,1,True,False,Discovery precedence,3,True,True,False,False,True,False,1,CHEMBL4026,112,430
+TCN1,ENSG00000134827,transcobalamin 1,Unclassified,6.612,0.0070958576839052,up,107,0,False,False,Discovery precedence,3,True,False,False,False,False,False,0,,0,0
+TEX101,ENSG00000131126,testis expressed 101,Unclassified,4.391,2.6493863291093495e-101,up,46,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+THRSP,ENSG00000151365,thyroid hormone responsive,Unclassified,-4.46,4.69954433993067e-39,down,110,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+TMPRSS11A,ENSG00000187054,transmembrane serine protease 11A,Unclassified,5.886,1.08425157696603e-55,up,54,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+TMPRSS11D,ENSG00000153802,transmembrane serine protease 11D,Enzyme,6.933,3.06269361376121e-13,up,40,1,False,False,Discovery precedence,3,False,True,False,False,True,False,0,CHEMBL1795138,27,49
+TMPRSS6,ENSG00000187045,transmembrane serine protease 6,Enzyme,-2.874,1.61094009700847e-91,down,89,0,False,False,Discovery precedence,3,False,True,False,False,False,False,1,CHEMBL1795139,69,91
+TNFRSF9,ENSG00000049249,TNF receptor superfamily member 9,Membrane receptor,2.878,9.96123906925684e-47,up,122,1,True,False,Discovery precedence,3,True,False,False,False,False,True,2,CHEMBL3712857,2,3
+TNIP3,ENSG00000050730,TNFAIP3 interacting protein 3,Unclassified,7.022,1.0124044000745398e-77,up,24,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+TNNT2,ENSG00000118194,"troponin T2, cardiac type",Unclassified,-1.828,1.29076215466659e-113,down,78,0,False,False,Advanced clinical,5,True,True,False,False,True,False,1,,0,0
+TRIM10,ENSG00000204613,tripartite motif containing 10,Unclassified,4.181,7.30875096290992e-127,up,37,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+UPK1B,ENSG00000114638,uroplakin 1B,Unclassified,-3.012,2.29390226106605e-66,down,104,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+VNN3,ENSG00000293493,"vanin 3, pseudogene ",Unclassified,8.081,3.798963881275559e-185,up,1,1,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+WDR72,ENSG00000166415,WD repeat domain 72,Unclassified,-2.534,1.3533355689124e-107,down,80,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+WFDC12,ENSG00000168703,WAP four-disulfide core domain 12,Unclassified,2.304,1.02966734262806e-84,up,111,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+WFIKKN2,ENSG00000173714,"WAP, follistatin/kazal, immunoglobulin, kunitz and netrin domain containing 2",Unclassified,-3.06,3.15047080616646e-74,down,121,0,False,False,Unknown,0,False,False,False,False,False,False,0,,0,0
+XAF1,ENSG00000132530,XIAP associated factor 1,Unclassified,2.546,2.0496820781045e-27,up,86,2,True,True,Unknown,0,False,False,False,False,False,False,0,,0,0
+ZC3H12A,ENSG00000163874,zinc finger CCCH-type containing 12A,Unclassified,3.07,1.71881269526147e-13,up,128,2,True,False,Unknown,0,False,False,False,False,False,False,0,,0,0

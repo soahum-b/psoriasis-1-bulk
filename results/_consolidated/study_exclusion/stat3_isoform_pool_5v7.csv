@@ -1,0 +1,3 @@
+"pool","DL","HKSJ","verdict"
+"3-study (original)","+0.778 pp [-0.047, 1.604] p=0.065","+0.79 pp p~0.11 (reported in deep-dive)","does NOT replicate"
+"4-study (+S3)","+0.868 pp [0.147, 1.588] p=0.018","+0.804 pp [-0.440, 2.048] p=0.132","DL crosses 0.05; HKSJ still n.s."

@@ -1,0 +1,5 @@
+"method","estimate_pp","p_value","verdict"
+"Meta-analysis (per-study effect, DL random-effects)","+0.87","0.018","significant"
+"Meta-analysis (per-study effect, HKSJ)","+0.80","0.132","not significant"
+"Mega-analysis (all 268 samples, study covariate, quasibinomial)","+0.46","0.228","not significant"
+"Mega-analysis cross-check (depth-weighted linear model)","+0.40","0.211","not significant"

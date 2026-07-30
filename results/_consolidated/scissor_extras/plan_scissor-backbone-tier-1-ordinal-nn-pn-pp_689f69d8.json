@@ -1,0 +1,63 @@
+{
+  "version": 3,
+  "created_at": "2026-07-08T13:32:37.603Z",
+  "task_summary": "Scissor backbone: Tier-1 ordinal (NN<PN<PP) gradient cell-state selection on Ma 2023 psoriasis scRNA",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Plan",
+      "delegations": [
+        {
+          "steps": [
+            {
+              "title": "Assemble scRNA reference from GSE173706",
+              "description": "Download GSE173706_RAW.tar (264 MB) from GEO into the workspace (fetch-only cell). Untar, read the 33 per-sample .csv.gz count matrices, and build a single merged Seurat object. Tag each cell with donor id and a three-level condition factor (NS=0/NN, PN=1, PP=2) parsed from the sample title, matching the bulk ordinal axis. Save a checkpoint reference_raw.rds and a small sample_manifest.csv (sample, tier, n_cells). Deliverable: fig_ref_composition.png (bar chart of cells per tier and per donor)."
+            },
+            {
+              "title": "QC and preprocess the reference",
+              "description": "Standard Seurat QC: filter cells on nFeature/nCount/percent.mt, log-normalize, find 2000 HVGs, scale, PCA, UMAP, and Louvain clustering. Annotate broad cell types (keratinocyte, fibroblast, myeloid/DC, T cell, endothelial, melanocyte) via canonical markers (KRT14/KRT10, COL1A1/PDGFRA, LYZ/CD68, CD3D, PECAM1, MLANA). Confirm feature-space overlap with the bulk gene symbols. Save reference_processed.rds (checkpoint). Deliverable: fig_ref_umap.png (UMAP colored by cell type + by tier)."
+            },
+            {
+              "title": "Load bulk phenotype anchor and build Tier-1 vector",
+              "description": "Load the existing bulk artifacts from the Recount-3 folder (dge_filt_norm.rds / sample_classification.rds) to get the logCPM bulk matrix and the frozen NN/PN/PP labels. Build the Tier-1 ordinal phenotype y in {0,1,2}. Collapse bulk to gene symbols (max-expression on duplicates) and intersect with the reference HVG/feature space. Run non-degeneracy checks (adequate n per level; phenotype not perfectly separable by study). Save bulk_anchor.rds + phenotype_checks.csv."
+            },
+            {
+              "title": "Build Scissor R environment",
+              "description": "Create a conda R environment with Seurat, Scissor (Sunduz-Duan), preprocessCore, and dependencies. Verify Scissor loads and inspect current function signatures (Scissor(), reliability.test(), evaluate.cell()) since the API drifts across versions. Record exact versions in the repo for reproducibility."
+            },
+            {
+              "title": "Run Tier-1 Gaussian Scissor with alpha tuning",
+              "description": "Run Scissor in family='gaussian' on the ordinal 0/1/2 axis. Tune alpha over ~0.05-0.5 and select the value giving a modest, biologically plausible selected fraction (not a large share of all cells). Resolve cells into Scissor-positive (toward lesional), Scissor-negative (toward normal), background. Save scissor_result.rds + scissor_alpha_tuning.csv. Deliverable: fig_alpha_tuning.png (selected fraction vs alpha)."
+            },
+            {
+              "title": "Reliability test + permutation null",
+              "description": "Run reliability.test() with permutations and require significance (mandatory in Gaussian mode). Then the independent permutation-null control: shuffle the phenotype across bulk samples, rerun Scissor, and confirm the selected fraction collapses and significance disappears. Save reliability_test.rds + permutation_null.csv. Deliverable: fig_permutation_null.png (observed selected fraction vs null distribution)."
+            },
+            {
+              "title": "Characterize the gradient-tracking cell states",
+              "description": "Deliverables: (1) fig_scissor_umap.png — UMAP of Scissor-positive/negative/background. (2) fig_scissor_composition.png — cell-type composition of the Scissor-positive set, highlighting whether intermediate keratinocyte/fibroblast/myeloid states concentrate at the PN tier. (3) DE of selected vs background cells (Seurat FindMarkers) -> gradient_program_genes.csv, and check where STAT3 and its known targets sit in that program. Save scissor_characterization.rds."
+            },
+            {
+              "title": "Assemble portable repo + HANDOFF.md",
+              "description": "Organize everything into a clean git-ready structure (code/, results/, figures/, data pointers not the 264 MB tar). Write HANDOFF.md documenting: what was run, current status, exact env spec, how to git-pull and re-run on a cluster, and the decision point for Tiers 2/3/4 (severity, held-out signature, cross-cohort replication) + back-projection. Save the repo as a tarball artifact plus HANDOFF.md and a backbone summary markdown."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    }
+  ],
+  "desired_outputs": [
+    "Seurat reference object (Ma 2023) with NN/PN/PP condition labels and cell-type annotation",
+    "Scissor-selected cells (positive/negative/background) on the ordinal gradient axis",
+    "reliability.test permutation significance + permutation-null control",
+    "UMAP of Scissor +/-/background cells",
+    "Cell-type composition of the gradient-tracking fraction",
+    "Gradient-tracking gene program (DE selected vs background)",
+    "Portable git-ready repo with HANDOFF.md status/next-steps"
+  ],
+  "feasibility": {
+    "confidence": "high",
+    "rationale": "The bulk phenotype anchor (NN<PN<PP) and per-study normalized matrices already exist in the project. The single-cell reference (GSE173706, Ma 2023) is 264 MB of pre-quantified per-sample count matrices spanning all three tiers (NS/PN/PP), fits in 64 GB local RAM, and needs no cluster for the backbone. The main methodological risk — circularity — is handled by using the non-circular ordinal biopsy-site label and validated with a permutation null."
+  }
+}

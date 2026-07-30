@@ -1,0 +1,70 @@
+{
+  "version": 3,
+  "created_at": "2026-07-06T01:47:09.405Z",
+  "task_summary": "Druggability triage of psoriasis meta-DEGs → pocket analysis → local demo docking + cluster-ready packages for docking/co-folding/MD",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Plan",
+      "delegations": [
+        {
+          "steps": [
+            {
+              "title": "Assemble ranked DEG target list",
+              "description": "Load meta_de_PPvsNN.csv (23,410 genes; 2,379 pass FDR<0.05 & |logFC|>1). Filter to significant DEGs, retain effect size (logFC), significance (FDR, z), cross-study support (k, I2 heterogeneity), and direction. Map HGNC symbols to UniProt/Ensembl IDs. Intersect with the project's pathway evidence (GSEA/ORA leading edges, CollecTRI TF-activity) to flag pathway-supported genes (IL-17/JAK-STAT/NF-kB/keratinocyte axes). Runs here (light compute). Save target_universe.csv and fig_target_volcano_annotated.png highlighting STAT3 and top candidates."
+            },
+            {
+              "title": "Druggability annotation via knowledge bases",
+              "description": "For the top ~150 DEGs by combined rank, query Open Targets (small-molecule + antibody tractability buckets, clinical precedence), ChEMBL (target class, known active compounds, mechanism-of-action drugs, max clinical phase), and BindingDB/PubChem (existing affinity data). Annotate each with protein class (kinase/TF/GPCR/enzyme/surface), ligandability signals, and existing-drug counts. Internet-dependent — runs here. Save druggability_annotation.csv and fig_druggability_landscape.png (tractability vs DE effect size)."
+            },
+            {
+              "title": "Score and rank druggable targets; select leads",
+              "description": "Combine DE evidence (effect size, cross-study robustness), pathway centrality, and druggability (tractability bucket, structural availability, known-drug precedence) into a transparent composite score. Produce a ranked shortlist. Carry the top ~3-5 targets (STAT3 included by design) into structural work. Save druggable_target_ranking.csv and fig_target_ranking.png; write a short rationale for each lead."
+            },
+            {
+              "title": "Retrieve structures for lead targets",
+              "description": "For each lead, fetch the best experimental structure from RCSB PDB (prefer ligand-bound, high-resolution; for STAT3 the SH2 domain / DNA-binding constructs) and the AlphaFold DB model as fallback/complement. Record resolution, coverage, bound ligands, and construct boundaries. Runs here. Save receptor PDBs under structures/ and structure_inventory.csv. Render fig_lead_structures.png cartoon overviews."
+            },
+            {
+              "title": "Binding-pocket detection & structural druggability",
+              "description": "Run fpocket on each lead receptor to enumerate pockets; score druggability (fpocket druggability score, volume, hydrophobicity, polarity). For STAT3, specifically characterize the SH2 phosphotyrosine pocket. Select the target pocket per lead and define the docking box. Runs here. Save pocket_report.csv and per-target fig_pockets_<TARGET>.png with pocket surfaces highlighted."
+            },
+            {
+              "title": "Prepare purchasable screening library (ZINC22)",
+              "description": "Assemble a focused purchasable set from ZINC22: (a) analogs/neighbors of known inhibitors of the lead pocket via SMILES-similarity search, plus (b) a lead-like diverse sample. Fetch 3D structures, apply drug-like/PAINS filters (RDKit), record provenance (ZINC IDs, suppliers). Internet-dependent — runs here. Save screening_library.sdf and library_manifest.csv."
+            },
+            {
+              "title": "Virtual screen by docking (CPU)",
+              "description": "Install AutoDock Vina/smina (GPU-free). Prepare the lead receptor (protonation, charges) and dock a demonstrative-scale ZINC22 subset into the selected pocket across the 12 local CPUs for real ranked results here. In parallel, generate a self-contained cluster-ready docking package (full/larger library, receptor + config, portable run script + SLURM/PBS template) the user launches on an activated VSCode node. Rank by docking score, cluster poses, inspect top binders' pocket-residue interactions. Save docking_results.csv, top-pose complexes under docked_poses/, docking_cluster_package/, and fig_docking_topscores.png + fig_top_pose_interactions.png."
+            },
+            {
+              "title": "Structure-based cross-check on top hits",
+              "description": "For the top ~5-10 docked compounds, cross-validate: recompute interaction fingerprints and check against known-inhibitor benchmark poses docked identically (positive controls). Because co-folding (Boltz-2/Chai-1) needs a GPU, build a cluster-ready co-folding/affinity package (input FASTAs+SMILES, run script, SLURM/PBS template) rather than running it here; run the non-GPU cross-checks locally. Flag consensus binders. Save shortlist_validated.csv, cofolding_cluster_package/, and fig_consensus_binders.png."
+            },
+            {
+              "title": "Build MD-ready systems for the cluster",
+              "description": "For the top 1-3 receptor-ligand complexes, build fully-prepared MD systems: ligand parameterization (GAFF2/OpenFF via antechamber/OpenFF), protein force field (Amber ff14SB/ff19SB), solvation (TIP3P box), ion neutralization, energy minimization, and short local NVT/NPT equilibration to verify the system is stable. Package GROMACS- and/or OpenMM-ready inputs (topologies, coordinates, mdp/run scripts) plus a SLURM/PBS submission template tailored to the VSCode-activated-node workflow, with a README on launching. Save md_systems/ package and md_prep_report.md."
+            },
+            {
+              "title": "Compile report and deliverables",
+              "description": "Assemble a consolidated report tying the DEG evidence to the selected druggable targets, pocket analysis, virtual-screen hits, and the cluster hand-off packages. Include all key figures, ranked tables, a methods section with tool versions and parameters, and explicit caveats (demo-scale local docking vs full cluster run, GPU stages run on user's HPC, meta-analysis evidence base). Save psoriasis_druggability_report.md and an index of all artifacts."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    }
+  ],
+  "desired_outputs": [
+    "Ranked druggability table of DEG-encoded proteins (tractability, known drugs, protein class)",
+    "Pocket/structural druggability report for top targets",
+    "Virtual screen results: ranked docked purchasable compounds (local demo screen) + full-scale cluster-ready docking package",
+    "Co-folding/affinity cross-check package (GPU, cluster-ready) on top screen hits",
+    "Ready-to-run MD simulation package (parameterized, solvated, equilibrated systems + cluster submission scripts)",
+    "Consolidated figures and a summary report"
+  ],
+  "feasibility": {
+    "rationale": "The DEG evidence base is mature and in-hand (meta_de_PPvsNN.csv; 2,379 genes at FDR<0.05 & |logFC|>1; STAT3 up). The internet-dependent and light-compute stages — target triage, druggability annotation (Open Targets/ChEMBL/BindingDB), structure retrieval (PDB/AlphaFold DB), pocket detection (fpocket), library assembly (ZINC22), and a demonstrative-scale CPU docking screen — all run here on this 12-CPU machine, where the API connectors and internet live. The user's cluster is reachable only interactively through VSCode's SSH node picker (no persistent submit endpoint), so the compute-heavy stages are delivered as self-contained, cluster-ready packages the user launches on an activated node: a full-scale docking package, a GPU co-folding package, and fully-parameterized/equilibrated MD systems with submission scripts.",
+    "confidence": "high"
+  }
+}

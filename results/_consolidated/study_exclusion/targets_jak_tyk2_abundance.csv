@@ -1,0 +1,5 @@
+"gene","lfc","FDR","drug","sig"
+"TYK2",0.123,0.44,"deucravacitinib",FALSE
+"JAK1",-0.32,6.1e-08,"JAK1i (upadacitinib etc.)",TRUE
+"JAK2",-0.169,0.33,"JAK2i",FALSE
+"JAK3",2.04112667872001,2.25494835907771e-16,"JAK3/pan-JAKi (tofacitinib)",TRUE
