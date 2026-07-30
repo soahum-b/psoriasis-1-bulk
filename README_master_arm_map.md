@@ -8,7 +8,7 @@ A multi-arm transcriptomic dissection of psoriasis (genes → pathways → drugg
 
 ## Reproducibility status
 
-- **264/300 artifacts (88%) have recoverable generating code** in lineage; **13/14 arms fully reproducible**.
+- **264/300 artifacts (88%) have recoverable generating code** in lineage; **5/14 arms are 100% code-recoverable (A4, D, F, I, J); the rest partial** — see per-arm counts below.
 - Toolchains: `psoriasis-r` (recount3/DESeq2/edgeR/limma), `python`, `scissor-r` (Seurat5/glmnet), `dock-md` (rdkit/biopython).
 - Environment manifests to capture per arm: see table below.
 
@@ -16,20 +16,20 @@ A multi-arm transcriptomic dissection of psoriasis (genes → pathways → drugg
 
 | Arm | Description | Artifacts | Repro | Toolchain | Already in repo | Stage target (additive) |
 |-----|-------------|----------:|-------|-----------|-----------------|-------------------------|
-| A1_meta_analysis | Bulk meta-analysis (k=4 PP-vs-NN, DerSimonian-Laird) | 101 | FULL | psoriasis-r, python | code/run_pipeline.R, 00_download_data.R; results/, figures/ | results/meta_analysis/, figures/meta_analysis/ |
-| A2_peer_review | Peer review of methodology | 4 | FULL | psoriasis-r | — (artifact only) | docs/peer_review/ |
-| A3_pathway_TF | Pathway / TF-activity (GSEA/ORA/CollecTRI) | 14 | FULL | psoriasis-r, python | — (artifact only) | code/pathway_TF/, results/pathway_TF/, figures/pathway_TF/ |
+| A1_meta_analysis | Bulk meta-analysis (k=4 PP-vs-NN, DerSimonian-Laird) | 101 | 92/101 | psoriasis-r, python | code/run_pipeline.R, 00_download_data.R; results/, figures/ | results/meta_analysis/, figures/meta_analysis/ |
+| A2_peer_review | Peer review of methodology | 4 | 2/4 | psoriasis-r | — (artifact only) | docs/peer_review/ |
+| A3_pathway_TF | Pathway / TF-activity (GSEA/ORA/CollecTRI) | 14 | 13/14 | psoriasis-r, python | — (artifact only) | code/pathway_TF/, results/pathway_TF/, figures/pathway_TF/ |
 | A4_study_exclusion | Study-exclusion documentation (S1–S9) | 23 | FULL | psoriasis-r | (partly in docs) | results/study_exclusion/ |
-| B_scissor | Scissor single-cell progression-gradient | 44 | FULL | scissor-r, python | code/scissor_*.R, run_full_census*; results_full/, figures_full/ | (present) |
-| C_stat3_isoforms | STAT3 six-isoform (α/β/γ/δ/ε/ζ) characterization | 3 | FULL | python | — (artifact only) | code/isoforms/, results/isoforms/ |
+| B_scissor | Scissor single-cell progression-gradient | 44 | 43/44 | scissor-r, python | code/scissor_*.R, run_full_census*; results_full/, figures_full/ | (present) |
+| C_stat3_isoforms | STAT3 six-isoform (α/β/γ/δ/ε/ζ) characterization | 3 | 2/3 | python | — (artifact only) | code/isoforms/, results/isoforms/ |
 | D_docking_md | Molecular docking + MD simulation | 50 | FULL | dock-md, python | — (artifact only) | code/docking_md/, results/docking_md/, figures/docking_md/ |
-| E_genome_browser | Genome-browser comparison tool | 12 | FULL | psoriasis-r, python | — (artifact only) | code/genome_browser/, results/genome_browser/ |
+| E_genome_browser | Genome-browser comparison tool | 12 | 10/12 | psoriasis-r, python | — (artifact only) | code/genome_browser/, results/genome_browser/ |
 | F_presentation | Figure presentation compile | 1 | FULL | python | — (artifact only) | docs/presentation/ |
 | G_audit | Independent project audit | 2 | PARTIAL | — | PROJECT_AUDIT.md | (present) |
-| H_session_current | Theory-1 IL-1/endothelium + session docs | 29 | FULL | python | docs/, notes/ (theory1, LOY, decisions, methods) | results/theory1_il1/, figures/theory1_il1/ |
+| H_session_current | Theory-1 IL-1/endothelium + session docs | 29 | 16/29 | python | docs/, notes/ (theory1, LOY, decisions, methods) | results/theory1_il1/, figures/theory1_il1/ |
 | I_lncRNA | lncRNA differential expression | 11 | FULL | psoriasis-r, python | — (artifact only) | code/lncRNA/, results/lncRNA/, figures/lncRNA/ |
 | J_theory2_plan | Theory-2 sex-stratified plan | 1 | FULL | — | docs/plans/ (pending) | docs/plans/ |
-| K_refs_deconv | Reference PDFs + deconvolution reading | 5 | FULL | — | — (artifact only) | docs/references/ |
+| K_refs_deconv | Reference PDFs + deconvolution reading | 5 | 0/5 | — | — (artifact only) | docs/references/ |
 
 ## How to reproduce each arm
 
