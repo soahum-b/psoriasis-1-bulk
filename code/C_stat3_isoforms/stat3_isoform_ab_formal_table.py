@@ -1,0 +1,35 @@
+# Auto-extracted generating script
+# Produces: stat3_isoform_ab_formal_table.csv
+# Conda env: python   (run with this environment activated)
+# Inputs (expected alongside / in data/): none
+# Source artifact version: a5b85f55-5157-45c5-a73d-a445e2489505
+# NOTE: absolute artifact paths rewritten to basenames; place named inputs in the same dir.
+#------------------------------------------------------------
+
+import csv
+rows = [
+    ["panel","label","estimate_pp","p_value","significant","note"],
+    ["A_perstudy","SRP035988 (anchor, n=95v83)","1.167","0.017","yes","only significant single study"],
+    ["A_perstudy","SRP165679 (deep, n=66)","-0.071","0.70","no","well-powered, no shift"],
+    ["A_perstudy","SRP154474 (n=17)","2.209","0.37","no","underpowered"],
+    ["A_perstudy","SRP126422 (4v4)","1.008","0.86","no","underpowered"],
+    ["A_pooled","Meta DL random-effects","0.868","0.018","yes",""],
+    ["A_pooled","Meta HKSJ (few-study honest)","0.804","0.132","no","primary honest estimator"],
+    ["B_estimator","Meta DL random-effects","0.868","0.018","yes",""],
+    ["B_estimator","Stouffer weighted-Z (sqrt n)","","0.0446","yes",""],
+    ["B_estimator","Stouffer unweighted","","0.124","no",""],
+    ["B_estimator","Meta HKSJ","0.804","0.132","no",""],
+    ["B_estimator","Fisher (unsigned)","","0.193","no",""],
+    ["B_estimator","Mega depth-weighted linear","0.40","0.211","no","268 samples"],
+    ["B_estimator","Mega quasibinomial","0.46","0.228","no","268 samples, study covariate"],
+    ["C_LOO","drop SRP165679","","0.0113","yes",""],
+    ["C_LOO","drop SRP126422","","0.0449","yes",""],
+    ["C_LOO","drop SRP154474","","0.0655","no",""],
+    ["C_LOO","drop SRP035988 (anchor)","","0.9133","no","signal collapses"],
+    ["D_gradient","NN PSI-beta %","8.85","","","gene log2FC 0"],
+    ["D_gradient","PN PSI-beta %","7.69","","","gene log2FC 0.156"],
+    ["D_gradient","PP PSI-beta %","8.78","","","gene log2FC 1.21"],
+]
+with open("stat3_isoform_ab_formal_table.csv","w",newline="") as f:
+    csv.writer(f).writerows(rows)
+print("wrote", len(rows)-1, "rows")
