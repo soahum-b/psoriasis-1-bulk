@@ -35,3 +35,9 @@ psor_fig4_*.out
 # Redundant full-census figure dir + base64 transfer cruft (canonical copies are figures/*_fullcensus.png)
 figures_full/
 *.b64
+
+# Restored regenerable bundles + downloaded deps (present on disk, not git-tracked)
+results/clust_out3.tar.gz
+results/scissor_repo_ship.tar.gz
+data/GenomeInfoDbData_*.tar.gz
+results/_consolidated/presentation/presentation.pptx
