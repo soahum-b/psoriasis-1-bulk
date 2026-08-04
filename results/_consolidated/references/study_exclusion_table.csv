@@ -1,0 +1,24 @@
+study,n,fate,category,reason,verified
+SRP035988,179,INCLUDED,—,"case-control, healthy + lesional whole skin (83 NN/95 PP)",original screen
+SRP165679,147,INCLUDED,—,AD/PSO/healthy cohort; only study with all 3 tiers (38/27/28),original screen
+SRP065812,52,INCLUDED,—,lncRNA psor+healthy; pre-adalimumab baseline kept (16 NN/18 PP),original screen
+SRP126422,24,INCLUDED,—,keratinocyte+biopsy; tiny but real whole skin (4/4/4),original screen
+SRP076982,259,excluded,no normal control,"211 PP + 48 PN, 0 NN, and ~4M depth (shallow) — no healthy arm",original screen
+ERP110816,178,excluded,systemic therapy,all 178 samples on etanercept (anti-TNF); no treatment-naive baseline,original screen
+SRP026042,84,excluded,in-vitro,aryl-hydrocarbon-receptor drug-perturbed cultured explants,original screen
+SRP049599,73,excluded,cell line,JunB foreskin keratinocyte line + siRNA; no lesional tissue,original screen
+SRP116922,36,excluded,in-vitro,"T-cell activation in skin explants (culture, not intact skin)",original screen
+SRP130972,34,excluded,in-vitro,IL-1B/IL-36 responses in epidermal keratinocytes (culture),original screen
+SRP086612,32,excluded,in-vitro,Act1 keratinocyte differentiation assay (culture),original screen
+ERP110814,30,excluded,blood,whole-blood transcriptome across timepoints — not skin,original screen
+SRP057087,28,excluded,no healthy skin,"VERIFIED: 28 skin samples, only PP+PN groups, no NN healthy arm",recount3 metadata (2026-08-04)
+SRP154474,28,excluded,subtype + special-site,VERIFIED: has healthy ctrl but mixes palmoplantar/scalp/conventional subtypes; not a clean plaque-vs-healthy whole-skin study,recount3 metadata (2026-08-04)
+SRP173379,19,excluded,blood + GPP,"neutrophil RNAseq, Generalised Pustular Psoriasis (excluded subtype)",original screen
+SRP144926,18,excluded,in-vitro,IkBz IL-36-driven keratinocyte model (culture),original screen
+SRP173378,16,excluded,blood + GPP,"whole-blood RNAseq, GPP",original screen
+SRP078169,15,excluded,sorted cells (pDC),"VERIFIED: sorted plasmacytoid DCs, influenza-stimulated; not whole skin",recount3 metadata (2026-08-04)
+SRP132160,15,excluded,blood + GPP,"PBMC RNAseq, GPP, acitretin-treated",original screen
+SRP213063,12,excluded,cell line (HaCaT),"VERIFIED: all 12 samples HaCaT keratinocyte line, not skin biopsy",recount3 metadata (2026-08-04)
+ERP017153,10,excluded,in-vitro stimulation,"VERIFIED: human cells +TNFa/IL-12 in vitro (not mouse, not intact skin) — earlier 'mouse model' guess corrected",recount3 metadata (2026-08-04)
+SRP016583,6,excluded,no normal,"early profiling, 3 PP + 3 PN, 0 NN — no healthy arm",original screen
+SRP093255,6,excluded,not skin biopsy,"psoriasis-lesion mesenchymal stem cells (MSC), not whole skin",original screen
