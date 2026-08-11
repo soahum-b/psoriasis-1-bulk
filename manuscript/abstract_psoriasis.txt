@@ -1,0 +1,11 @@
+The psoriasis endothelial inflammatory program is concentrated in an IL-1-receptor-positive subset that is smaller in lesional skin
+
+BACKGROUND: Psoriasis transcriptomic studies are usually single-cohort and rarely separate tissue composition from cell state, leaving the disease signature's cellular origin unresolved. STAT3 is widely proposed as a therapeutic node, yet its reproducibility and cellular source are untested.
+
+OBJECTIVES: To define a reproducible whole-skin psoriasis signature and localise the disease-associated program to specific cells.
+
+METHODS: Of 35 recount3 psoriasis studies screened, four treatment-naive whole-skin cohorts qualified (141 healthy, 145 lesional). Differential expression (limma-voom) was pooled by random-effects meta-analysis (DerSimonian-Laird), with Benjamini-Hochberg FDR throughout. In 89,058 single cells across healthy, peri-lesional and lesional skin, deconvolution quantified cell-type proportions and Scissor identified phenotype-associated cells; endothelium was stratified by IL1R1.
+
+RESULTS: 2,277 genes were reproducibly differentially expressed (FDR<0.05, |log2FC|>1). STAT3 was elevated across all four cohorts (+1.06, FDR=5.7x10-6) but heterogeneous (I2=92%) and not significant per-cell (q=0.13), indicating tissue-level rather than cell-intrinsic elevation. Endothelium was the most phenotype-enriched of ten lineages (OR=5.24), rising monotonically in proportion from healthy to lesional skin (q=1.3x10-19). Within endothelium, IL1R1+ cells were enriched 2.3-fold among phenotype-tracking cells (OR=2.32, p=1.4x10-38) and expressed far more STAT3 (66% vs 40%), IL6 (31% vs 13%), GSDMD and PYCARD. This subset was nonetheless a smaller fraction of endothelium in lesional than healthy skin (51%, 29%, 27% across tiers; log2FC -1.12), alongside higher IL1RN.
+
+SIGNIFICANCE: Psoriatic skin contains more endothelium but a lower IL1R1+ fraction, with the inflammatory program concentrated in that subset. Being cross-sectional, these data cannot separate receptor downregulation from dilution by new vessels; both predict an early rather than sustained IL-1 role.
