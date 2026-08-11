@@ -93,6 +93,33 @@ support a vascular-first reading of psoriasis.*
     markers are flat in whole skin — expected, since their measurements are in
     blood and brachial-vein endothelium.
 
+### Ponikowska et al. 2026 — Cardiovascular Disease and Psoriasis (review)
+- *Dermatol Ther (Heidelb)* 2026;16:155–169 · DOI 10.1007/s13555-025-01566-0
+- **Why:** the current, citable synthesis of the psoriasis→CV link; supplies the
+  Background claim in the conference abstract and independently names the same
+  mechanistic genes our data flags.
+- **Used / key claims:**
+  - Psoriasis carries an **~50% increased relative risk of major cardiovascular
+    events**; a 2022 meta-analysis (31 cohorts, >665,000 patients vs ~18M
+    controls) gives pooled RR ≈1.17 myocardial infarction, 1.19 stroke, **1.46
+    cardiovascular mortality**.
+  - Endothelial cells isolated from psoriasis patients show **2–8-fold
+    upregulation of pro-inflammatory transcripts**, resembling endothelium
+    stimulated by TNF-α + IL-17A + IFN-γ — a direct vascular impact of psoriatic
+    inflammation. (Independent support for our endothelium-first result.)
+  - **Inflammasome signalling is the most differentially expressed systemic
+    pathway in psoriasis** and plays a causal role in atherosclerosis — directly
+    relevant to our IL1R1⁺ endothelial subset being GSDMD/PYCARD/CASP1-high.
+  - S100A7A and S100A8/A9 alarmins correlate with psoriasis severity and with
+    atherosclerotic plaque instability.
+  - Biologics (TNF-α, IL-17, IL-23 inhibitors) associate with **~50% reductions
+    in myocardial infarction incidence** vs topical regimens.
+- **Concordance with our bulk k=4 meta-analysis** (all lesional vs healthy):
+  S100A7A **+7.78**, S100A7 **+6.37**, S100A9 **+6.08**, S100A8 **+6.01**,
+  CXCL10 **+3.01**, PYCARD **+1.09**, GSDMD **+0.75**, CASP1 **+0.59** — every
+  gene the review names is significantly up in our data (VCAM1 and NLRP3 are the
+  two exceptions, both n.s.).
+
 ### Psoriatic march / endothelial dysfunction → atherosclerosis
 - *Endothelial Dysfunction in Psoriasis: An Updated Review* — Front. Med. 2022;9:864185
 - *Psoriasis and Cardiovascular Disease: Novel Mechanisms* — PMC9744099
