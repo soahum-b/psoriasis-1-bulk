@@ -1,0 +1,10 @@
+project,n,tissue,cohort,verdict
+ERP110816,178,skin (lesional/non-lesional),plaque psoriasis,"EXCLUDE — skin, not blood; all on etanercept; already in project as the paired-skin arm"
+SRP169085,33,sorted iNKT / γδ-T cells,spondyloarthritis / RA,"EXCLUDE — SpA/RA cohort, psoriasis only in abstract context; sorted T-cell subsets, not whole blood"
+SRP086612,32,keratinocyte cell line,in vitro,EXCLUDE — cultured keratinocytes (TRAF3IP2 silencing); 'blood' matched host-defence text
+ERP110814,30,whole blood,plaque psoriasis,USABLE (no healthy arm) — the paired-blood arm already analysed; 10 patients × 3 visits on etanercept
+SRP173379,19,sorted neutrophils,GPP,EXCLUDE — GPP (user rule); sorted neutrophils not whole blood
+SRP173378,16,whole blood,GPP,EXCLUDE — GPP (user rule)
+SRP095209,15,peripheral whole blood,IBD (UC/Crohn/IBS),"EXCLUDE — autoimmune lncRNA study; cohort is IBD, no psoriasis samples"
+SRP078169,15,sorted pDCs,viral stimulation,EXCLUDE — influenza-stimulated pDC subsets; no psoriasis samples
+SRP132160,15,PBMC,GPP,EXCLUDE — GPP + no healthy controls + acitretin-treated
