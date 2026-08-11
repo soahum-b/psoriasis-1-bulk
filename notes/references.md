@@ -152,7 +152,7 @@ arm and a silent arm**:
 - IL1RN (antagonist) **+0.83** ***; IL33 +0.50 ***
 
 **Not significant / down — the classical IL-1β axis**
-- **IL1B +1.09 n.s.** (I²=94 — the noisiest gene in the panel)
+- **IL1B +1.09 n.s.** (I²=94 — among the most heterogeneous in the panel, with IL18 and IL37 at I²=95)
 - IL18 −0.05 n.s.; IL1A **−0.47** **; IL37 **−1.91** *
 - Receptors: IL1R1 −0.02 **n.s.**, IL1R2 −0.34 n.s., IL1RAP +0.20 n.s.
   (IL1RL2, the IL-36 receptor, is up +0.29 **)

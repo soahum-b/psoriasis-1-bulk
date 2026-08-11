@@ -22,8 +22,10 @@ for (i in seq_len(nrow(sra))) {
     psor  <- grepl("psoria", txt)
     blood <- grepl("blood|pbmc|mononuclear|neutrophil|leukocyte|monocyte|platelet|serum|plasma", txt)
     if (psor && blood) {
+      # NOTE: raw read gives UNPREFIXED names, so use gv() here too --
+      # md$sra.study_title would always be NULL and silently blank the title.
       res[[p]] <- data.frame(project=p, n=nrow(md),
-        title=substr(if ("sra.study_title" %in% names(md)) unique(md$sra.study_title)[1] else "", 1, 180),
+        title=substr(gv("study_title"), 1, 180),
         has_healthy=grepl("healthy|normal|control", txt),
         stringsAsFactors=FALSE)
       cat("HIT", p, "n=", nrow(md), "\n")
