@@ -1,0 +1,7 @@
+"blood","skin","rho_within","p","p_BH"
+"platelet","skin_endo",-0.331,0.0742,0.148
+"platelet","skin_il1",0.386,0.0357,0.148
+"platelet","skin_il36",0.204,0.279,0.419
+"ifn","skin_endo",0.349,0.059,0.148
+"ifn","skin_il1",0.065,0.733,0.733
+"ifn","skin_il36",-0.089,0.64,0.733
