@@ -1,0 +1,25 @@
+group,gene,logFC,FDR,I2,k,sig
+STATs,STAT1,1.7,5.28019621155931e-21,83,4,***
+STATs,STAT2,0.8,1.78993670773111e-23,54,4,***
+STATs,STAT3,1.06,5.72095716086077e-06,92,4,***
+STATs,STAT4,0.24,0.43337880301384,89,4,n.s.
+STATs,STAT5A,-0.07,0.610725776695658,80,4,n.s.
+STATs,STAT5B,-0.25,6.28614094368818e-05,78,4,***
+STATs,STAT6,0.09,0.0014435600085821,0,4,**
+JAKs,JAK1,-0.23,0.0231969999991985,82,4,*
+JAKs,JAK2,0.09,0.71916702563842,95,4,n.s.
+JAKs,JAK3,1.12,0.0112873102211888,95,4,*
+JAKs,TYK2,0.23,4.63120170378439e-07,0,4,***
+gp130-family cytokines/receptors (true STAT3 upstream),IL6,-1.37,0.766029521632056,99,2,n.s.
+gp130-family cytokines/receptors (true STAT3 upstream),IL6R,-0.07,0.75598933566699,92,4,n.s.
+gp130-family cytokines/receptors (true STAT3 upstream),IL6ST,-0.14,0.0642360780841775,32,4,n.s.
+gp130-family cytokines/receptors (true STAT3 upstream),IL11,-0.13,0.903236908363098,72,2,n.s.
+gp130-family cytokines/receptors (true STAT3 upstream),IL22RA1,0.17,0.321427466250231,80,4,n.s.
+gp130-family cytokines/receptors (true STAT3 upstream),IL23A,1.5,0.0004903124237027,86,4,***
+gp130-family cytokines/receptors (true STAT3 upstream),IL23R,,,NA,1,n.s.
+gp130-family cytokines/receptors (true STAT3 upstream),LIF,-1.5,0.0006551244011517,92,4,***
+gp130-family cytokines/receptors (true STAT3 upstream),OSM,1.46,0.553696325553763,98,2,n.s.
+Negative regulators,SOCS1,0.7,0.208618957652421,95,4,n.s.
+Negative regulators,SOCS3,0.86,0.443477053145605,98,4,n.s.
+Negative regulators,PIAS3,0.04,0.21396743201757,1,4,n.s.
+Negative regulators,PTPN2,0.46,0.0022492693746437,95,4,**

@@ -120,6 +120,90 @@ support a vascular-first reading of psoriasis.*
   gene the review names is significantly up in our data (VCAM1 and NLRP3 are the
   two exceptions, both n.s.).
 
+### → Concordance: the review's "emerging mediators" vs our k=4 meta-analysis
+
+Ponikowska 2026 §Emerging Molecular Pathways nominates three CV-linked mediators
+beyond TNF-α/IL-17/IFN-γ. **All three are detectable in our bulk meta-analysis,
+and two rank among the top effects genome-wide** — and notably, the strongest of
+them is IL-1 superfamily. (Full table: `results/il1_superfamily_bulk_k4.csv`.)
+
+| Review's mediator | Our k=4 result (lesional vs healthy) |
+|---|---|
+| **IL-36 family** (IL-1 superfamily; keratinocyte activation, vascular injury) | **IL36A +9.03** (FDR 1.8×10⁻¹⁹) — **rank 2 of 28,339 genes** by effect size (behind DEFB4A +9.84); IL36G +4.66, IL36RN +2.79, IL36B +1.05 (all ***) |
+| **S100 alarmins** (S100A7A, S100A8/A9; severity + plaque instability) | **S100A7A +7.78**, S100A12 +7.44, S100A7 +6.37, S100A9 +6.08, S100A8 +6.01 (all ***) |
+| **GPR15** (epithelial immunity, lymphocyte trafficking) | **+1.84** (FDR 0.028 *) — significant but weakest: k=2, I²=86%. Treat as suggestive, not established. `GPR15L` not in annotation. |
+
+**Caveat:** this concordance is **tissue-level (bulk)**. IL36A/IL36B/S100A9/
+S100A12/GPR15 are absent from the single-cell tested family (below expression
+thresholds), and IL36G/S100A8 are *lower* in disease-associated cells — a
+composition effect, since those cells are endothelium-enriched while IL-36/S100
+are keratinocyte genes. The concordance does not extend to the cell-level arm.
+
+### The IL-1 superfamily in psoriasis — our full profile
+
+Because IL-36 is IL-1 superfamily, the project's IL-1 story is best read across
+the whole family. Our k=4 meta-analysis separates it cleanly into an **active
+arm and a silent arm**:
+
+**Strongly up — the IL-36 axis and inflammasome effectors**
+- IL36A **+9.03** (rank 2 genome-wide), IL36G **+4.66**, IL36RN **+2.79**, IL36B **+1.05** (all ***)
+- CASP5 **+3.54**, AIM2 **+2.84**, PYCARD **+1.09**, CASP4 **+0.88**,
+  GSDMD **+0.75**, CASP1 **+0.59** (all *** / **)
+- IL1RN (antagonist) **+0.83** ***; IL33 +0.50 ***
+
+**Not significant / down — the classical IL-1β axis**
+- **IL1B +1.09 n.s.** (I²=94 — the noisiest gene in the panel)
+- IL18 −0.05 n.s.; IL1A **−0.47** **; IL37 **−1.91** *
+- Receptors: IL1R1 −0.02 **n.s.**, IL1R2 −0.34 n.s., IL1RAP +0.20 n.s.
+  (IL1RL2, the IL-36 receptor, is up +0.29 **)
+- NLRP3 +0.52 n.s.
+
+**Reading:** in whole skin it is the **IL-36 sub-family, not IL-1β, that carries
+the IL-1 superfamily signal**, together with the downstream inflammasome
+effectors (caspases, PYCARD, GSDMD, AIM2). The classical IL-1β ligand/receptor
+axis is flat at tissue level. This is consistent with (i) the disappointing
+performance of IL-1β blockade in plaque psoriasis, (ii) DITRA — IL-36 receptor
+antagonist deficiency causing severe pustular disease, and (iii) our cell-level
+finding that IL-1 *responsiveness* (IL1R1⁺ endothelium) is an early, declining
+feature rather than a maintained one.
+
+### STAT3 and the JAK–STAT axis — and why it is NOT IL-1 superfamily
+
+**Classification (important, easy to conflate):** STAT3 is **not** a member of
+the IL-1 superfamily. The IL-1 superfamily comprises secreted ligands
+(IL-1α/β, IL-18, IL-33, IL-36α/β/γ, IL-37, IL-38) and their receptors —
+extracellular signalling proteins. **STAT3 is an intracellular transcription
+factor**, phosphorylated by JAK kinases downstream of **gp130-family** receptors
+(IL-6, IL-11, IL-22, IL-23, LIF, OSM).
+
+**The real link is indirect and downstream:**
+`IL-1 → IL1R1 → MyD88 → NF-κB → IL-6 → IL6R/gp130 → JAK → STAT3`
+IL-1 can therefore *drive* STAT3, but through an IL-6 intermediate — they are
+different molecule classes on the same pathway, not the same family.
+
+**Our k=4 profile** (full table: `results/jakstat_axis_bulk_k4.csv`):
+
+| Layer | Result |
+|---|---|
+| STATs | **STAT1 +1.70***, **STAT3 +1.06***, STAT2 +0.80***; STAT5B −0.25***, STAT4/5A n.s. |
+| JAKs | **JAK3 +1.12*** (I²=95), TYK2 +0.23***; JAK1 **−0.23*** |
+| gp130 cytokines (true STAT3 upstream) | **IL23A +1.50***; IL6 −1.37 **n.s.** (I²=99, k=2), IL6R/IL6ST/IL22RA1 n.s., **LIF −1.50*** |
+| Negative regulators | SOCS3 +0.86 **n.s.** (I²=98), SOCS1 n.s., PTPN2 +0.46** |
+
+**Reading:** STAT3 mRNA is reproducibly elevated (+1.06, all four cohorts), but
+its canonical upstream ligands are **not** — IL6 is non-significant with extreme
+heterogeneity (I²=99), IL6R/IL6ST flat, LIF *down*. The one significant upstream
+signal is **IL23A (+1.50)**, consistent with the IL-23/Th17 axis rather than
+IL-6 driving STAT3 here. Combined with our single-cell result (STAT3 not
+significant per-cell, q=0.13; 66% vs 40% enriched specifically in IL1R1⁺
+endothelium), the tissue-level STAT3 elevation looks **compositional and
+IL-23-associated**, not a cell-intrinsic IL-6→STAT3 program.
+
+*Caution for writing:* do not describe STAT3 as IL-1 superfamily. The
+defensible phrasings are "STAT3, downstream of IL-1-induced IL-6" or "the
+JAK–STAT axis," and our IL1R1⁺-endothelium result is precisely where the two
+pathways intersect at cell level.
+
 ### Psoriatic march / endothelial dysfunction → atherosclerosis
 - *Endothelial Dysfunction in Psoriasis: An Updated Review* — Front. Med. 2022;9:864185
 - *Psoriasis and Cardiovascular Disease: Novel Mechanisms* — PMC9744099
